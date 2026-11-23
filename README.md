@@ -48,9 +48,16 @@ cd paper && pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex ma
 2. Run the 4-stage pipeline from the repository root:
    ```bash
    python -B scripts/run_audit.py --root corpus/src --out-dir reports --prefix full_clean
-   python -B scripts/se_topology.py --dag-index reports/full_clean_dag_index.json --out-dir reports --prefix full_clean_se_topology
-   python -B scripts/lean_dag.py --root corpus/src --dag-index reports/full_clean_dag_index.json --out-dir reports --prefix full_clean --entry-config configs/rh_archive.json --l3a-only
-   python -B scripts/run_l25_audit.py --root corpus/src --out-dir reports --prefix full_clean_l25 --shadow-config configs/rh_archive.json
+   python -B scripts/se_topology.py \
+     --dag-index reports/full_clean_dag_index.json \
+     --out-dir reports --prefix full_clean_se_topology
+   python -B scripts/lean_dag.py \
+     --root corpus/src --dag-index reports/full_clean_dag_index.json \
+     --out-dir reports --prefix full_clean \
+     --entry-config configs/rh_archive.json --l3a-only
+   python -B scripts/run_l25_audit.py \
+     --root corpus/src --out-dir reports --prefix full_clean_l25 \
+     --shadow-config configs/rh_archive.json
    python -B scripts/plot_figures.py
    ```
    - `run_audit.py` writes a ~110 MB local intermediate `reports/full_clean_dag_index.json` consumed by `se_topology.py` and `lean_dag.py`; it is excluded from Git via `.gitignore` and can be removed after downstream stages finish.
@@ -63,7 +70,9 @@ If you use the audit scripts, datasets, or technical report, please cite:
 ```bibtex
 @misc{Jiang_2026_lean4_static_audit,
   author       = {Jiang, Chen},
-  title        = {Static Structural Audit of the 17.37-Million-Line Lean 4 Riemann Hypothesis Archive: Trust Boundaries, Type-2 Clones, and Dependency Topology},
+  title        = {Static Structural Audit of the 17.37-Million-Line Lean 4
+                  Riemann Hypothesis Archive: Trust Boundaries, Type-2 Clones,
+                  and Dependency Topology},
   year         = {2026},
   month        = nov,
   doi          = {10.5281/zenodo.24465791},
