@@ -1,0 +1,842 @@
+{
+  "timing_sec": 12.22,
+  "provenance": {
+    "dag_index_name": "full_clean_dag_index.json",
+    "se_topology_sha256": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+    "upstream_provenance": {
+      "corpus_label": "corpus/lean/src",
+      "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+      "script_sha256": {
+        "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+        "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+        "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+        "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+        "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+        "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+        "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+      },
+      "lean_toolchain": "leanprover/lean4:v4.33.1",
+      "source_archive": {
+        "file": "raw/lean.tar.gz",
+        "bytes": 239275554,
+        "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+      }
+    }
+  },
+  "invariants_checked": {
+    "edge_conservation": true,
+    "dag_acyclic": true,
+    "exact_all_nodes_blast_radius": true
+  },
+  "module_count": 175187,
+  "dag_acyclic": true,
+  "topo_sorted_count": 175187,
+  "max_dag_depth": 202,
+  "p90_dag_depth": 98,
+  "zero_decl_wrapper_files": 174,
+  "zero_decl_wrapper_pct": 0.1,
+  "gini_and_percentiles": {
+    "code_lines": {
+      "total": 15531759,
+      "gini": 0.5631,
+      "top_1pct_share_pct": 9.14,
+      "top_5pct_share_pct": 25.34,
+      "top_10pct_share_pct": 39.03,
+      "p50": 51,
+      "p90": 210,
+      "p99": 498,
+      "max": 14814
+    },
+    "raw_lines": {
+      "total": 17374215,
+      "gini": 0.5626,
+      "top_1pct_share_pct": 9.18,
+      "top_5pct_share_pct": 25.3,
+      "top_10pct_share_pct": 38.93,
+      "p50": 58,
+      "p90": 233,
+      "p99": 560,
+      "max": 17981
+    },
+    "defs": {
+      "total": 242670,
+      "gini": 0.8989,
+      "top_1pct_share_pct": 30.65,
+      "top_5pct_share_pct": 65.7,
+      "top_10pct_share_pct": 82.45,
+      "p50": 0,
+      "p90": 3,
+      "p99": 24,
+      "max": 226
+    },
+    "thms": {
+      "total": 818755,
+      "gini": 0.6273,
+      "top_1pct_share_pct": 13.1,
+      "top_5pct_share_pct": 33.34,
+      "top_10pct_share_pct": 48.59,
+      "p50": 1,
+      "p90": 12,
+      "p99": 35,
+      "max": 1518
+    },
+    "direct_fan_in": {
+      "total": 753261,
+      "gini": 0.6966,
+      "top_1pct_share_pct": 36.63,
+      "top_5pct_share_pct": 58.49,
+      "top_10pct_share_pct": 67.62,
+      "p50": 1,
+      "p90": 5,
+      "p99": 54,
+      "max": 3088
+    },
+    "local_fan_out": {
+      "total": 753261,
+      "gini": 0.4626,
+      "top_1pct_share_pct": 7.03,
+      "top_5pct_share_pct": 20.99,
+      "top_10pct_share_pct": 33.2,
+      "p50": 3,
+      "p90": 9,
+      "p99": 20,
+      "max": 370
+    },
+    "transitive_blast_radius": {
+      "total": 545942223,
+      "gini": 0.8905,
+      "top_1pct_share_pct": 22.93,
+      "top_5pct_share_pct": 64.49,
+      "top_10pct_share_pct": 86.02,
+      "p50": 87,
+      "p90": 6888,
+      "p99": 49494,
+      "max": 108056
+    }
+  },
+  "top_30_hubs_by_blast_radius": [
+    {
+      "module": "Formalism.RealPlaceAnalysis.StatementA",
+      "file": "Formalism/RealPlaceAnalysis/StatementA.lean",
+      "direct_fan_in": 23,
+      "transitive_blast_radius": 108056,
+      "blast_pct": 61.68,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 129,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.LatticeTheta.Statement",
+      "file": "Formalism/LatticeTheta/Statement.lean",
+      "direct_fan_in": 19,
+      "transitive_blast_radius": 106548,
+      "blast_pct": 60.82,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 67,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.SatakeDualWeyl.Statement",
+      "file": "Formalism/SatakeDualWeyl/Statement.lean",
+      "direct_fan_in": 120,
+      "transitive_blast_radius": 106175,
+      "blast_pct": 60.61,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 463,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.FockGram.StatementLat",
+      "file": "Formalism/FockGram/StatementLat.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 106007,
+      "blast_pct": 60.51,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 65,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.FockGram.StatementHerm",
+      "file": "Formalism/FockGram/StatementHerm.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 106002,
+      "blast_pct": 60.51,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 31,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.HermitianLattices.StatementLat",
+      "file": "Formalism/HermitianLattices/StatementLat.lean",
+      "direct_fan_in": 47,
+      "transitive_blast_radius": 105999,
+      "blast_pct": 60.51,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 180,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.RealPlaceAnalysis.FockPairGl",
+      "file": "Formalism/RealPlaceAnalysis/FockPairGl.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 105785,
+      "blast_pct": 60.38,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 45,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.RealPlaceAnalysis.RealPlaceTaylor.ProdFactorialSupportSubSingle",
+      "file": "Formalism/RealPlaceAnalysis/RealPlaceTaylor/ProdFactorialSupportSubSingle.lean",
+      "direct_fan_in": 10,
+      "transitive_blast_radius": 105631,
+      "blast_pct": 60.3,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 135,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.TameInertiaTowers.StatementGroup",
+      "file": "Formalism/TameInertiaTowers/StatementGroup.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 105469,
+      "blast_pct": 60.2,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 107,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.TameInertiaTowers.StatementField",
+      "file": "Formalism/TameInertiaTowers/StatementField.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 105458,
+      "blast_pct": 60.2,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 77,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.FrobeniusOrbits.Statement",
+      "file": "Formalism/FrobeniusOrbits/Statement.lean",
+      "direct_fan_in": 31,
+      "transitive_blast_radius": 105452,
+      "blast_pct": 60.19,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 202,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ZsmulGeneratorEqZeroOfProjection",
+      "file": "Formalism/SharpRestriction/RamificationFrobenius/TotientGaloisClasses/ZsmulGeneratorEqZeroOfProjection.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 105362,
+      "blast_pct": 60.14,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 92,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.CoboundaryTransfers.Statement",
+      "file": "Formalism/CoboundaryTransfers/Statement.lean",
+      "direct_fan_in": 24,
+      "transitive_blast_radius": 105218,
+      "blast_pct": 60.06,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 148,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.ConjugateSelfDual.Statement",
+      "file": "Formalism/ConjugateSelfDual/Statement.lean",
+      "direct_fan_in": 13,
+      "transitive_blast_radius": 105014,
+      "blast_pct": 59.94,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 24,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem",
+      "file": "ReciprocityTheory/GaloisValuations/SeparatedDvrSecondCohomologyMem.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 104976,
+      "blast_pct": 59.92,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 231,
+      "def_pattern_findings_in_file": 1
+    },
+    {
+      "module": "ReciprocityTheory.GaloisValuations.ContinuousConstSMulQuotient",
+      "file": "ReciprocityTheory/GaloisValuations/ContinuousConstSMulQuotient.lean",
+      "direct_fan_in": 14,
+      "transitive_blast_radius": 104971,
+      "blast_pct": 59.92,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 166,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.WeaklyAdmissibleFiltrations.Statement",
+      "file": "Formalism/WeaklyAdmissibleFiltrations/Statement.lean",
+      "direct_fan_in": 49,
+      "transitive_blast_radius": 104938,
+      "blast_pct": 59.9,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 456,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.GaloisValuations.GlobalA",
+      "file": "ReciprocityTheory/GaloisValuations/GlobalA.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 104932,
+      "blast_pct": 59.9,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 152,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.WeaklyAdmissibleFiltrations.StatementPC",
+      "file": "Formalism/WeaklyAdmissibleFiltrations/StatementPC.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 104900,
+      "blast_pct": 59.88,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 70,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc",
+      "file": "Formalism/SharpRestriction/LevelLetterCocycles/DataNLoc.lean",
+      "direct_fan_in": 188,
+      "transitive_blast_radius": 104894,
+      "blast_pct": 59.88,
+      "local_fan_out": 3,
+      "dag_depth": 3,
+      "code_lines": 972,
+      "def_pattern_findings_in_file": 1
+    },
+    {
+      "module": "ReciprocityTheory.GaloisValuations.GlobalB",
+      "file": "ReciprocityTheory/GaloisValuations/GlobalB.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 104892,
+      "blast_pct": 59.87,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 279,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.GaloisValuations.Global",
+      "file": "ReciprocityTheory/GaloisValuations/Global.lean",
+      "direct_fan_in": 67,
+      "transitive_blast_radius": 104890,
+      "blast_pct": 59.87,
+      "local_fan_out": 3,
+      "dag_depth": 2,
+      "code_lines": 353,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd",
+      "file": "Formalism/SharpRestriction/RamificationFrobenius/TotientGaloisClasses/EvalFrameOrd.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 104780,
+      "blast_pct": 59.81,
+      "local_fan_out": 1,
+      "dag_depth": 4,
+      "code_lines": 14,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.LocalRingCardinality.Params",
+      "file": "Formalism/LocalRingCardinality/Params.lean",
+      "direct_fan_in": 47,
+      "transitive_blast_radius": 104779,
+      "blast_pct": 59.81,
+      "local_fan_out": 1,
+      "dag_depth": 5,
+      "code_lines": 79,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.HermitianLattices.DefsCS",
+      "file": "Formalism/HermitianLattices/DefsCS.lean",
+      "direct_fan_in": 10,
+      "transitive_blast_radius": 104778,
+      "blast_pct": 59.81,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 53,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.AlphaUniqueness.Statement",
+      "file": "Formalism/AlphaUniqueness/Statement.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 104698,
+      "blast_pct": 59.76,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 76,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.HermitianLattices.StatementTheta",
+      "file": "Formalism/HermitianLattices/StatementTheta.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 104697,
+      "blast_pct": 59.76,
+      "local_fan_out": 3,
+      "dag_depth": 3,
+      "code_lines": 67,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.Hypotheses.GalCohDefs",
+      "file": "ReciprocityTheory/Hypotheses/GalCohDefs.lean",
+      "direct_fan_in": 46,
+      "transitive_blast_radius": 104696,
+      "blast_pct": 59.76,
+      "local_fan_out": 2,
+      "dag_depth": 3,
+      "code_lines": 109,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.Hypotheses.GalCoh",
+      "file": "ReciprocityTheory/Hypotheses/GalCoh.lean",
+      "direct_fan_in": 64,
+      "transitive_blast_radius": 104627,
+      "blast_pct": 59.72,
+      "local_fan_out": 1,
+      "dag_depth": 4,
+      "code_lines": 225,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ConjEMemHostFIff",
+      "file": "Formalism/SharpRestriction/RamificationFrobenius/TotientGaloisClasses/ConjEMemHostFIff.lean",
+      "direct_fan_in": 36,
+      "transitive_blast_radius": 104593,
+      "blast_pct": 59.7,
+      "local_fan_out": 1,
+      "dag_depth": 4,
+      "code_lines": 173,
+      "def_pattern_findings_in_file": 0
+    }
+  ],
+  "top_30_hubs_by_direct_fanin": [
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone",
+      "file": "Development/AbelianVarietyTheory/Definitions/Divisors/CTSmallCone.lean",
+      "direct_fan_in": 3088,
+      "transitive_blast_radius": 12106,
+      "blast_pct": 6.91,
+      "local_fan_out": 2,
+      "dag_depth": 42,
+      "code_lines": 292,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian",
+      "file": "Development/AbelianVarietyTheory/Definitions/Divisors/SiegelWeilAnisotropicHermitian.lean",
+      "direct_fan_in": 2972,
+      "transitive_blast_radius": 9718,
+      "blast_pct": 5.55,
+      "local_fan_out": 23,
+      "dag_depth": 53,
+      "code_lines": 53,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique",
+      "file": "Development/AbelianVarietyTheory/Definitions/Divisors/DiscreteSeriesHermitianUnique.lean",
+      "direct_fan_in": 2518,
+      "transitive_blast_radius": 13112,
+      "blast_pct": 7.48,
+      "local_fan_out": 62,
+      "dag_depth": 50,
+      "code_lines": 128,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/AutomorphicForms₂/ExistsNormLeHeightPow.lean",
+      "direct_fan_in": 2426,
+      "transitive_blast_radius": 34259,
+      "blast_pct": 19.56,
+      "local_fan_out": 4,
+      "dag_depth": 42,
+      "code_lines": 88,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/UniformisationConclusion.lean",
+      "direct_fan_in": 2390,
+      "transitive_blast_radius": 83899,
+      "blast_pct": 47.89,
+      "local_fan_out": 5,
+      "dag_depth": 9,
+      "code_lines": 193,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/UnifUniqSt.lean",
+      "direct_fan_in": 2284,
+      "transitive_blast_radius": 58347,
+      "blast_pct": 33.31,
+      "local_fan_out": 1,
+      "dag_depth": 15,
+      "code_lines": 54,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered",
+      "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/CohomologicalCsdTempered.lean",
+      "direct_fan_in": 2242,
+      "transitive_blast_radius": 2251,
+      "blast_pct": 1.28,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 1,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf",
+      "file": "Development/AbelianVarietyTheory/Definitions/Divisors/ToKnownTheoremsOf.lean",
+      "direct_fan_in": 1838,
+      "transitive_blast_radius": 9534,
+      "blast_pct": 5.44,
+      "local_fan_out": 20,
+      "dag_depth": 87,
+      "code_lines": 66,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/TwistedTraceFormula/HarishChandraModulesOn.lean",
+      "direct_fan_in": 1653,
+      "transitive_blast_radius": 21456,
+      "blast_pct": 12.25,
+      "local_fan_out": 4,
+      "dag_depth": 34,
+      "code_lines": 177,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/HeckeKer.lean",
+      "direct_fan_in": 1429,
+      "transitive_blast_radius": 78914,
+      "blast_pct": 45.05,
+      "local_fan_out": 1,
+      "dag_depth": 6,
+      "code_lines": 77,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/SecBaseChangeAnySt.lean",
+      "direct_fan_in": 1340,
+      "transitive_blast_radius": 83414,
+      "blast_pct": 47.61,
+      "local_fan_out": 1,
+      "dag_depth": 11,
+      "code_lines": 63,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/TwistedTraceFormula/AdmissibleDiscreteSeriesOfHasParam.lean",
+      "direct_fan_in": 1323,
+      "transitive_blast_radius": 16544,
+      "blast_pct": 9.44,
+      "local_fan_out": 5,
+      "dag_depth": 30,
+      "code_lines": 233,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels",
+      "file": "Development/AbelianVarietyTheory/BlockTheory/DivisorBase/WeilTensorModels.lean",
+      "direct_fan_in": 1307,
+      "transitive_blast_radius": 17277,
+      "blast_pct": 9.86,
+      "local_fan_out": 5,
+      "dag_depth": 40,
+      "code_lines": 419,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/IsHolPeriods.lean",
+      "direct_fan_in": 1206,
+      "transitive_blast_radius": 89172,
+      "blast_pct": 50.9,
+      "local_fan_out": 2,
+      "dag_depth": 7,
+      "code_lines": 98,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr",
+      "file": "Development/AbelianVarietyTheory/Definitions/Degenerations/AdmissibleBaseOfCompleteDvr.lean",
+      "direct_fan_in": 1063,
+      "transitive_blast_radius": 30304,
+      "blast_pct": 17.3,
+      "local_fan_out": 6,
+      "dag_depth": 34,
+      "code_lines": 218,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/AutomorphicForms₂/HasDRepIffHasDerivAt.lean",
+      "direct_fan_in": 1020,
+      "transitive_blast_radius": 19056,
+      "blast_pct": 10.88,
+      "local_fan_out": 1,
+      "dag_depth": 28,
+      "code_lines": 89,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing",
+      "file": "Development/AbelianVarietyTheory/Definitions/AbelianSchemeLaws/FirstCohomologyVanishesSpecOfIsLocalRing.lean",
+      "direct_fan_in": 963,
+      "transitive_blast_radius": 54873,
+      "blast_pct": 31.32,
+      "local_fan_out": 3,
+      "dag_depth": 12,
+      "code_lines": 196,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/GeometricallyConnectedOfIsIsoRestrict.lean",
+      "direct_fan_in": 937,
+      "transitive_blast_radius": 12149,
+      "blast_pct": 6.93,
+      "local_fan_out": 3,
+      "dag_depth": 7,
+      "code_lines": 102,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow",
+      "file": "Formalism/LocalRingCardinality/RhoDetPrimeEqMuTildeMulChiPow.lean",
+      "direct_fan_in": 921,
+      "transitive_blast_radius": 103013,
+      "blast_pct": 58.8,
+      "local_fan_out": 15,
+      "dag_depth": 14,
+      "code_lines": 266,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/GaloisGeometry₂/HoweUnram.lean",
+      "direct_fan_in": 884,
+      "transitive_blast_radius": 18317,
+      "blast_pct": 10.46,
+      "local_fan_out": 1,
+      "dag_depth": 37,
+      "code_lines": 18,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2",
+      "file": "Formalism/SharpRestriction/Divisibility/GeneratorPowers/ThExprUniqOfChartIndep2.lean",
+      "direct_fan_in": 873,
+      "transitive_blast_radius": 44629,
+      "blast_pct": 25.48,
+      "local_fan_out": 1,
+      "dag_depth": 12,
+      "code_lines": 34,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/CrysToDRBijective.lean",
+      "direct_fan_in": 859,
+      "transitive_blast_radius": 18459,
+      "blast_pct": 10.54,
+      "local_fan_out": 1,
+      "dag_depth": 23,
+      "code_lines": 70,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition",
+      "file": "Development/AbelianVarietyTheory/Definitions/Divisors/DivisorSupportCondition.lean",
+      "direct_fan_in": 858,
+      "transitive_blast_radius": 3761,
+      "blast_pct": 2.15,
+      "local_fan_out": 3,
+      "dag_depth": 5,
+      "code_lines": 121,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm",
+      "file": "Development/AbelianVarietyTheory/Definitions/Foundations/NormSumPairRankZeroOfCurveCoordNorm.lean",
+      "direct_fan_in": 829,
+      "transitive_blast_radius": 43389,
+      "blast_pct": 24.77,
+      "local_fan_out": 1,
+      "dag_depth": 25,
+      "code_lines": 381,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/AutomorphicForms₂/HarishChandraFinite.lean",
+      "direct_fan_in": 813,
+      "transitive_blast_radius": 28397,
+      "blast_pct": 16.21,
+      "local_fan_out": 4,
+      "dag_depth": 37,
+      "code_lines": 118,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/ExistsCrystalPairing.lean",
+      "direct_fan_in": 812,
+      "transitive_blast_radius": 8230,
+      "blast_pct": 4.7,
+      "local_fan_out": 10,
+      "dag_depth": 90,
+      "code_lines": 113,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/CubeVal.lean",
+      "direct_fan_in": 811,
+      "transitive_blast_radius": 59032,
+      "blast_pct": 33.7,
+      "local_fan_out": 1,
+      "dag_depth": 16,
+      "code_lines": 222,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.WeilRepresentationUnitaryPair",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/AutomorphicForms₂/WeilRepresentationUnitaryPair.lean",
+      "direct_fan_in": 780,
+      "transitive_blast_radius": 23713,
+      "blast_pct": 13.54,
+      "local_fan_out": 1,
+      "dag_depth": 29,
+      "code_lines": 12,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied",
+      "file": "Formalism/LocalRingCardinality/AdicCompletionLocal/LocTied.lean",
+      "direct_fan_in": 776,
+      "transitive_blast_radius": 104089,
+      "blast_pct": 59.42,
+      "local_fan_out": 2,
+      "dag_depth": 7,
+      "code_lines": 21,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec",
+      "file": "Development/AutomorphicArithmetic/Foundations/LocalLanglands/IsRecTOfIsRec.lean",
+      "direct_fan_in": 775,
+      "transitive_blast_radius": 3743,
+      "blast_pct": 2.14,
+      "local_fan_out": 2,
+      "dag_depth": 54,
+      "code_lines": 93,
+      "def_pattern_findings_in_file": 0
+    }
+  ],
+  "cross_dir_coupling_matrix": {
+    "(root)": {
+      "(root)": 1,
+      "Supplements": 1
+    },
+    "CompanionTheory": {
+      "CompanionTheory": 5034,
+      "Formalism": 762,
+      "ReciprocityTheory": 154,
+      "Development": 1437,
+      "GroundTheory": 65,
+      "BuildAid": 3
+    },
+    "Development": {
+      "ReciprocityTheory": 38051,
+      "Development": 577034,
+      "Formalism": 41857,
+      "BuildAid": 35,
+      "GroundTheory": 7532,
+      "CompanionTheory": 1874,
+      "PositivityTheory": 1057
+    },
+    "Formalism": {
+      "Formalism": 44412,
+      "ReciprocityTheory": 348,
+      "Development": 236,
+      "Lemmata": 118,
+      "CompanionTheory": 1,
+      "GroundTheory": 1
+    },
+    "GroundTheory": {
+      "GroundTheory": 20797,
+      "Development": 57,
+      "CompanionTheory": 2,
+      "ReciprocityTheory": 1161,
+      "Formalism": 10
+    },
+    "Lemmata": {
+      "Formalism": 634,
+      "ReciprocityTheory": 7
+    },
+    "PositivityTheory": {
+      "Development": 632,
+      "GroundTheory": 111,
+      "Formalism": 8,
+      "PositivityTheory": 773,
+      "ReciprocityTheory": 2
+    },
+    "ReciprocityTheory": {
+      "ReciprocityTheory": 8711,
+      "Lemmata": 50,
+      "Formalism": 266,
+      "Development": 17,
+      "CompanionTheory": 1
+    },
+    "Supplements": {
+      "Formalism": 1,
+      "Development": 6,
+      "Supplements": 2
+    }
+  }
+}

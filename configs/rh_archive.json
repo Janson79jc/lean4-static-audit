@@ -1,0 +1,20 @@
+{
+  "entry_roots": [
+    "Main",
+    "Statements",
+    "Supplements.Kernels.MainTheoremsAll",
+    "Supplements.Kernels.MainTheorems"
+  ],
+  "shadow_targets": [
+    "RiemannHypothesis",
+    "RiemannZetaZerosOnLine",
+    "riemannZeta",
+    "GeneralizedRiemannHypothesis",
+    "GRH",
+    "DirichletLNonvanishingRightOfHalf",
+    "DirichletLZerosOnLine",
+    "PrimitiveDirichletLZerosOnLine",
+    "LFunction",
+    "ZeroFree"
+  ]
+}

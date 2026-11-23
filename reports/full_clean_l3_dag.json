@@ -1,0 +1,149 @@
+{
+  "timing_sec": 3.68,
+  "provenance": {
+    "dag_index_name": "full_clean_dag_index.json",
+    "lean_dag_sha256": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+    "upstream_provenance": {
+      "corpus_label": "corpus/lean/src",
+      "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+      "script_sha256": {
+        "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+        "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+        "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+        "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+        "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+        "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+        "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+      },
+      "lean_toolchain": "leanprover/lean4:v4.33.1",
+      "source_archive": {
+        "file": "raw/lean.tar.gz",
+        "bytes": 239275554,
+        "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+      }
+    }
+  },
+  "invariants_checked": {
+    "reach_plus_dead_files": true,
+    "reach_plus_dead_code_lines": true,
+    "dir_stats_files_conservation": true,
+    "findings_cone_split_conservation": true
+  },
+  "l3a_plus_caveat": "Short-symbol lookup can collide with local bindings or homonymous defs; treat L3-A+ counts as candidate leads and cite only manually verified full chains.",
+  "entry_roots": [
+    "Main",
+    "Statements",
+    "Supplements.Kernels.MainTheoremsAll",
+    "Supplements.Kernels.MainTheorems"
+  ],
+  "reachability_main": {
+    "total_files": 175187,
+    "reachable_files": 175187,
+    "reachable_files_pct": 100.0,
+    "dead_files": 0,
+    "dead_files_pct": 0.0,
+    "total_code_lines": 15531759,
+    "reachable_code_lines": 15531759,
+    "reachable_code_lines_pct": 100.0,
+    "dead_code_lines": 0,
+    "dead_code_lines_pct": 0.0,
+    "reachable_all_entries_files": 175187
+  },
+  "by_top_dir": {
+    "(root)": {
+      "total_files": 2,
+      "total_code_lines": 19,
+      "reach_files": 2,
+      "reach_code_lines": 19
+    },
+    "BuildAid": {
+      "total_files": 5,
+      "total_code_lines": 15,
+      "reach_files": 5,
+      "reach_code_lines": 15
+    },
+    "CompanionTheory": {
+      "total_files": 2027,
+      "total_code_lines": 173982,
+      "reach_files": 2027,
+      "reach_code_lines": 173982
+    },
+    "Development": {
+      "total_files": 141928,
+      "total_code_lines": 11050038,
+      "reach_files": 141928,
+      "reach_code_lines": 11050038
+    },
+    "Formalism": {
+      "total_files": 18254,
+      "total_code_lines": 2789976,
+      "reach_files": 18254,
+      "reach_code_lines": 2789976
+    },
+    "GroundTheory": {
+      "total_files": 8507,
+      "total_code_lines": 963283,
+      "reach_files": 8507,
+      "reach_code_lines": 963283
+    },
+    "Lemmata": {
+      "total_files": 167,
+      "total_code_lines": 8561,
+      "reach_files": 167,
+      "reach_code_lines": 8561
+    },
+    "PositivityTheory": {
+      "total_files": 449,
+      "total_code_lines": 47696,
+      "reach_files": 449,
+      "reach_code_lines": 47696
+    },
+    "ReciprocityTheory": {
+      "total_files": 3845,
+      "total_code_lines": 498172,
+      "reach_files": 3845,
+      "reach_code_lines": 498172
+    },
+    "Supplements": {
+      "total_files": 3,
+      "total_code_lines": 17,
+      "reach_files": 3,
+      "reach_code_lines": 17
+    }
+  },
+  "findings_cone_split": {
+    "DEF_CONST_TRUE": {
+      "total": 8,
+      "in_main_cone": 8
+    },
+    "DEF_EXPLICIT_WILDCARD_PARAM": {
+      "total": 77,
+      "in_main_cone": 77
+    },
+    "DEF_FUN_TRUE": {
+      "total": 9,
+      "in_main_cone": 9
+    },
+    "DEF_MULTIARG_FUN_TRUE": {
+      "total": 54,
+      "in_main_cone": 54
+    },
+    "DEF_SINGLEARG_FUN_TRUE": {
+      "total": 162,
+      "in_main_cone": 162
+    },
+    "DEF_TRIVIAL_STUB": {
+      "total": 2,
+      "in_main_cone": 2
+    },
+    "DEF_UNUSED_EXPLICIT_NAMED_PARAM": {
+      "total": 210,
+      "in_main_cone": 210
+    },
+    "DEF_UNUSED_EXPLICIT_UNDERSCORE_PARAM": {
+      "total": 881,
+      "in_main_cone": 881
+    }
+  },
+  "l3a_plus_traced": []
+}

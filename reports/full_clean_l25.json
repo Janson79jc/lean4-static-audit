@@ -1,0 +1,1375 @@
+{
+  "timing_sec": 478.97,
+  "provenance": {
+    "corpus_label": "corpus/lean/src",
+    "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+    "script_sha256": {
+      "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+      "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+      "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+      "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+      "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+      "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+      "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+    },
+    "lean_toolchain": "leanprover/lean4:v4.33.1",
+    "source_archive": {
+      "file": "raw/lean.tar.gz",
+      "bytes": 239275554,
+      "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+    }
+  },
+  "shadow_targets_configured": [
+    "RiemannHypothesis",
+    "RiemannZetaZerosOnLine",
+    "riemannZeta",
+    "GeneralizedRiemannHypothesis",
+    "GRH",
+    "DirichletLNonvanishingRightOfHalf",
+    "DirichletLZerosOnLine",
+    "PrimitiveDirichletLZerosOnLine",
+    "LFunction",
+    "ZeroFree"
+  ],
+  "invariants_checked": {
+    "finding_counts_conservation": true,
+    "meta_location_dedup_valid": true
+  },
+  "files_scanned": 175187,
+  "escape_counts_all_checked": {
+    "debug_skipKernelTC": 0,
+    "csimp_attr": 0,
+    "trustCompiler": 0,
+    "env_addDecl": 2,
+    "env_addAndCompile": 0,
+    "env_modifyEnv": 5,
+    "env_setEnv": 0,
+    "sorry": 0,
+    "admit": 0,
+    "sorryAx": 0,
+    "mkSorry": 0,
+    "native_decide": 0,
+    "ofReduceBool": 0,
+    "ofReduceNat": 0,
+    "implemented_by": 0,
+    "extern_attr": 0,
+    "unsafe_kw": 0,
+    "axiom_decl": 0,
+    "opaque_decl": 0
+  },
+  "escape_hits": [
+    {
+      "kind": "env_modifyEnv",
+      "file": "BuildAid/D1.lean",
+      "line": 4,
+      "text": "run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env \"CompanionTheory\""
+    },
+    {
+      "kind": "env_modifyEnv",
+      "file": "BuildAid/D2.lean",
+      "line": 4,
+      "text": "run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env \"CrystallineSemistableComparison\""
+    },
+    {
+      "kind": "env_modifyEnv",
+      "file": "BuildAid/D3.lean",
+      "line": 4,
+      "text": "run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env \"GlobalTheory\""
+    },
+    {
+      "kind": "env_modifyEnv",
+      "file": "BuildAid/D4.lean",
+      "line": 4,
+      "text": "run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env \"PositivityTheory\""
+    },
+    {
+      "kind": "env_modifyEnv",
+      "file": "BuildAid/D5.lean",
+      "line": 4,
+      "text": "run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env \"UpperTheory\""
+    },
+    {
+      "kind": "env_addDecl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/CutCptCopy.lean",
+      "line": 78,
+      "text": "addDecl (.defnDecl { d with name := n', type := subst tainted d.type, value := subst tainted d.value })"
+    },
+    {
+      "kind": "env_addDecl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/CutCptCopy.lean",
+      "line": 82,
+      "text": "addDecl (.thmDecl { t with name := n', type := subst tainted t.type, value := subst tainted t.value })"
+    }
+  ],
+  "meta_and_partial_summary": {
+    "raw_primitive_hits": 64,
+    "distinct_source_locations": 34,
+    "environment_mutation_calls": 7
+  },
+  "meta_and_command_inventory": {
+    "run_cmd": 5,
+    "elab_decl": 4,
+    "macro_decl": 87,
+    "initialize_decl": 0,
+    "import_lean_meta": 12
+  },
+  "meta_and_command_hits": [
+    {
+      "kind": "run_cmd",
+      "file": "BuildAid/D1.lean",
+      "line": 3,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D1.lean",
+      "line": 1,
+      "text": "import Lean.LibrarySuggestions.Basic"
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D1.lean",
+      "line": 2,
+      "text": "import Lean.Elab.Command"
+    },
+    {
+      "kind": "run_cmd",
+      "file": "BuildAid/D2.lean",
+      "line": 3,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D2.lean",
+      "line": 1,
+      "text": "import Lean.LibrarySuggestions.Basic"
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D2.lean",
+      "line": 2,
+      "text": "import Lean.Elab.Command"
+    },
+    {
+      "kind": "run_cmd",
+      "file": "BuildAid/D3.lean",
+      "line": 3,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D3.lean",
+      "line": 1,
+      "text": "import Lean.LibrarySuggestions.Basic"
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D3.lean",
+      "line": 2,
+      "text": "import Lean.Elab.Command"
+    },
+    {
+      "kind": "run_cmd",
+      "file": "BuildAid/D4.lean",
+      "line": 3,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D4.lean",
+      "line": 1,
+      "text": "import Lean.LibrarySuggestions.Basic"
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D4.lean",
+      "line": 2,
+      "text": "import Lean.Elab.Command"
+    },
+    {
+      "kind": "run_cmd",
+      "file": "BuildAid/D5.lean",
+      "line": 3,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D5.lean",
+      "line": 1,
+      "text": "import Lean.LibrarySuggestions.Basic"
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "BuildAid/D5.lean",
+      "line": 2,
+      "text": "import Lean.Elab.Command"
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/GoodPartEq.lean",
+      "line": 16,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/PlaceModelImp.lean",
+      "line": 26,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/RealIoX.lean",
+      "line": 89,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/RealIoX.lean",
+      "line": 98,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/RealIoX.lean",
+      "line": 110,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Definitions/GaloisGeometry/NegOnePowBoundaryTermsCancel.lean",
+      "line": 113,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsDlogAddCoboundaryAbLocus.lean",
+      "line": 19,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsMeasY.lean",
+      "line": 19,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/IsCechOneCoboundaryOfRefinement.lean",
+      "line": 7,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/IsProperOfFiniteType.lean",
+      "line": 29,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/FormalGroupCharts/ExistsFormalBiextMap.lean",
+      "line": 86,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/FormalGroupCharts/ExistsFormalBiextMap.lean",
+      "line": 95,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/FormalGroupCharts/GermEvGermEvThreePoints.lean",
+      "line": 86,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/FormalGroupCharts/GermEvGermEvThreePoints.lean",
+      "line": 91,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/IsClassSystem.lean",
+      "line": 28,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/IsClassSystem.lean",
+      "line": 93,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/LiftSetupOverExtendedDataIntegralFormsEq.lean",
+      "line": 14,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/RatCopyIff.lean",
+      "line": 15,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/SetupRelIffSameData.lean",
+      "line": 20,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/TieMove.lean",
+      "line": 14,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/CharWSeedStd.lean",
+      "line": 15,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/EqCjOneSmul.lean",
+      "line": 68,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsNormalisedReadingTransportedNewTwist.lean",
+      "line": 13,
+      "text": "local macro:max \"kc% \" e:term:max : term => `((by kexactB $e))"
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsSelectedRealization.lean",
+      "line": 42,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/FormGroupsModelsActionsMeasuresBasesCharacterise.lean",
+      "line": 17,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/FormGroupsModelsActionsMeasuresBasesCharacterise.lean",
+      "line": 29,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/FormGroupsModelsActionsMeasuresBasesCharacterise.lean",
+      "line": 80,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/LineModelTrueOfFalse.lean",
+      "line": 8,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/RealDatumPrerequisitesUpdateModels.lean",
+      "line": 17,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ReferenceTupleWeilDatumVectorPolynomialMapEnlarg.lean",
+      "line": 17,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ReferenceTupleWeilDatumVectorPolynomialMapEnlarg.lean",
+      "line": 24,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ReferenceTupleWeilDatumVectorPolynomialMapEnlarg.lean",
+      "line": 29,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ReferenceTupleWeilDatumVectorPolynomialMapEnlarg.lean",
+      "line": 160,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ReferenceTupleWeilDatumVectorPolynomialMapEnlarg.lean",
+      "line": 212,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/RigidFrameSymmetricRatioSeries.lean",
+      "line": 48,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/RingSpecNormalisedCharacterEq.lean",
+      "line": 74,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ThetaLiftAtReferenceTupleOverEnlargedBase.lean",
+      "line": 18,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ThetaLiftAtReferenceTupleOverEnlargedBase.lean",
+      "line": 52,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ThetaLiftAtReferenceTupleOverEnlargedBase.lean",
+      "line": 71,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ThetaLiftAtReferenceTupleOverEnlargedBase.lean",
+      "line": 182,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/JetHarmonics/IntegralChartFormalBiext.lean",
+      "line": 35,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/JetHarmonics/IntegralChartFormalBiext.lean",
+      "line": 45,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/ModuliProofs/ExistsUniqueRigMulRight.lean",
+      "line": 600,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/TransferBottom.lean",
+      "line": 23,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/TransferFlip.lean",
+      "line": 27,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/TwoLeMOf.lean",
+      "line": 71,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/TwoLeMOf.lean",
+      "line": 73,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/TwoLeMOf.lean",
+      "line": 77,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnitaryActions/ContinuousAdelicGL2OfContinuousEntries.lean",
+      "line": 33,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/UnitaryActions/ContinuousAdelicGL2OfContinuousEntries.lean",
+      "line": 36,
+      "text": "local macro \"gl2\" : tactic => `(tactic|"
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicArithmetic/Foundations/EtaleClopenDescent/ExistsHeckeCorrespondenceOnIntegralShimuraModel.lean",
+      "line": 102,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/ExistsSelectionPairLocalLanglands.lean",
+      "line": 29,
+      "text": "local macro:max \"kq% \" e:term:max : term => `((by kexactB $e))"
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicSpectrum/Proofs/BlockDecomposition/Cup1CoboundaryMemBoundaries.lean",
+      "line": 95,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicSpectrum/Proofs/BlockDecomposition/DFormMem.lean",
+      "line": 84,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicSpectrum/Proofs/BlockDecomposition/GradedFormCocycle.lean",
+      "line": 14,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicSpectrum/Proofs/BlockDecomposition/NewformHeckeEigenvalue.lean",
+      "line": 22,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicSpectrum/Proofs/BlockDecomposition/ShuffleCup1FormulaPositiveDegree.lean",
+      "line": 28,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/AutomorphicSpectrum/Proofs/BlockDecomposition/TaylorDifferentialRepresentative.lean",
+      "line": 58,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/EtaleCohomology/EtaleSheaves/ChasePf.lean",
+      "line": 104,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/EtaleCohomology/TateTwists/EtaleTensorCycleLocallyLowersTopDegreeOfRowExact.lean",
+      "line": 8,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/EtaleCohomology/TateTwists/EtaleTensorCycleLocallyLowersTopDegreeOfRowExact.lean",
+      "line": 10,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/WeilBound/CoreStatements/HodgeTatePoints/CbBase.lean",
+      "line": 33,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/WeilBound/CoreStatements/HodgeTatePoints/CbBase.lean",
+      "line": 80,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/WeilBound/CoreStatements/HodgeTatePoints/CcBase.lean",
+      "line": 41,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/WeilBound/CoreStatements/HodgeTatePoints/CcBase.lean",
+      "line": 80,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Development/WeilBound/CoreStatements/PadicHodgeComparison/EtaleCohomologyComparison/CechPairings/FaceMapCompSuccAboveCastSucc.lean",
+      "line": 226,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/DistinguishedUnitIdeals/DistinguishedOrderProofs/RhoMapFunctorial.lean",
+      "line": 9,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/EllipticTorsion/EllipticTorsionProofs/Change.lean",
+      "line": 65,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/CoordinateCommuteRaisingConstant.lean",
+      "line": 572,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/CornerBlockActionInvariant.lean",
+      "line": 71,
+      "text": ""
+    },
+    {
+      "kind": "elab_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/CutCptCopy.lean",
+      "line": 86,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/EmbedLoweringConstant.lean",
+      "line": 11,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/LevelNablaStarRelations.lean",
+      "line": 352,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/LinearFormRadicalRankOne.lean",
+      "line": 54,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/RadicalUnipotentFirstBasisEqOne.lean",
+      "line": 411,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/RadicalUnipotentFirstBasisEqOne.lean",
+      "line": 525,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/RttUpperRelationsFromDescent.lean",
+      "line": 29,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/LocalToGlobal/IndefiniteForms/IndefiniteTree/FunctionalLowerBoundOfConditionsNumeric.lean",
+      "line": 230,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/LocalToGlobal/IndefiniteForms/IndefiniteTree/FunctionalLowerBoundOfConditionsNumeric.lean",
+      "line": 233,
+      "text": ""
+    },
+    {
+      "kind": "elab_decl",
+      "file": "Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/Imports.lean",
+      "line": 4,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "Formalism/LocalToGlobal/IndefiniteReal/HeckeNonvanishing/Imports.lean",
+      "line": 1,
+      "text": "import Lean"
+    },
+    {
+      "kind": "elab_decl",
+      "file": "Formalism/LocalToGlobal/NumberFieldFamilies/OwnStruct.lean",
+      "line": 52,
+      "text": ""
+    },
+    {
+      "kind": "elab_decl",
+      "file": "Formalism/LocalToGlobal/NumberFieldFamilies/OwnStruct.lean",
+      "line": 59,
+      "text": ""
+    },
+    {
+      "kind": "import_lean_meta",
+      "file": "Formalism/LocalToGlobal/NumberFieldFamilies/OwnStruct.lean",
+      "line": 1,
+      "text": "import Lean"
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/LocalToGlobal/TorsionIntegrality/TorsionTranslationPowers/NonsingularJetNorms/NonsingularNorm.lean",
+      "line": 69,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/PeriodIntegrals/UnitaryGroupMassFormula/DensityLemma/PFibreBoundV.lean",
+      "line": 174,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/PeriodIntegrals/UnitaryGroupMassFormula/GaussianUniqueness/MulMApply.lean",
+      "line": 11,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/PeriodIntegrals/UnitaryGroupMassFormula/LevelImageArithmetic/GlevImageOf.lean",
+      "line": 11,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/SatakeDualWeyl/AdelicIwasawaHecke/FIwasawaC.lean",
+      "line": 6,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/SharpRestriction/Divisibility/GeneratorPowers/FBMapPf.lean",
+      "line": 152,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "Formalism/SharpRestriction/Divisibility/LocalNonemptiness/SubsingletonRankIndicatorIff.lean",
+      "line": 275,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/DiscreteValuationRings/ExistsRosatiGen.lean",
+      "line": 33,
+      "text": ""
+    },
+    {
+      "kind": "macro_decl",
+      "file": "ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/Theta1.lean",
+      "line": 24,
+      "text": ""
+    }
+  ],
+  "meta_and_partial_dumps": [
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/ExistsBoundAbsLocalLatticeCompletionEntries.lean",
+      "line": 12,
+      "context": "    8: theorem absFin_latLoc_le : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] {n : ℕ}\n    9:     (L : Submodule (𝓞 E) (Fin n → E)) [Submodule.IsLattice E L] (v : HeightOneSpectrum (𝓞 F)),\n   10:     ∃ C : ℝ≥0, ∀ y ∈ latLoc F L v, ∀ i, absFin F v (y i) ≤ C := by\n   11:   first\n   12:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   13:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   14:   | exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   15:   | exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   16:   | (apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   17:   | (intros; apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   18:   | (intros; apply @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> first | assumption | infer_instance)\n   19:   | (intros; exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc ..)\n   20: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/ExistsBoundAbsLocalLatticeCompletionEntries.lean",
+      "line": 13,
+      "context": "    9:     (L : Submodule (𝓞 E) (Fin n → E)) [Submodule.IsLattice E L] (v : HeightOneSpectrum (𝓞 F)),\n   10:     ∃ C : ℝ≥0, ∀ y ∈ latLoc F L v, ∀ i, absFin F v (y i) ≤ C := by\n   11:   first\n   12:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   13:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   14:   | exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   15:   | exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   16:   | (apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   17:   | (intros; apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   18:   | (intros; apply @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> first | assumption | infer_instance)\n   19:   | (intros; exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc ..)\n   20: \n   21: example : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] {n : ℕ} (L : Submodule (𝓞 E) (Fin n → E)) [Submodule.IsLattice E L] (v : HeightOneSpectrum (𝓞 F)), ∃ C : ℝ≥0, ∀ y ∈ latLoc F L v, ∀ i, absFin F v (y i) ≤ C := @absFin_latLoc_le"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/ExistsBoundAbsLocalLatticeCompletionEntries.lean",
+      "line": 12,
+      "context": "    8: theorem absFin_latLoc_le : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] {n : ℕ}\n    9:     (L : Submodule (𝓞 E) (Fin n → E)) [Submodule.IsLattice E L] (v : HeightOneSpectrum (𝓞 F)),\n   10:     ∃ C : ℝ≥0, ∀ y ∈ latLoc F L v, ∀ i, absFin F v (y i) ≤ C := by\n   11:   first\n   12:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   13:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   14:   | exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   15:   | exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   16:   | (apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   17:   | (intros; apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   18:   | (intros; apply @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> first | assumption | infer_instance)\n   19:   | (intros; exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc ..)\n   20: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/ExistsBoundAbsLocalLatticeCompletionEntries.lean",
+      "line": 13,
+      "context": "    9:     (L : Submodule (𝓞 E) (Fin n → E)) [Submodule.IsLattice E L] (v : HeightOneSpectrum (𝓞 F)),\n   10:     ∃ C : ℝ≥0, ∀ y ∈ latLoc F L v, ∀ i, absFin F v (y i) ≤ C := by\n   11:   first\n   12:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   13:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   14:   | exact @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   15:   | exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc\n   16:   | (apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   17:   | (intros; apply _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> assumption)\n   18:   | (intros; apply @_root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc <;> first | assumption | infer_instance)\n   19:   | (intros; exact _root_.GlobalTheory.LocalLatticeBound.exists_bound_latLoc ..)\n   20: \n   21: example : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] {n : ℕ} (L : Submodule (𝓞 E) (Fin n → E)) [Submodule.IsLattice E L] (v : HeightOneSpectrum (𝓞 F)), ∃ C : ℝ≥0, ∀ y ∈ latLoc F L v, ∀ i, absFin F v (y i) ≤ C := @absFin_latLoc_le"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/BoundedPowerSeriesEvaluationDivisibility.lean",
+      "line": 24,
+      "context": "   20:   GlobalTheory.BoundedPowerSeriesDisc.evalBounded π h\n   21: \n   22: theorem main : ∀ (C : Type) [NontriviallyNormedField C] [IsUltrametricDist C] [CompleteSpace C] (π : C), ‖π‖ < 1 → ∃ (B : Subring (PowerSeries C)) (ev : B →+* C) (t : B), (∀ Φ, Φ ∈ B ↔ ∃ b : ℝ, ∀ n, ‖PowerSeries.coeff n Φ‖ ≤ b) ∧ (∀ Φ : B, ev Φ = ∑' n, PowerSeries.coeff n (Φ : PowerSeries C) * π ^ n) ∧ t ≠ 0 ∧ (∀ Φ, ev Φ = 0 ↔ t ∣ Φ) ∧ ∀ Φ : B, Φ ≠ 0 → ∃ n : ℕ, ¬ t ^ n ∣ Φ := by\n   23:   first\n   24:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   25:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SummableSeriesBounds.main\n   26:   | exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   27:   | exact _root_.GlobalTheory.SummableSeriesBounds.main\n   28:   | (apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   29:   | (intros; apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   30:   | (intros; apply @_root_.GlobalTheory.SummableSeriesBounds.main <;> first | assumption | infer_instance)\n   31:   | (intros; exact _root_.GlobalTheory.SummableSeriesBounds.main ..)\n   32: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/BoundedPowerSeriesEvaluationDivisibility.lean",
+      "line": 25,
+      "context": "   21: \n   22: theorem main : ∀ (C : Type) [NontriviallyNormedField C] [IsUltrametricDist C] [CompleteSpace C] (π : C), ‖π‖ < 1 → ∃ (B : Subring (PowerSeries C)) (ev : B →+* C) (t : B), (∀ Φ, Φ ∈ B ↔ ∃ b : ℝ, ∀ n, ‖PowerSeries.coeff n Φ‖ ≤ b) ∧ (∀ Φ : B, ev Φ = ∑' n, PowerSeries.coeff n (Φ : PowerSeries C) * π ^ n) ∧ t ≠ 0 ∧ (∀ Φ, ev Φ = 0 ↔ t ∣ Φ) ∧ ∀ Φ : B, Φ ≠ 0 → ∃ n : ℕ, ¬ t ^ n ∣ Φ := by\n   23:   first\n   24:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   25:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SummableSeriesBounds.main\n   26:   | exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   27:   | exact _root_.GlobalTheory.SummableSeriesBounds.main\n   28:   | (apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   29:   | (intros; apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   30:   | (intros; apply @_root_.GlobalTheory.SummableSeriesBounds.main <;> first | assumption | infer_instance)\n   31:   | (intros; exact _root_.GlobalTheory.SummableSeriesBounds.main ..)\n   32: \n   33: end GlobalTheory.MBLow.BddPS"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/BoundedPowerSeriesEvaluationDivisibility.lean",
+      "line": 24,
+      "context": "   20:   GlobalTheory.BoundedPowerSeriesDisc.evalBounded π h\n   21: \n   22: theorem main : ∀ (C : Type) [NontriviallyNormedField C] [IsUltrametricDist C] [CompleteSpace C] (π : C), ‖π‖ < 1 → ∃ (B : Subring (PowerSeries C)) (ev : B →+* C) (t : B), (∀ Φ, Φ ∈ B ↔ ∃ b : ℝ, ∀ n, ‖PowerSeries.coeff n Φ‖ ≤ b) ∧ (∀ Φ : B, ev Φ = ∑' n, PowerSeries.coeff n (Φ : PowerSeries C) * π ^ n) ∧ t ≠ 0 ∧ (∀ Φ, ev Φ = 0 ↔ t ∣ Φ) ∧ ∀ Φ : B, Φ ≠ 0 → ∃ n : ℕ, ¬ t ^ n ∣ Φ := by\n   23:   first\n   24:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   25:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SummableSeriesBounds.main\n   26:   | exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   27:   | exact _root_.GlobalTheory.SummableSeriesBounds.main\n   28:   | (apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   29:   | (intros; apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   30:   | (intros; apply @_root_.GlobalTheory.SummableSeriesBounds.main <;> first | assumption | infer_instance)\n   31:   | (intros; exact _root_.GlobalTheory.SummableSeriesBounds.main ..)\n   32: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/BoundedPowerSeriesEvaluationDivisibility.lean",
+      "line": 25,
+      "context": "   21: \n   22: theorem main : ∀ (C : Type) [NontriviallyNormedField C] [IsUltrametricDist C] [CompleteSpace C] (π : C), ‖π‖ < 1 → ∃ (B : Subring (PowerSeries C)) (ev : B →+* C) (t : B), (∀ Φ, Φ ∈ B ↔ ∃ b : ℝ, ∀ n, ‖PowerSeries.coeff n Φ‖ ≤ b) ∧ (∀ Φ : B, ev Φ = ∑' n, PowerSeries.coeff n (Φ : PowerSeries C) * π ^ n) ∧ t ≠ 0 ∧ (∀ Φ, ev Φ = 0 ↔ t ∣ Φ) ∧ ∀ Φ : B, Φ ≠ 0 → ∃ n : ℕ, ¬ t ^ n ∣ Φ := by\n   23:   first\n   24:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   25:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SummableSeriesBounds.main\n   26:   | exact @_root_.GlobalTheory.SummableSeriesBounds.main\n   27:   | exact _root_.GlobalTheory.SummableSeriesBounds.main\n   28:   | (apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   29:   | (intros; apply _root_.GlobalTheory.SummableSeriesBounds.main <;> assumption)\n   30:   | (intros; apply @_root_.GlobalTheory.SummableSeriesBounds.main <;> first | assumption | infer_instance)\n   31:   | (intros; exact _root_.GlobalTheory.SummableSeriesBounds.main ..)\n   32: \n   33: end GlobalTheory.MBLow.BddPS"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsJetExtensionSquareZero.lean",
+      "line": 22,
+      "context": "   18:     ∃ χ : K.jet k ⟶ T, χ.deg = f₁.deg ∧ jet0 k ≫ χ = f₁ ∧ jet1 k ≫ χ = f₂ ∧\n   19:       ∀ x : TrivSqZeroExt (Hol (K.W k)) (Fin g → Hol (K.W k)),\n   20:         χ.φ x = f₁.φ (x.fst : Hol (K.W k)) + ∑ a, f₁.φ (x.snd a : Hol (K.W k)) * n a := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   24:   | exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   25:   | exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   26:   | (apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet ..)\n   30: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsJetExtensionSquareZero.lean",
+      "line": 23,
+      "context": "   19:       ∀ x : TrivSqZeroExt (Hol (K.W k)) (Fin g → Hol (K.W k)),\n   20:         χ.φ x = f₁.φ (x.fst : Hol (K.W k)) + ∑ a, f₁.φ (x.snd a : Hol (K.W k)) * n a := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   24:   | exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   25:   | exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   26:   | (apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet ..)\n   30: \n   31: end GlobalTheory.AnPer.Charts"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsJetExtensionSquareZero.lean",
+      "line": 22,
+      "context": "   18:     ∃ χ : K.jet k ⟶ T, χ.deg = f₁.deg ∧ jet0 k ≫ χ = f₁ ∧ jet1 k ≫ χ = f₂ ∧\n   19:       ∀ x : TrivSqZeroExt (Hol (K.W k)) (Fin g → Hol (K.W k)),\n   20:         χ.φ x = f₁.φ (x.fst : Hol (K.W k)) + ∑ a, f₁.φ (x.snd a : Hol (K.W k)) * n a := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   24:   | exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   25:   | exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   26:   | (apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet ..)\n   30: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsJetExtensionSquareZero.lean",
+      "line": 23,
+      "context": "   19:       ∀ x : TrivSqZeroExt (Hol (K.W k)) (Fin g → Hol (K.W k)),\n   20:         χ.φ x = f₁.φ (x.fst : Hol (K.W k)) + ∑ a, f₁.φ (x.snd a : Hol (K.W k)) * n a := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   24:   | exact @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   25:   | exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet\n   26:   | (apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.SquareLiftLemmas.exists_hom_jet ..)\n   30: \n   31: end GlobalTheory.AnPer.Charts"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/FramesTildeGammaValues.lean",
+      "line": 70,
+      "context": "   66:       Formalism.HermitianLatticesTheory.normAt (Pi.basisFun Xf.K (Fin ((A3.side3 Ps ψs Zs).nV A3.fam3.base3.μ0))) X0 v F ^ 2 := by\n   67:   subst gEq\n   68:   have hg : grp = (Pi.group : Group (G0 Xf.E Pr.vGs Rk.r)) := eq_of_heq hgrp\n   69:   subst hg\n   70:   run_tac do\n   71:     let g ← Lean.Elab.Tactic.getMainGoal\n   72:     let g' ← g.withContext do\n   73:       let lctx ← Lean.getLCtx\n   74:       let some fe := lctx.findFromUserName? `famEq | throwError \"famEq\"\n   75:       let some fi := lctx.findFromUserName? `fin | throwError \"fin\"\n   76:       let t ← Lean.instantiateMVars fe.type\n   77:       let ty ← Lean.Meta.whnf (← Lean.Meta.inferType t.appArg!)\n   78:       let inst := ty.getAppArgs[6]!"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/IsRootMapMinpolyIffExistsRingHomExtension.lean",
+      "line": 10,
+      "context": "    6: theorem exists_ringHom_extension_algClosed_of_isIntegral_injective {R S K : Type*} [CommRing R] [CommRing S] [Field K] [IsAlgClosed K]\n    7:     [Algebra R S] [Algebra.IsIntegral R S] (hinj : Function.Injective (algebraMap R S))\n    8:     (ψ : R →+* K) : ∃ x : S →+* K, x.comp (algebraMap R S) = ψ := by\n    9:   first\n   10:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   11:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   12:   | exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   13:   | exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   14:   | (apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   15:   | (intros; apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   16:   | (intros; apply @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> first | assumption | infer_instance)\n   17:   | (intros; exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq ..)\n   18: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/IsRootMapMinpolyIffExistsRingHomExtension.lean",
+      "line": 11,
+      "context": "    7:     [Algebra R S] [Algebra.IsIntegral R S] (hinj : Function.Injective (algebraMap R S))\n    8:     (ψ : R →+* K) : ∃ x : S →+* K, x.comp (algebraMap R S) = ψ := by\n    9:   first\n   10:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   11:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   12:   | exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   13:   | exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   14:   | (apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   15:   | (intros; apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   16:   | (intros; apply @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> first | assumption | infer_instance)\n   17:   | (intros; exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq ..)\n   18: \n   19: theorem isRoot_map_minpoly_iff_exists_ringHom : ∀ (A B : Type) [CommRing A] [IsDomain A] [IsIntegrallyClosed A] [CommRing B] [IsDomain B] [Algebra A B] [Algebra.IsIntegral A B], Function.Injective (algebraMap A B) → ∀ (g : B) (φ : A →+* ℂ) (z : ℂ), ((minpoly A g).map φ).IsRoot z ↔ ∃ x : B →+* ℂ, x.comp (algebraMap A B) = φ ∧ x g = z := by"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/IsRootMapMinpolyIffExistsRingHomExtension.lean",
+      "line": 10,
+      "context": "    6: theorem exists_ringHom_extension_algClosed_of_isIntegral_injective {R S K : Type*} [CommRing R] [CommRing S] [Field K] [IsAlgClosed K]\n    7:     [Algebra R S] [Algebra.IsIntegral R S] (hinj : Function.Injective (algebraMap R S))\n    8:     (ψ : R →+* K) : ∃ x : S →+* K, x.comp (algebraMap R S) = ψ := by\n    9:   first\n   10:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   11:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   12:   | exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   13:   | exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   14:   | (apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   15:   | (intros; apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   16:   | (intros; apply @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> first | assumption | infer_instance)\n   17:   | (intros; exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq ..)\n   18: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/IsRootMapMinpolyIffExistsRingHomExtension.lean",
+      "line": 11,
+      "context": "    7:     [Algebra R S] [Algebra.IsIntegral R S] (hinj : Function.Injective (algebraMap R S))\n    8:     (ψ : R →+* K) : ∃ x : S →+* K, x.comp (algebraMap R S) = ψ := by\n    9:   first\n   10:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   11:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   12:   | exact @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   13:   | exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq\n   14:   | (apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   15:   | (intros; apply _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> assumption)\n   16:   | (intros; apply @_root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq <;> first | assumption | infer_instance)\n   17:   | (intros; exact _root_.GlobalTheory.InjectiveAlgebraHomExistence.exists_ringHom_comp_algebraMap_eq ..)\n   18: \n   19: theorem isRoot_map_minpoly_iff_exists_ringHom : ∀ (A B : Type) [CommRing A] [IsDomain A] [IsIntegrallyClosed A] [CommRing B] [IsDomain B] [Algebra A B] [Algebra.IsIntegral A B], Function.Injective (algebraMap A B) → ∀ (g : B) (φ : A →+* ℂ) (z : ℂ), ((minpoly A g).map φ).IsRoot z ↔ ∃ x : B →+* ℂ, x.comp (algebraMap A B) = φ ∧ x g = z := by"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 38,
+      "context": "   34:     (hA : Aα.comp (algebraMap R₀ LR) = (algebraMap B₀ LB).comp α)\n   35:     (hK : Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ) :\n   36:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   37:   first\n   38:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   39:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   40:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   41:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   42:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   43:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   44:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   45:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   46: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 39,
+      "context": "   35:     (hK : Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ) :\n   36:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   37:   first\n   38:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   39:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   40:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   41:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   42:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   43:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   44:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   45:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   46: \n   47: theorem locPullback : ∀ {A R₀ A' B₀ : Type} [CommRing A] [CommRing R₀] [CommRing A'] [CommRing B₀]"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 61,
+      "context": "   57:     Aα.comp (algebraMap R₀ LR) = (algebraMap B₀ LB).comp α →\n   58:     Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ →\n   59:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   60:   first\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   62:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   63:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   64:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   65:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   66:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   67:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   68:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   69: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 62,
+      "context": "   58:     Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ →\n   59:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   60:   first\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   62:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   63:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   64:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   65:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   66:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   67:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   68:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   69: \n   70: end GlobalTheory"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 38,
+      "context": "   34:     (hA : Aα.comp (algebraMap R₀ LR) = (algebraMap B₀ LB).comp α)\n   35:     (hK : Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ) :\n   36:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   37:   first\n   38:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   39:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   40:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   41:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   42:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   43:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   44:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   45:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   46: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 39,
+      "context": "   35:     (hK : Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ) :\n   36:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   37:   first\n   38:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   39:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   40:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   41:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   42:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   43:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   44:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   45:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   46: \n   47: theorem locPullback : ∀ {A R₀ A' B₀ : Type} [CommRing A] [CommRing R₀] [CommRing A'] [CommRing B₀]"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 61,
+      "context": "   57:     Aα.comp (algebraMap R₀ LR) = (algebraMap B₀ LB).comp α →\n   58:     Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ →\n   59:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   60:   first\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   62:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   63:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   64:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   65:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   66:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   67:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   68:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   69: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/LocalizationPreservesRingPullbackSquare.lean",
+      "line": 62,
+      "context": "   58:     Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ →\n   59:     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by\n   60:   first\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.QuotientMapComposition.main\n   62:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.QuotientMapComposition.main\n   63:   | exact @_root_.GlobalTheory.QuotientMapComposition.main\n   64:   | exact _root_.GlobalTheory.QuotientMapComposition.main\n   65:   | (apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   66:   | (intros; apply _root_.GlobalTheory.QuotientMapComposition.main <;> assumption)\n   67:   | (intros; apply @_root_.GlobalTheory.QuotientMapComposition.main <;> first | assumption | infer_instance)\n   68:   | (intros; exact _root_.GlobalTheory.QuotientMapComposition.main ..)\n   69: \n   70: end GlobalTheory"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/MatchedDiffsInvariantSubspace.lean",
+      "line": 31,
+      "context": "   27: \n   28: theorem gen_stable {ρ : ι → V →ₗ[ℂ] V} {N : Submodule ℂ V} (hN : ∀ y, ∀ x ∈ N, ρ y x ∈ N)\n   29:     {s : Module.End ℂ V} (hs : s ∈ gen ρ) : ∀ x ∈ N, s x ∈ N := by\n   30:   first\n   31:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   32:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   33:   | exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   34:   | exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   35:   | (apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   36:   | (intros; apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   37:   | (intros; apply @_root_.GlobalTheory.SpectralLemmaFirst.main <;> first | assumption | infer_instance)\n   38:   | (intros; exact _root_.GlobalTheory.SpectralLemmaFirst.main ..)\n   39: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/MatchedDiffsInvariantSubspace.lean",
+      "line": 32,
+      "context": "   28: theorem gen_stable {ρ : ι → V →ₗ[ℂ] V} {N : Submodule ℂ V} (hN : ∀ y, ∀ x ∈ N, ρ y x ∈ N)\n   29:     {s : Module.End ℂ V} (hs : s ∈ gen ρ) : ∀ x ∈ N, s x ∈ N := by\n   30:   first\n   31:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   32:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   33:   | exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   34:   | exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   35:   | (apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   36:   | (intros; apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   37:   | (intros; apply @_root_.GlobalTheory.SpectralLemmaFirst.main <;> first | assumption | infer_instance)\n   38:   | (intros; exact _root_.GlobalTheory.SpectralLemmaFirst.main ..)\n   39: \n   40: def lift (ρ : ι → V →ₗ[ℂ] V) (N : Submodule ℂ V) (hN : ∀ y, ∀ x ∈ N, ρ y x ∈ N) : Submodule (gen ρ) V where"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/MatchedDiffsInvariantSubspace.lean",
+      "line": 31,
+      "context": "   27: \n   28: theorem gen_stable {ρ : ι → V →ₗ[ℂ] V} {N : Submodule ℂ V} (hN : ∀ y, ∀ x ∈ N, ρ y x ∈ N)\n   29:     {s : Module.End ℂ V} (hs : s ∈ gen ρ) : ∀ x ∈ N, s x ∈ N := by\n   30:   first\n   31:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   32:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   33:   | exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   34:   | exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   35:   | (apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   36:   | (intros; apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   37:   | (intros; apply @_root_.GlobalTheory.SpectralLemmaFirst.main <;> first | assumption | infer_instance)\n   38:   | (intros; exact _root_.GlobalTheory.SpectralLemmaFirst.main ..)\n   39: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/MatchedDiffsInvariantSubspace.lean",
+      "line": 32,
+      "context": "   28: theorem gen_stable {ρ : ι → V →ₗ[ℂ] V} {N : Submodule ℂ V} (hN : ∀ y, ∀ x ∈ N, ρ y x ∈ N)\n   29:     {s : Module.End ℂ V} (hs : s ∈ gen ρ) : ∀ x ∈ N, s x ∈ N := by\n   30:   first\n   31:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   32:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   33:   | exact @_root_.GlobalTheory.SpectralLemmaFirst.main\n   34:   | exact _root_.GlobalTheory.SpectralLemmaFirst.main\n   35:   | (apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   36:   | (intros; apply _root_.GlobalTheory.SpectralLemmaFirst.main <;> assumption)\n   37:   | (intros; apply @_root_.GlobalTheory.SpectralLemmaFirst.main <;> first | assumption | infer_instance)\n   38:   | (intros; exact _root_.GlobalTheory.SpectralLemmaFirst.main ..)\n   39: \n   40: def lift (ρ : ι → V →ₗ[ℂ] V) (N : Submodule ℂ V) (hN : ∀ y, ∀ x ∈ N, ρ y x ∈ N) : Submodule (gen ρ) V where"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/BasedFlagPairLatticeContainment.lean",
+      "line": 131,
+      "context": "  127: \n  128: theorem exists_nat_smul_mem (Λ : LV D) (hΛ : Submodule.IsLattice D.host.E Λ) (v : (VS D).V) :\n  129:     ∃ n : ℕ, 0 < n ∧ (n : D.host.E) • v ∈ Λ := by\n  130:   first\n  131:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  132:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  133:   | exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  134:   | exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  135:   | (apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  136:   | (intros; apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  137:   | (intros; apply @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> first | assumption | infer_instance)\n  138:   | (intros; exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem ..)\n  139: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/BasedFlagPairLatticeContainment.lean",
+      "line": 132,
+      "context": "  128: theorem exists_nat_smul_mem (Λ : LV D) (hΛ : Submodule.IsLattice D.host.E Λ) (v : (VS D).V) :\n  129:     ∃ n : ℕ, 0 < n ∧ (n : D.host.E) • v ∈ Λ := by\n  130:   first\n  131:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  132:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  133:   | exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  134:   | exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  135:   | (apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  136:   | (intros; apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  137:   | (intros; apply @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> first | assumption | infer_instance)\n  138:   | (intros; exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem ..)\n  139: \n  140: end GlobalTheory.CompScale"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/BasedFlagPairLatticeContainment.lean",
+      "line": 131,
+      "context": "  127: \n  128: theorem exists_nat_smul_mem (Λ : LV D) (hΛ : Submodule.IsLattice D.host.E Λ) (v : (VS D).V) :\n  129:     ∃ n : ℕ, 0 < n ∧ (n : D.host.E) • v ∈ Λ := by\n  130:   first\n  131:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  132:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  133:   | exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  134:   | exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  135:   | (apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  136:   | (intros; apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  137:   | (intros; apply @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> first | assumption | infer_instance)\n  138:   | (intros; exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem ..)\n  139: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/BasedFlagPairLatticeContainment.lean",
+      "line": 132,
+      "context": "  128: theorem exists_nat_smul_mem (Λ : LV D) (hΛ : Submodule.IsLattice D.host.E Λ) (v : (VS D).V) :\n  129:     ∃ n : ℕ, 0 < n ∧ (n : D.host.E) • v ∈ Λ := by\n  130:   first\n  131:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  132:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  133:   | exact @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  134:   | exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem\n  135:   | (apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  136:   | (intros; apply _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> assumption)\n  137:   | (intros; apply @_root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem <;> first | assumption | infer_instance)\n  138:   | (intros; exact _root_.GlobalTheory.NatSmulMemOfSpan.exists_nat_smul_mem ..)\n  139: \n  140: end GlobalTheory.CompScale"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/DetMatrixSandwichLinearMap.lean",
+      "line": 14,
+      "context": "   10:     (L : (ι → Fin j → Fin j → ℂ) →ₗ[ℝ] (ι → Fin j → Fin j → ℂ))\n   11:     (hL : ∀ h w, Matrix.of (L h w) = A w * Matrix.of (h w) * B w) :\n   12:     LinearMap.det L = ∏ w, (‖(A w).det‖ ^ 2 * ‖(B w).det‖ ^ 2) ^ j := by\n   13:   first\n   14:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   15:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   16:   | exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   17:   | exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   18:   | (apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   19:   | (intros; apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   20:   | (intros; apply @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> first | assumption | infer_instance)\n   21:   | (intros; exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family ..)\n   22: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/DetMatrixSandwichLinearMap.lean",
+      "line": 15,
+      "context": "   11:     (hL : ∀ h w, Matrix.of (L h w) = A w * Matrix.of (h w) * B w) :\n   12:     LinearMap.det L = ∏ w, (‖(A w).det‖ ^ 2 * ‖(B w).det‖ ^ 2) ^ j := by\n   13:   first\n   14:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   15:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   16:   | exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   17:   | exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   18:   | (apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   19:   | (intros; apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   20:   | (intros; apply @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> first | assumption | infer_instance)\n   21:   | (intros; exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family ..)\n   22: \n   23: end GlobalTheory.MatMulDet"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/DetMatrixSandwichLinearMap.lean",
+      "line": 14,
+      "context": "   10:     (L : (ι → Fin j → Fin j → ℂ) →ₗ[ℝ] (ι → Fin j → Fin j → ℂ))\n   11:     (hL : ∀ h w, Matrix.of (L h w) = A w * Matrix.of (h w) * B w) :\n   12:     LinearMap.det L = ∏ w, (‖(A w).det‖ ^ 2 * ‖(B w).det‖ ^ 2) ^ j := by\n   13:   first\n   14:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   15:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   16:   | exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   17:   | exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   18:   | (apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   19:   | (intros; apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   20:   | (intros; apply @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> first | assumption | infer_instance)\n   21:   | (intros; exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family ..)\n   22: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/DetMatrixSandwichLinearMap.lean",
+      "line": 15,
+      "context": "   11:     (hL : ∀ h w, Matrix.of (L h w) = A w * Matrix.of (h w) * B w) :\n   12:     LinearMap.det L = ∏ w, (‖(A w).det‖ ^ 2 * ‖(B w).det‖ ^ 2) ^ j := by\n   13:   first\n   14:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   15:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   16:   | exact @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   17:   | exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family\n   18:   | (apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   19:   | (intros; apply _root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> assumption)\n   20:   | (intros; apply @_root_.GlobalTheory.DeterminantRealSandwich.det_real_family <;> first | assumption | infer_instance)\n   21:   | (intros; exact _root_.GlobalTheory.DeterminantRealSandwich.det_real_family ..)\n   22: \n   23: end GlobalTheory.MatMulDet"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/PowLePowRatio.lean",
+      "line": 153,
+      "context": "  149: theorem span_inner {n : ℕ} (L M : Hn n →L[ℂ] Hn n) (s t : Set (Hn n))\n  150:     (h : ∀ u ∈ s, ∀ z ∈ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0) :\n  151:     ∀ u ∈ Submodule.span ℂ s, ∀ z ∈ Submodule.span ℂ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0 := by\n  152:   first\n  153:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  154:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  155:   | exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  156:   | exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  157:   | (apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  158:   | (intros; apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  159:   | (intros; apply @_root_.GlobalTheory.InnerSumZeroSpan.main <;> first | assumption | infer_instance)\n  160:   | (intros; exact _root_.GlobalTheory.InnerSumZeroSpan.main ..)\n  161: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/PowLePowRatio.lean",
+      "line": 154,
+      "context": "  150:     (h : ∀ u ∈ s, ∀ z ∈ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0) :\n  151:     ∀ u ∈ Submodule.span ℂ s, ∀ z ∈ Submodule.span ℂ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0 := by\n  152:   first\n  153:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  154:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  155:   | exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  156:   | exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  157:   | (apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  158:   | (intros; apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  159:   | (intros; apply @_root_.GlobalTheory.InnerSumZeroSpan.main <;> first | assumption | infer_instance)\n  160:   | (intros; exact _root_.GlobalTheory.InnerSumZeroSpan.main ..)\n  161: \n  162: theorem sp_orth (w : InfinitePlace I.E) {A B : Submodule (𝓞 I.E) (Fin I.n → I.E)}"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/PowLePowRatio.lean",
+      "line": 153,
+      "context": "  149: theorem span_inner {n : ℕ} (L M : Hn n →L[ℂ] Hn n) (s t : Set (Hn n))\n  150:     (h : ∀ u ∈ s, ∀ z ∈ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0) :\n  151:     ∀ u ∈ Submodule.span ℂ s, ∀ z ∈ Submodule.span ℂ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0 := by\n  152:   first\n  153:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  154:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  155:   | exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  156:   | exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  157:   | (apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  158:   | (intros; apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  159:   | (intros; apply @_root_.GlobalTheory.InnerSumZeroSpan.main <;> first | assumption | infer_instance)\n  160:   | (intros; exact _root_.GlobalTheory.InnerSumZeroSpan.main ..)\n  161: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/FlagMeasures/PowLePowRatio.lean",
+      "line": 154,
+      "context": "  150:     (h : ∀ u ∈ s, ∀ z ∈ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0) :\n  151:     ∀ u ∈ Submodule.span ℂ s, ∀ z ∈ Submodule.span ℂ t, ⟪L u, z⟫_ℂ + ⟪u, M z⟫_ℂ = 0 := by\n  152:   first\n  153:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  154:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  155:   | exact @_root_.GlobalTheory.InnerSumZeroSpan.main\n  156:   | exact _root_.GlobalTheory.InnerSumZeroSpan.main\n  157:   | (apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  158:   | (intros; apply _root_.GlobalTheory.InnerSumZeroSpan.main <;> assumption)\n  159:   | (intros; apply @_root_.GlobalTheory.InnerSumZeroSpan.main <;> first | assumption | infer_instance)\n  160:   | (intros; exact _root_.GlobalTheory.InnerSumZeroSpan.main ..)\n  161: \n  162: theorem sp_orth (w : InfinitePlace I.E) {A B : Submodule (𝓞 I.E) (Fin I.n → I.E)}"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsExtTwistedPlaces.lean",
+      "line": 60,
+      "context": "   56: \n   57: theorem exists_below_of_range (D D' : D7) (h : Set.range D.what₂.embLL ⊆ Set.range D'.what₂.embLL) (v' : D'.what₂.places.Pl) :\n   58:     ∃ v : D.what₂.places.Pl, Below D D' v v' := by\n   59:   first\n   60:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.PrimeBelow.exists_below\n   62:   | exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   63:   | exact _root_.GlobalTheory.PrimeBelow.exists_below\n   64:   | (apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   65:   | (intros; apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   66:   | (intros; apply @_root_.GlobalTheory.PrimeBelow.exists_below <;> first | assumption | infer_instance)\n   67:   | (intros; exact _root_.GlobalTheory.PrimeBelow.exists_below ..)\n   68: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsExtTwistedPlaces.lean",
+      "line": 61,
+      "context": "   57: theorem exists_below_of_range (D D' : D7) (h : Set.range D.what₂.embLL ⊆ Set.range D'.what₂.embLL) (v' : D'.what₂.places.Pl) :\n   58:     ∃ v : D.what₂.places.Pl, Below D D' v v' := by\n   59:   first\n   60:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.PrimeBelow.exists_below\n   62:   | exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   63:   | exact _root_.GlobalTheory.PrimeBelow.exists_below\n   64:   | (apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   65:   | (intros; apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   66:   | (intros; apply @_root_.GlobalTheory.PrimeBelow.exists_below <;> first | assumption | infer_instance)\n   67:   | (intros; exact _root_.GlobalTheory.PrimeBelow.exists_below ..)\n   68: \n   69: theorem resChar_of_below {D D' : D7} {v : D.what₂.places.Pl} {v' : D'.what₂.places.Pl} (hB : Below D D' v v') :"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsExtTwistedPlaces.lean",
+      "line": 60,
+      "context": "   56: \n   57: theorem exists_below_of_range (D D' : D7) (h : Set.range D.what₂.embLL ⊆ Set.range D'.what₂.embLL) (v' : D'.what₂.places.Pl) :\n   58:     ∃ v : D.what₂.places.Pl, Below D D' v v' := by\n   59:   first\n   60:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.PrimeBelow.exists_below\n   62:   | exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   63:   | exact _root_.GlobalTheory.PrimeBelow.exists_below\n   64:   | (apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   65:   | (intros; apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   66:   | (intros; apply @_root_.GlobalTheory.PrimeBelow.exists_below <;> first | assumption | infer_instance)\n   67:   | (intros; exact _root_.GlobalTheory.PrimeBelow.exists_below ..)\n   68: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsExtTwistedPlaces.lean",
+      "line": 61,
+      "context": "   57: theorem exists_below_of_range (D D' : D7) (h : Set.range D.what₂.embLL ⊆ Set.range D'.what₂.embLL) (v' : D'.what₂.places.Pl) :\n   58:     ∃ v : D.what₂.places.Pl, Below D D' v v' := by\n   59:   first\n   60:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   61:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.PrimeBelow.exists_below\n   62:   | exact @_root_.GlobalTheory.PrimeBelow.exists_below\n   63:   | exact _root_.GlobalTheory.PrimeBelow.exists_below\n   64:   | (apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   65:   | (intros; apply _root_.GlobalTheory.PrimeBelow.exists_below <;> assumption)\n   66:   | (intros; apply @_root_.GlobalTheory.PrimeBelow.exists_below <;> first | assumption | infer_instance)\n   67:   | (intros; exact _root_.GlobalTheory.PrimeBelow.exists_below ..)\n   68: \n   69: theorem resChar_of_below {D D' : D7} {v : D.what₂.places.Pl} {v' : D'.what₂.places.Pl} (hB : Below D D' v v') :"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExistsGIs.lean",
+      "line": 81,
+      "context": "   77: set_option maxHeartbeats 4000000 in\n   78: \n   79: theorem isLocalFamily_stages (sc : Scale) (Z Z' : Later B C) (L0 : LevelData (recOf Z)) (T : ∀ u, Forms0 (recOf Z) u) (g)\n   80:     (h : IsLocalFamily sc (recOf Z) L0 T g) : IsLocalFamily sc (recOf Z') L0 (fun u => forms0Re Z' (T u)) g := by\n   81:   run_tac do\n   82:     let m ← Lean.Elab.Tactic.getMainGoal\n   83:     m.withContext do m.assign (← Lean.Meta.getFVarFromUserName `h)\n   84: \n   85: end Stages\n   86: \n   87: section Main\n   88: \n   89: open Formalism.MainNotions.G Formalism.L2.G IsDedekindDomain Formalism.UG Formalism.L2.Forms GlobalTheory.Mem.ConcreteRecord GlobalTheory.Mem.Top.ColOwe GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/AdelicLatticeSmulMemOfAgreeAwayFromPlace.lean",
+      "line": 70,
+      "context": "   66: \n   67: theorem exists_nsmul_mem_of_mem_span {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N → E)) {v : Fin N → E}\n   68:     (hv : v ∈ Submodule.span E (Lb : Set (Fin N → E))) : ∃ n : ℕ, 0 < n ∧ n • v ∈ Lb := by\n   69:   first\n   70:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   71:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   72:   | exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   73:   | exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   74:   | (apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   75:   | (intros; apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   76:   | (intros; apply @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> first | assumption | infer_instance)\n   77:   | (intros; exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem ..)\n   78: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/AdelicLatticeSmulMemOfAgreeAwayFromPlace.lean",
+      "line": 71,
+      "context": "   67: theorem exists_nsmul_mem_of_mem_span {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N → E)) {v : Fin N → E}\n   68:     (hv : v ∈ Submodule.span E (Lb : Set (Fin N → E))) : ∃ n : ℕ, 0 < n ∧ n • v ∈ Lb := by\n   69:   first\n   70:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   71:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   72:   | exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   73:   | exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   74:   | (apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   75:   | (intros; apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   76:   | (intros; apply @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> first | assumption | infer_instance)\n   77:   | (intros; exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem ..)\n   78: \n   79: end GlobalTheory.TwV.Xc"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/AdelicLatticeSmulMemOfAgreeAwayFromPlace.lean",
+      "line": 70,
+      "context": "   66: \n   67: theorem exists_nsmul_mem_of_mem_span {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N → E)) {v : Fin N → E}\n   68:     (hv : v ∈ Submodule.span E (Lb : Set (Fin N → E))) : ∃ n : ℕ, 0 < n ∧ n • v ∈ Lb := by\n   69:   first\n   70:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   71:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   72:   | exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   73:   | exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   74:   | (apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   75:   | (intros; apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   76:   | (intros; apply @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> first | assumption | infer_instance)\n   77:   | (intros; exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem ..)\n   78: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/AdelicLatticeSmulMemOfAgreeAwayFromPlace.lean",
+      "line": 71,
+      "context": "   67: theorem exists_nsmul_mem_of_mem_span {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N → E)) {v : Fin N → E}\n   68:     (hv : v ∈ Submodule.span E (Lb : Set (Fin N → E))) : ∃ n : ℕ, 0 < n ∧ n • v ∈ Lb := by\n   69:   first\n   70:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   71:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   72:   | exact @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   73:   | exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem\n   74:   | (apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   75:   | (intros; apply _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> assumption)\n   76:   | (intros; apply @_root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem <;> first | assumption | infer_instance)\n   77:   | (intros; exact _root_.GlobalTheory.NatMulIsIntegralSatakeParameters.exists_nsmul_mem ..)\n   78: \n   79: end GlobalTheory.TwV.Xc"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/UnramifiedWeierstrassCurveTransformCoefficientsW.lean",
+      "line": 20,
+      "context": "   16: variable {p : ℕ} [Fact p.Prime]\n   17: \n   18: theorem inWf_of_kur {x : ℂ_[p]} (hx : x ∈ Formalism.L2.Th1.CM.MaximalUnramifiedExtension p) : InWf x := by\n   19:   first\n   20:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   21:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   22:   | exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   23:   | exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   24:   | (apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   25:   | (intros; apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   26:   | (intros; apply @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> first | assumption | infer_instance)\n   27:   | (intros; exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur ..)\n   28: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/UnramifiedWeierstrassCurveTransformCoefficientsW.lean",
+      "line": 21,
+      "context": "   17: \n   18: theorem inWf_of_kur {x : ℂ_[p]} (hx : x ∈ Formalism.L2.Th1.CM.MaximalUnramifiedExtension p) : InWf x := by\n   19:   first\n   20:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   21:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   22:   | exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   23:   | exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   24:   | (apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   25:   | (intros; apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   26:   | (intros; apply @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> first | assumption | infer_instance)\n   27:   | (intros; exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur ..)\n   28: \n   29: theorem coefWf_phW_of_kur (W : WeierstrassCurve ℂ_[p]) (h1 : W.a₁ ∈ Formalism.L2.Th1.CM.MaximalUnramifiedExtension p)"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/UnramifiedWeierstrassCurveTransformCoefficientsW.lean",
+      "line": 20,
+      "context": "   16: variable {p : ℕ} [Fact p.Prime]\n   17: \n   18: theorem inWf_of_kur {x : ℂ_[p]} (hx : x ∈ Formalism.L2.Th1.CM.MaximalUnramifiedExtension p) : InWf x := by\n   19:   first\n   20:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   21:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   22:   | exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   23:   | exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   24:   | (apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   25:   | (intros; apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   26:   | (intros; apply @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> first | assumption | infer_instance)\n   27:   | (intros; exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur ..)\n   28: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/UnramifiedWeierstrassCurveTransformCoefficientsW.lean",
+      "line": 21,
+      "context": "   17: \n   18: theorem inWf_of_kur {x : ℂ_[p]} (hx : x ∈ Formalism.L2.Th1.CM.MaximalUnramifiedExtension p) : InWf x := by\n   19:   first\n   20:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   21:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   22:   | exact @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   23:   | exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur\n   24:   | (apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   25:   | (intros; apply _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> assumption)\n   26:   | (intros; apply @_root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur <;> first | assumption | infer_instance)\n   27:   | (intros; exact _root_.GlobalTheory.WittRootsOfUnity.inWf_of_mem_Kur ..)\n   28: \n   29: theorem coefWf_phW_of_kur (W : WeierstrassCurve ℂ_[p]) (h1 : W.a₁ ∈ Formalism.L2.Th1.CM.MaximalUnramifiedExtension p)"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/ValuationRingModel.lean",
+      "line": 206,
+      "context": "  202:   exact ⟨s, Finset.mem_insert_of_mem hs, hgs⟩\n  203: \n  204: theorem res_algClosed [IsAlgClosed K] : IsAlgClosed (IsLocalRing.ResidueField O) := by\n  205:   first\n  206:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  207:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  208:   | exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  209:   | exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  210:   | (apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  211:   | (intros; apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  212:   | (intros; apply @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> first | assumption | infer_instance)\n  213:   | (intros; exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField ..)\n  214: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/ValuationRingModel.lean",
+      "line": 207,
+      "context": "  203: \n  204: theorem res_algClosed [IsAlgClosed K] : IsAlgClosed (IsLocalRing.ResidueField O) := by\n  205:   first\n  206:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  207:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  208:   | exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  209:   | exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  210:   | (apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  211:   | (intros; apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  212:   | (intros; apply @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> first | assumption | infer_instance)\n  213:   | (intros; exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField ..)\n  214: \n  215: end Top"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/ValuationRingModel.lean",
+      "line": 206,
+      "context": "  202:   exact ⟨s, Finset.mem_insert_of_mem hs, hgs⟩\n  203: \n  204: theorem res_algClosed [IsAlgClosed K] : IsAlgClosed (IsLocalRing.ResidueField O) := by\n  205:   first\n  206:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  207:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  208:   | exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  209:   | exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  210:   | (apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  211:   | (intros; apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  212:   | (intros; apply @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> first | assumption | infer_instance)\n  213:   | (intros; exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField ..)\n  214: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/SatakeParameters/ValuationRingModel.lean",
+      "line": 207,
+      "context": "  203: \n  204: theorem res_algClosed [IsAlgClosed K] : IsAlgClosed (IsLocalRing.ResidueField O) := by\n  205:   first\n  206:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  207:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  208:   | exact @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  209:   | exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField\n  210:   | (apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  211:   | (intros; apply _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> assumption)\n  212:   | (intros; apply @_root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField <;> first | assumption | infer_instance)\n  213:   | (intros; exact _root_.GlobalTheory.AlgClosedResidueField.isAlgClosed_residueField ..)\n  214: \n  215: end Top"
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/RelIndexTwoBlockParahoricConjTorusDiagElement.lean",
+      "line": 22,
+      "context": "   18:     (((parahoric k A D).map (MulAut.conj (mtor (A := A) ϖ e)).toMonoidHom).relIndex (parahoric k A D) : ℝ) =\n   19:       (resCard k : ℝ) ^ ((Fintype.card A : ℤ) * sumAbs e) *\n   20:         (((KO k D).map (MulAut.conj (torusElt k D ϖ e)).toMonoidHom).relIndex (KO k D) : ℝ) := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   24:   | exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   25:   | exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   26:   | (apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric ..)\n   30: "
+    },
+    {
+      "kind": "run_tac",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/RelIndexTwoBlockParahoricConjTorusDiagElement.lean",
+      "line": 23,
+      "context": "   19:       (resCard k : ℝ) ^ ((Fintype.card A : ℤ) * sumAbs e) *\n   20:         (((KO k D).map (MulAut.conj (torusElt k D ϖ e)).toMonoidHom).relIndex (KO k D) : ℝ) := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   24:   | exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   25:   | exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   26:   | (apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric ..)\n   30: \n   31: end GlobalTheory.ParIdx"
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/RelIndexTwoBlockParahoricConjTorusDiagElement.lean",
+      "line": 22,
+      "context": "   18:     (((parahoric k A D).map (MulAut.conj (mtor (A := A) ϖ e)).toMonoidHom).relIndex (parahoric k A D) : ℝ) =\n   19:       (resCard k : ℝ) ^ ((Fintype.card A : ℤ) * sumAbs e) *\n   20:         (((KO k D).map (MulAut.conj (torusElt k D ϖ e)).toMonoidHom).relIndex (KO k D) : ℝ) := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   24:   | exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   25:   | exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   26:   | (apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric ..)\n   30: "
+    },
+    {
+      "kind": "liftMetaTactic",
+      "file": "Development/AbelianVarietyTheory/Proofs/TwistedOperators/RelIndexTwoBlockParahoricConjTorusDiagElement.lean",
+      "line": 23,
+      "context": "   19:       (resCard k : ℝ) ^ ((Fintype.card A : ℤ) * sumAbs e) *\n   20:         (((KO k D).map (MulAut.conj (torusElt k D ϖ e)).toMonoidHom).relIndex (KO k D) : ℝ) := by\n   21:   first\n   22:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   23:   | (run_tac Lean.Elab.Tactic.liftMetaTactic (fun g => do pure [← g.revertAll])); exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   24:   | exact @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   25:   | exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric\n   26:   | (apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   27:   | (intros; apply _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> assumption)\n   28:   | (intros; apply @_root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric <;> first | assumption | infer_instance)\n   29:   | (intros; exact _root_.GlobalTheory.ParahoricConjugateOpen.relIndex_conj_parahoric ..)\n   30: \n   31: end GlobalTheory.ParIdx"
+    },
+    {
+      "kind": "partial_def",
+      "file": "Formalism/HermitianCurvature/HermitianCurvatureProofs/CutCptCopy.lean",
+      "line": 40,
+      "context": "   36:   | n => .str n \"Cpt\"\n   37: \n   38: def proposals (ci : ConstantInfo) : Array Name :=\n   39:   ci.type.getUsedConstants ++ ((ci.value? (allowOpaque := true)).map (·.getUsedConstants) |>.getD #[])\n   40: \n   41: partial def go (env : Environment) (n : Name) (st : NameSet × NameSet × Array Name) : NameSet × NameSet × Array Name :=\n   42:   let (seen, tainted, order) := st\n   43:   if seen.contains n || terminal n then st else\n   44:   let seen := seen.insert n\n   45:   match env.find? n with\n   46:   | none => (seen, tainted, order)\n   47:   | some ci =>\n   48:     let us := proposals ci"
+    },
+    {
+      "kind": "partial_def",
+      "file": "Formalism/LocalToGlobal/NumberFieldFamilies/OwnStruct.lean",
+      "line": 17,
+      "context": "   13:   | .error _ => return false\n   14: \n   15: def ownStruct (env : Environment) (S : Name) : Bool :=\n   16:   isStructure env S && (S.getRoot == `Formalism || [``And, ``Prod, ``PProd, ``Sigma, ``PSigma, ``Subtype, ``Iff].contains S)\n   17: \n   18: partial def copyAt (probe : Bool) (e tgt : Expr) (path : String) (fuel : Nat) : StateT (Array String) MetaM Expr := do\n   19:   let tgt ← instantiateMVars tgt\n   20:   let srcTy ← instantiateMVars (← inferType e)\n   21:   if srcTy == tgt then return e\n   22:   if fuel = 0 then\n   23:     modify (·.push path); return e\n   24:   let env ← getEnv\n   25: "
+    }
+  ],
+  "l25_finding_counts": {
+    "DEF_PARAM_DUMMY_CONST_OR_DEFAULT": 17,
+    "DEF_CONST_FALSE": 1,
+    "DEF_FUN_FALSE": 1
+  },
+  "l25_findings_by_rule": {
+    "DEF_PARAM_DUMMY_CONST_OR_DEFAULT": [
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/BlockTheory/ExistenceTori/ConjugateFieldNorm.lean",
+        "line": 253,
+        "kind": "def",
+        "name": "frI",
+        "snippet": "def frI (_Q : CorePar F R) : FractionalIdeal (nonZeroDivisors (𝓞 E)) E := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Definitions/Divisors/AdelicAdmissibleSmul.lean",
+        "line": 21,
+        "kind": "def",
+        "name": "J₁",
+        "snippet": "def J₁ (K : Type) [Field K] : Matrix Unit Unit (K × K) := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Definitions/NonGaloisDescent/LiftToGlobalDescentData.lean",
+        "line": 12,
+        "kind": "def",
+        "name": "NTiedGPlaceholder.liftToGlobalDescentData",
+        "snippet": "def NTiedGPlaceholder.liftToGlobalDescentData {D : D7} (_T : NormalizedHeckeDataPlaceholder D) : NTiedGPlaceholder D := ⟨⟩"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/ShortExactMulPrimeZmodTensorComplex.lean",
+        "line": 63,
+        "kind": "def",
+        "name": "oneZ",
+        "snippet": "def oneZ (p : ℕ) : zmodOverInt p := (1 : ZMod p)"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExponentAndTwistData.lean",
+        "line": 457,
+        "kind": "def",
+        "name": "twDelT",
+        "snippet": "def twDelT (i : T.Tw) (j : ℕ) (b : Bool) (Q : Finset (PlE D.host)) (M : ℕ) :     FmT D T S i j b →ₗ[T.O i] FmT D T S i j b ⊗[T.O i] AddMonoidAlgebra (T.O i) (DelQM D.host (T.l i) Q"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/ExponentAndTwistData.lean",
+        "line": 460,
+        "kind": "def",
+        "name": "eHT",
+        "snippet": "def eHT (i : T.Tw) (j : ℕ) (b : Bool) : Module.End (FractionRing (T.O i)) (FmT D T S i j b) := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/FiniteDoubleCosetsDefiniteUnitaryMaximalLevel.lean",
+        "line": 69,
+        "kind": "abbrev",
+        "name": "Jn",
+        "snippet": "abbrev Jn (n : ℕ) : Matrix (Fin n) (Fin n) L := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/SecondStepNoFormsOutsideLiftRange.lean",
+        "line": 204,
+        "kind": "def",
+        "name": "twDelC",
+        "snippet": "def twDelC (i : D.ntw.Tw) (j : ℕ) (b : Bool) (Q : Finset (PlE D.host)) (M : ℕ) :     FmC D i j b →ₗ[D.ntw.O i] (FmC D i j b ⊗[D.ntw.O i] AddMonoidAlgebra (D.ntw.O i) (DelQM D.host "
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/SecondStepNoFormsOutsideLiftRange.lean",
+        "line": 207,
+        "kind": "def",
+        "name": "thPC",
+        "snippet": "def thPC (i : D.ntw.Tw) (j : ℕ) (b : Bool) (k : ℕ) (Q : Finset (PlE D.host))     (ψ : Formalism.ConjugateSelfDual.G D.host.E D.nd.Om →* (D.ntw.Ok i k)ˣ) :"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/LocalRingCardinality/SpanPowerMembership/ExampleWeightMiddleEntries.lean",
+        "line": 327,
+        "kind": "def",
+        "name": "jZero",
+        "snippet": "def jZero (embLL : K →+* ℂ) : (zeroHLat K).V →ₛₗ[embLL] Z0 := 0"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/LocalRingCardinality/SpanPowerMembership/NZTypeH.lean",
+        "line": 60,
+        "kind": "def",
+        "name": "zL",
+        "snippet": "def zL (k : Fin 2) : GL (Fin R.r) (ZMod (H.g k)) := -1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/LocalToGlobal/Columns/ReferenceActionRationalLevels.lean",
+        "line": 657,
+        "kind": "def",
+        "name": "ScNum.CY",
+        "snippet": "def ScNum.CY (_ : ScNum) : ℝ := 9"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/LocalToGlobal/Divisibility/Tuples.lean",
+        "line": 120,
+        "kind": "def",
+        "name": "mu0",
+        "snippet": "def mu0 (S : Set ℕ) : Tup F E L S := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/LocalToGlobal/ProjectiveLattices/CuspidalL2Subspace.lean",
+        "line": 52,
+        "kind": "def",
+        "name": "frI",
+        "snippet": "def frI (_T : Core D) : FractionalIdeal (nonZeroDivisors (𝓞 D.host.E)) D.host.E := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/SharpRestriction/CuspSpanNormBounds/LatticeGluingRadicals.lean",
+        "line": 8265,
+        "kind": "abbrev",
+        "name": "k_O",
+        "snippet": "abbrev k_O (E : Type) [Field E] [NumberField E] : Submodule (𝓞 E) E := 1"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "Formalism/SharpRestriction/InertJacobiLevels/HostFam.lean",
+        "line": 243,
+        "kind": "abbrev",
+        "name": "Arith.QS",
+        "snippet": "abbrev Arith.QS {B N : ℕ} (_ : Arith B N) : ℕ := 16"
+      },
+      {
+        "rule": "DEF_PARAM_DUMMY_CONST_OR_DEFAULT",
+        "file": "PositivityTheory/AutomorphicForms/PublishedInputs/HilbertEisenstein/SSmooth.lean",
+        "line": 52,
+        "kind": "def",
+        "name": "w0",
+        "snippet": "def w0 (F : Type) [Field F] [NumberField F] : InfinitePlace F := Classical.arbitrary _"
+      }
+    ],
+    "DEF_CONST_FALSE": [
+      {
+        "rule": "DEF_CONST_FALSE",
+        "file": "Development/AutomorphicArithmetic/Foundations/UnitarySphericalFixing/SatakeParameters/SwOn.lean",
+        "line": 3,
+        "kind": "def",
+        "name": "UpperTheory.One.M.Sw",
+        "snippet": "def UpperTheory.One.M.Sw : Prop := False"
+      }
+    ],
+    "DEF_FUN_FALSE": [
+      {
+        "rule": "DEF_FUN_FALSE",
+        "file": "Formalism/LocalToGlobal/Divisibility/JetBounds/IsExpansion.lean",
+        "line": 81,
+        "kind": "def",
+        "name": "noQ",
+        "snippet": "def noQ (l : ℕ) [Fact l.Prime] : OrbSys ℂ_[l] → ℝ → Prop := fun _ _ => False"
+      }
+    ]
+  },
+  "shadow_hits": [
+    {
+      "file": "Development/AutomorphicArithmetic/DedekindLFunctions/CharFamily.lean",
+      "line": 38,
+      "kind": "def",
+      "name": "ZeroFree",
+      "snippet": "def ZeroFree (F : CharFamily) (θ : ℝ) : Prop :=   ∀ i, ∀ s : ℂ, θ < s.re → DirichletCharacter.LFunction (F.χ i) s ≠ 0"
+    },
+    {
+      "file": "Development/AutomorphicArithmetic/DedekindLFunctions/RunBaseDimensionLeRankAddGenusTerm.lean",
+      "line": 159,
+      "kind": "def",
+      "name": "ZeroFree",
+      "snippet": "def ZeroFree (θ : ℝ) : Prop := ∀ ξ ∈ T.KEPT, ∀ s : ℂ, θ < s.re → ξ.L s ≠ 0"
+    },
+    {
+      "file": "GroundTheory/AutomorphicForms/GL2/GJLocalZeta.lean",
+      "line": 431,
+      "kind": "def",
+      "name": "LFunction",
+      "snippet": "def LFunction (s : ℂ) : ℂ :=   ((LPolynomial π).eval (qs F s))⁻¹"
+    },
+    {
+      "file": "GroundTheory/GlobalFields/TateThesis/HeckeLFunction.lean",
+      "line": 363,
+      "kind": "def",
+      "name": "LFunction",
+      "snippet": "def LFunction (s : ℂ) : ℂ :=   LSeries χ.LCoeff s"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 3,
+      "kind": "def",
+      "name": "RiemannZetaZerosOnLine",
+      "snippet": "def RiemannZetaZerosOnLine : Prop :=   ∀ s : ℂ, riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * ((n : ℂ) + 1)) → s ≠ 1 → s.re = 1 / 2"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 6,
+      "kind": "def",
+      "name": "DirichletLNonvanishingRightOfHalf",
+      "snippet": "def DirichletLNonvanishingRightOfHalf : Prop :=   ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 10,
+      "kind": "def",
+      "name": "DirichletLZerosOnLine",
+      "snippet": "def DirichletLZerosOnLine : Prop :=   ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 14,
+      "kind": "def",
+      "name": "PrimitiveDirichletLZerosOnLine",
+      "snippet": "def PrimitiveDirichletLZerosOnLine : Prop :=   ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N), χ.IsPrimitive →"
+    }
+  ]
+}

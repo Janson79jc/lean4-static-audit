@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Static Structural Audit of the 17.37-Million-Line Lean 4 Riemann Hypothesis Archive: Trust Boundaries, Type-2 Clones, and Dependency Topology"
+message: "If you use the audit scripts, datasets, or technical report, please cite this work."
+type: software
+authors:
+  - family-names: Jiang
+    given-names: Chen
+    email: cjiang1@my.hpu.edu
+    affiliation: Independent Researcher
+version: "1.0.0"
+date-released: "2026-11-23"
+doi: "10.5281/zenodo.24465791"
+url: "https://doi.org/10.5281/zenodo.24465791"
+repository-code: "https://github.com/Janson79jc/lean4-static-audit"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+keywords:
+  - Lean 4
+  - static analysis
+  - formal verification
+  - code clones
+  - dependency topology
+  - trust boundary

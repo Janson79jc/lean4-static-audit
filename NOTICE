@@ -1,0 +1,14 @@
+Lean 4 Riemann Hypothesis Archive Static Structural Audit: Trust Boundaries, Type-2 Clones, and Dependency Topology
+Copyright 2026 Chen Jiang
+
+Attribution Notice (Apache-2.0 Section 4(d) & CC BY 4.0):
+- Author: Chen Jiang (Independent Researcher, cjiang1@my.hpu.edu)
+- Zenodo DOI: https://doi.org/10.5281/zenodo.24465791
+- Source Repository: https://github.com/Janson79jc/lean4-static-audit
+
+Dual-Licensing Boundary:
+- Audit tooling, parsers, tests, and corpus configuration under `scripts/` and
+  `configs/` are licensed under the Apache License, Version 2.0 (`LICENSE`).
+- Audit reports, aggregate datasets, figures, and technical report artifacts under
+  `reports/` and `paper/` are licensed under Creative Commons Attribution 4.0
+  International (`LICENSE-DATA` / CC BY 4.0).
