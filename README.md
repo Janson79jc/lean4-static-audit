@@ -17,6 +17,12 @@ An open-source, pure static lexical, syntactic-pattern, clone-decomposition, and
 
 > **Verification Note**: Audit and plotting scripts were developed in a human–AI collaborative workflow and validated via 10 deterministic unit/regression tests (`scripts/test_lean_probes.py`), pre-output conservation assertions (`invariants_checked.all_passed`), and raw-output cross-checks rather than line-by-line manual Python code review; all hashed scripts (`probe_bundle_sha256: 43501e2c8041...`) are included for independent inspection.
 
+## Visual Summary
+
+![Proof clone stratification and module-size pattern density](reports/figures/fig1_clones_and_density.png)
+
+![Structural concentration and low-fan-in bottleneck separation](reports/figures/fig2_topology_concentration.png)
+
 ## Repository Structure
 
 - `scripts/` — Static lexer (`lean_lexer.py`), column-0 parser (`lean_decl_parser.py`), probe engine (`lean_probes.py`), L1+L2 runner (`run_audit.py`), SE topology (`se_topology.py`), L3-A reachability (`lean_dag.py`), L2.5 extended trust/dual audit (`run_l25_audit.py`), provenance helper (`audit_provenance.py`), figure generator (`plot_figures.py`), and regression suite (`test_lean_probes.py`).
