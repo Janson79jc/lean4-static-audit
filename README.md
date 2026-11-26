@@ -17,6 +17,37 @@ An open-source, pure static lexical, syntactic-pattern, clone-decomposition, and
 
 > **Verification Note**: Audit and plotting scripts were developed in a human–AI collaborative workflow and validated via 10 deterministic unit/regression tests (`scripts/test_lean_probes.py`), pre-output conservation assertions (`invariants_checked.all_passed`), and raw-output cross-checks rather than line-by-line manual Python code review; all hashed scripts (`probe_bundle_sha256: 43501e2c8041...`) are included for independent inspection.
 
+## Longitudinal Comparison: Original Archive vs. `lsernau/grh-lean` (`probe_bundle_sha256`: `43501e2c8041`)
+
+Using the unmodified probe bundle (`43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce`), we ran the same 4-stage static audit on the two refactored editions in [`lsernau/grh-lean`](https://github.com/lsernau/grh-lean) (commit `72fead102f663d5c7a407964a13dc0cf9d977207`, toolchain `leanprover/lean4:v4.35.0`, `mathlib4` rev `56a005855ea17e0b0958f73ec801ae140b0a1679`): the readable edition (`grh/src`) and the compact edition (`grh-compact/src`). Full longitudinal outputs are archived under [`reports/longitudinal/`](reports/longitudinal/).
+
+| Metric | `v0` Original Archive (`lean.tar.gz`) | `grh/src` Readable Edition | `grh-compact/src` Compact Edition |
+|---|---:|---:|---:|
+| **Files (`src/*.lean`)** | `175,187` | `803` (`-99.54%`) | `794` (`-99.55%`) |
+| **Raw Lines** | `17,374,215` | `477,124` (`-97.25%`) | `112,827` (`-99.35%`) |
+| **Non-Blank Lines (Code + Comments)** | `15,531,759` | `432,527` (`-97.22%`) | `95,030` (`-99.39%`) |
+| **Stripped Code Lines (Non-Empty)** | `15,531,759` | `299,902` (`-98.07%`) | `76,149` (`-99.51%`) |
+| **Comment-Only Lines (`%` of Non-Blank)** | `0` (`0.00%`) | `132,625` (`30.66%`) | `18,881` (`19.87%`) |
+| **Column-0 Definitions / Theorems** | `242,670` / `818,755` | `5,612` / `18,227` | `3,855` / `7,088` |
+| **Standalone `by trivial` / `rfl` Proofs** | `0` / `20,023` | `0` / `445` | `0` / `119` |
+| **Checked Lexical Trust-Boundary Primitives (17 items)** | `0` | `0` | `0` |
+| **`run_tac` / `liftMetaTactic` / `partial` (Dedup Sites / Raw)** | `34` / `64` (`32` / `30` / `2`) | `0` / `0` | `0` / `0` |
+| **Env Mutations (`modifyEnv` / `addDecl`) & `macro` Decls** | `7` (`5` / `2`) & `87` | `0` & `0` | `0` & `0` |
+| **Definition-Layer Syntactic Hits (`DEF_*`)** | `1,403` (`8` rules) | `17` (`16` wildcard, `1` `_`-param) | `14` (`14` wildcard) |
+| **Forwarding Shims ($\ge 8$ Tokens) & Type-2 Dup Rate** | `50,682` (`96.27%`, `48,791` dups) | `42` (`0.00%`, `0` dups) | `0` (`0.00%`, `0` dups) |
+| **Substantive Proofs ($\ge 20$ Tokens) Type-2 Dup Rate** | `6.39%` (`36,491 / 571,274`) | `0.18%` (`24 / 13,205`) | `0.02%` (`1 / 4,152`) |
+| **Exact-Token Proof Duplicates ($\ge 8$ Tokens)** | `33,184 / 734,084` (`4.52%`) | `29 / 16,058` (`0.18%`) | `0 / 5,716` (`0.00%`) |
+| **`Main` Reachability / Deduplicated Import Edges** | `100.0%` / `753,261` | `100.0%` / `1,733` | `100.0%` / `1,398` |
+| **Max Import DAG Depth (`P90`) / Zero-Decl Files** | `202` (`98`) / `174` | `53` (`39`) / `0` | `54` (`38`) / `0` |
+| **`transitive_blast_radius` Gini (Top 10% Share)** | `0.8905` (`86.02%`) | `0.6336` (`43.07%`) | `0.5156` (`35.01%`) |
+| **Cross-Directory Reverse Edges (`Lib` $\to$ `New`)** | Present (`Formalism` $\to$ `Dev`: `236`) | `0` (`New` $\to$ `Lib`: `208`) | `0` (`New` $\to$ `Lib`: `102`) |
+
+- **Empirical Observations**:
+  1. **Boilerplate & Metaprogramming Removal**: Forwarding shims ($\ge 8$ tokens) drop from `50,682` (`43,525` in one template) to `42` unique shims in `grh/src` and `0` in `grh-compact/src` (including `0` shims `< 8` tokens). All `34` `run_tac`/`liftMetaTactic`/`partial` sites, `7` `modifyEnv`/`addDecl` calls, `12` direct `import Lean` lines, `5` `run_cmd`, `4` `elab`, and `87` `macro` declarations measure `0` in both refactored editions.
+  2. **Substantive Proof Deduplication & Documentation**: Type-2 duplication among substantive proofs ($\ge 20$ tokens) decreases from `6.39%` (`36,491` duplicates) to `0.18%` (`24` duplicates) in `grh/src` and `0.02%` (`1` duplicate out of `4,152` long proofs; `0` Exact-Token proof duplicates) in `grh-compact/src`. Comment-only lines increase from `0` (`0.00%`) in `v0` to `132,625` (`30.66%` of non-blank lines) in `grh/src` and `18,881` (`19.87%`) in `grh-compact/src`.
+  3. **Definition-Layer & Topological Normalization**: Definition-layer syntactic hits decrease from `1,403` (plus `19` L2.5 `False`/dummy-constant hits) to `17` in `grh/src` and `14` in `grh-compact/src` (`0` L2.5 `False`/dummy-constant hits; the remaining hits are explicit carrier/receiver parameters `(_ : T)` and `1` `_h_read` parameter, and the `4` `DEF_SYMBOL_SHADOWING` hits in `Statements.lean` are the four canonical GRH target definitions). Import depth compresses from `202` to `53–54`, zero-declaration wrapper files drop from `174` to `0`, `Lib` $\to$ `New` reverse coupling is `0`, and `transitive_blast_radius` Gini decreases from `0.8905` to `0.6336` (`grh/src`) and `0.5156` (`grh-compact/src`).
+- **Methodological & Provenance Note**: To maintain strict single-probe comparability (`probe_bundle_sha256: 43501e2c8041`), `scripts/` was executed without modification. Supplementary verification accounting for Lean 4.35 Unicode `↦` (`pp.unicode.fun = true`) and `24` single-line compacted declarations (`<cmd> in <decl>` or `/-- ... -/ <decl>`) in `grh-compact/src` (`3,864` total defs, `7,103` total theorems/lemmas; `0` in `grh/src`) confirms `0` additional `DEF_*`/`False` pattern hits and `0` additional forwarding shims. Note that because `grh-lean` was audited inside `corpus/grh-lean/`, `collect_provenance` in `reports/longitudinal/*` inherited the parent workspace's `raw/lean.tar.gz` (`9631b4f02019...`) in `source_archive`; the true version anchor for both refactored editions is `lsernau/grh-lean` Git commit `72fead102f663d5c7a407964a13dc0cf9d977207`.
+
 ## Visual Summary
 
 ![Proof clone stratification and module-size pattern density](reports/figures/fig1_clones_and_density.png)
@@ -27,7 +58,7 @@ An open-source, pure static lexical, syntactic-pattern, clone-decomposition, and
 
 - `scripts/` — Static lexer (`lean_lexer.py`), column-0 parser (`lean_decl_parser.py`), probe engine (`lean_probes.py`), L1+L2 runner (`run_audit.py`), SE topology (`se_topology.py`), L3-A reachability (`lean_dag.py`), L2.5 extended trust/dual audit (`run_l25_audit.py`), provenance helper (`audit_provenance.py`), figure generator (`plot_figures.py`), and regression suite (`test_lean_probes.py`).
 - `configs/rh_archive.json` — Externalized entry roots and target symbol list (keeps Python probes repository-agnostic).
-- `reports/` — Audited Markdown summaries, aggregate JSON datasets, and publication vector figures (`reports/figures/`).
+- `reports/` — Audited Markdown summaries, aggregate JSON datasets, longitudinal comparison artifacts (`reports/longitudinal/`), and publication vector figures (`reports/figures/`).
 - `paper/` — 3-page LaTeX technical short paper (`paper/main.tex`, `paper/refs.bib`, `paper/main.pdf`).
 
 ## Reproducing the Audit

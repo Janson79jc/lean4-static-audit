@@ -4,6 +4,7 @@ corpus/
 
 # Regenerable 110+ MB intermediate index emitted locally by run_audit.py
 reports/*_dag_index.json
+reports/**/*_dag_index.json
 
 # Python / OS / IDE artifacts
 __pycache__/

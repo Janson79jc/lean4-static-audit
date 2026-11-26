@@ -1,0 +1,794 @@
+{
+  "timing_sec": 0.02,
+  "provenance": {
+    "dag_index_name": "grh_compact_dag_index.json",
+    "se_topology_sha256": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+    "upstream_provenance": {
+      "corpus_label": "corpus/grh-lean/grh-compact/src",
+      "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+      "script_sha256": {
+        "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+        "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+        "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+        "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+        "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+        "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+        "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+      },
+      "lean_toolchain": "leanprover/lean4:v4.35.0",
+      "source_archive": {
+        "file": "raw/lean.tar.gz",
+        "bytes": 239275554,
+        "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+      }
+    }
+  },
+  "invariants_checked": {
+    "edge_conservation": true,
+    "dag_acyclic": true,
+    "exact_all_nodes_blast_radius": true
+  },
+  "module_count": 794,
+  "dag_acyclic": true,
+  "topo_sorted_count": 794,
+  "max_dag_depth": 54,
+  "p90_dag_depth": 38,
+  "zero_decl_wrapper_files": 0,
+  "zero_decl_wrapper_pct": 0.0,
+  "gini_and_percentiles": {
+    "code_lines": {
+      "total": 76149,
+      "gini": 0.377,
+      "top_1pct_share_pct": 3.68,
+      "top_5pct_share_pct": 15.07,
+      "top_10pct_share_pct": 25.54,
+      "p50": 82,
+      "p90": 180,
+      "p99": 350,
+      "max": 464
+    },
+    "raw_lines": {
+      "total": 112827,
+      "gini": 0.3565,
+      "top_1pct_share_pct": 3.56,
+      "top_5pct_share_pct": 14.32,
+      "top_10pct_share_pct": 24.61,
+      "p50": 121,
+      "p90": 262,
+      "p99": 511,
+      "max": 619
+    },
+    "defs": {
+      "total": 3855,
+      "gini": 0.6898,
+      "top_1pct_share_pct": 8.72,
+      "top_5pct_share_pct": 32.43,
+      "top_10pct_share_pct": 49.7,
+      "p50": 2,
+      "p90": 14,
+      "p99": 40,
+      "max": 60
+    },
+    "thms": {
+      "total": 7088,
+      "gini": 0.4947,
+      "top_1pct_share_pct": 5.11,
+      "top_5pct_share_pct": 20.26,
+      "top_10pct_share_pct": 33.47,
+      "p50": 6,
+      "p90": 20,
+      "p99": 43,
+      "max": 64
+    },
+    "direct_fan_in": {
+      "total": 1398,
+      "gini": 0.2857,
+      "top_1pct_share_pct": 3.36,
+      "top_5pct_share_pct": 13.59,
+      "top_10pct_share_pct": 22.96,
+      "p50": 1,
+      "p90": 3,
+      "p99": 5,
+      "max": 11
+    },
+    "local_fan_out": {
+      "total": 1398,
+      "gini": 0.2698,
+      "top_1pct_share_pct": 2.72,
+      "top_5pct_share_pct": 12.59,
+      "top_10pct_share_pct": 21.6,
+      "p50": 2,
+      "p90": 3,
+      "p99": 5,
+      "max": 6
+    },
+    "transitive_blast_radius": {
+      "total": 96940,
+      "gini": 0.5156,
+      "top_1pct_share_pct": 4.53,
+      "top_5pct_share_pct": 20.22,
+      "top_10pct_share_pct": 35.01,
+      "p50": 78,
+      "p90": 299,
+      "p99": 533,
+      "max": 792
+    }
+  },
+  "top_30_hubs_by_blast_radius": [
+    {
+      "module": "Lib.General.LinearAlgebra.Base",
+      "file": "Lib/General/LinearAlgebra/Base.lean",
+      "direct_fan_in": 11,
+      "transitive_blast_radius": 792,
+      "blast_pct": 99.75,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 140,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.OstrowskiTaussky",
+      "file": "Lib/General/Analysis/OstrowskiTaussky.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 682,
+      "blast_pct": 85.89,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 65,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.ZpowSum",
+      "file": "Lib/General/Analysis/ZpowSum.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 649,
+      "blast_pct": 81.74,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 59,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.ValuationPair",
+      "file": "Lib/General/Groups/ValuationPair.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 608,
+      "blast_pct": 76.57,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 213,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.PartialDerivComm",
+      "file": "Lib/General/LinearAlgebra/PartialDerivComm.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 586,
+      "blast_pct": 73.8,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 98,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Measure.SubgroupIntegral",
+      "file": "Lib/General/Measure/SubgroupIntegral.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 538,
+      "blast_pct": 67.76,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 38,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.GaloisCohomology.ContinuousCocycles",
+      "file": "Lib/ClassField/GaloisCohomology/ContinuousCocycles.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 534,
+      "blast_pct": 67.25,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 27,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Places.GaloisDefs",
+      "file": "Lib/ClassField/Places/GaloisDefs.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 534,
+      "blast_pct": 67.25,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 59,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.GaloisCohomology.CyclicClass",
+      "file": "Lib/ClassField/GaloisCohomology/CyclicClass.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 533,
+      "blast_pct": 67.13,
+      "local_fan_out": 2,
+      "dag_depth": 2,
+      "code_lines": 23,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.CoprimeValuation",
+      "file": "Lib/Adelic/Adeles/CoprimeValuation.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 525,
+      "blast_pct": 66.12,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 135,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.DiscreteSeries.CuspKernel.CircleMean",
+      "file": "Lib/DiscreteSeries/CuspKernel/CircleMean.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 519,
+      "blast_pct": 65.37,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 111,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.ExtendColumns",
+      "file": "Lib/General/LinearAlgebra/ExtendColumns.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 518,
+      "blast_pct": 65.24,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 80,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.AdelicRingDefs",
+      "file": "Lib/General/LinearAlgebra/AdelicRingDefs.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 516,
+      "blast_pct": 64.99,
+      "local_fan_out": 2,
+      "dag_depth": 3,
+      "code_lines": 55,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.QuotientMeasure.Packing",
+      "file": "Lib/Adelic/QuotientMeasure/Packing.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 515,
+      "blast_pct": 64.86,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 89,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.QuotientMeasure.Unimodular",
+      "file": "Lib/Adelic/QuotientMeasure/Unimodular.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 514,
+      "blast_pct": 64.74,
+      "local_fan_out": 2,
+      "dag_depth": 4,
+      "code_lines": 124,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.AdeleTopology",
+      "file": "Lib/Adelic/Adeles/AdeleTopology.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 513,
+      "blast_pct": 64.61,
+      "local_fan_out": 2,
+      "dag_depth": 2,
+      "code_lines": 100,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Hecke.HeckeBasic",
+      "file": "Lib/Adelic/Hecke/HeckeBasic.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 510,
+      "blast_pct": 64.23,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 52,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.ColumnLattices",
+      "file": "Lib/General/LinearAlgebra/ColumnLattices.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 509,
+      "blast_pct": 64.11,
+      "local_fan_out": 2,
+      "dag_depth": 4,
+      "code_lines": 112,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.AdeleIdempotent",
+      "file": "Lib/Adelic/Adeles/AdeleIdempotent.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 490,
+      "blast_pct": 61.71,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 39,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.Construction.SubmoduleNormedSpace",
+      "file": "Lib/Weil/Construction/SubmoduleNormedSpace.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 478,
+      "blast_pct": 60.2,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 29,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.AdditiveCharDefs",
+      "file": "Lib/Adelic/Adeles/AdditiveCharDefs.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 477,
+      "blast_pct": 60.08,
+      "local_fan_out": 2,
+      "dag_depth": 3,
+      "code_lines": 35,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.ValuedMatrix",
+      "file": "Lib/General/LinearAlgebra/ValuedMatrix.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 475,
+      "blast_pct": 59.82,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 52,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.SubmersionZero",
+      "file": "Lib/General/LinearAlgebra/SubmersionZero.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 475,
+      "blast_pct": 59.82,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 19,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.CommonEigenvectors",
+      "file": "Lib/General/LinearAlgebra/CommonEigenvectors.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 466,
+      "blast_pct": 58.69,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 85,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.QuotientMeasure.PeriodicMean",
+      "file": "Lib/Adelic/QuotientMeasure/PeriodicMean.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 466,
+      "blast_pct": 58.69,
+      "local_fan_out": 2,
+      "dag_depth": 3,
+      "code_lines": 40,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.PadicHodge.Crystalline.NonUnitalUnits",
+      "file": "Lib/PadicHodge/Crystalline/NonUnitalUnits.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 466,
+      "blast_pct": 58.69,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 24,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.HeckeL.EulerProduct",
+      "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 465,
+      "blast_pct": 58.56,
+      "local_fan_out": 3,
+      "dag_depth": 4,
+      "code_lines": 181,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.FundamentalDomain",
+      "file": "Lib/General/Analysis/FundamentalDomain.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 465,
+      "blast_pct": 58.56,
+      "local_fan_out": 2,
+      "dag_depth": 5,
+      "code_lines": 88,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Unitary.SpaceDefs",
+      "file": "Lib/Adelic/Unitary/SpaceDefs.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 461,
+      "blast_pct": 58.06,
+      "local_fan_out": 3,
+      "dag_depth": 4,
+      "code_lines": 147,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Measure.HaarModulus",
+      "file": "Lib/General/Measure/HaarModulus.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 452,
+      "blast_pct": 56.93,
+      "local_fan_out": 1,
+      "dag_depth": 5,
+      "code_lines": 70,
+      "def_pattern_findings_in_file": 0
+    }
+  ],
+  "top_30_hubs_by_direct_fanin": [
+    {
+      "module": "Lib.General.LinearAlgebra.Base",
+      "file": "Lib/General/LinearAlgebra/Base.lean",
+      "direct_fan_in": 11,
+      "transitive_blast_radius": 792,
+      "blast_pct": 99.75,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 140,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Cohomology.Etale.TestRings",
+      "file": "Lib/Cohomology/Etale/TestRings.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 173,
+      "blast_pct": 21.79,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 50,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.OstrowskiTaussky",
+      "file": "Lib/General/Analysis/OstrowskiTaussky.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 682,
+      "blast_pct": 85.89,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 65,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.CommonEigenvectors",
+      "file": "Lib/General/LinearAlgebra/CommonEigenvectors.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 466,
+      "blast_pct": 58.69,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 85,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Witt.FrameAction",
+      "file": "Lib/Adelic/Witt/FrameAction.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 437,
+      "blast_pct": 55.04,
+      "local_fan_out": 1,
+      "dag_depth": 5,
+      "code_lines": 111,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Shimura.IntegralModel.NeatLevel",
+      "file": "Lib/Shimura/IntegralModel/NeatLevel.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 153,
+      "blast_pct": 19.27,
+      "local_fan_out": 5,
+      "dag_depth": 13,
+      "code_lines": 191,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.ValuationPair",
+      "file": "Lib/General/Groups/ValuationPair.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 608,
+      "blast_pct": 76.57,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 213,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.AdeleIdempotent",
+      "file": "Lib/Adelic/Adeles/AdeleIdempotent.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 490,
+      "blast_pct": 61.71,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 39,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Algebra.AdicRingHomExt",
+      "file": "Lib/General/Algebra/AdicRingHomExt.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 421,
+      "blast_pct": 53.02,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 78,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.HolomorphicIntegral",
+      "file": "Lib/General/Analysis/HolomorphicIntegral.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 406,
+      "blast_pct": 51.13,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 84,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Witt.SpaceOperations",
+      "file": "Lib/Adelic/Witt/SpaceOperations.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 348,
+      "blast_pct": 43.83,
+      "local_fan_out": 3,
+      "dag_depth": 9,
+      "code_lines": 122,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Places.UnramifiedCharacters",
+      "file": "Lib/ClassField/Places/UnramifiedCharacters.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 327,
+      "blast_pct": 41.18,
+      "local_fan_out": 2,
+      "dag_depth": 9,
+      "code_lines": 79,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Places.AdeleNorm",
+      "file": "Lib/ClassField/Places/AdeleNorm.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 323,
+      "blast_pct": 40.68,
+      "local_fan_out": 3,
+      "dag_depth": 7,
+      "code_lines": 110,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.Unramified.SphericalHecke",
+      "file": "Lib/Weil/Unramified/SphericalHecke.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 259,
+      "blast_pct": 32.62,
+      "local_fan_out": 2,
+      "dag_depth": 10,
+      "code_lines": 143,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.ExpSurjective",
+      "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 242,
+      "blast_pct": 30.48,
+      "local_fan_out": 2,
+      "dag_depth": 11,
+      "code_lines": 159,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.CuspForms.Petersson",
+      "file": "Lib/Adelic/CuspForms/Petersson.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 160,
+      "blast_pct": 20.15,
+      "local_fan_out": 1,
+      "dag_depth": 20,
+      "code_lines": 127,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.DualPair.PairSumNegation",
+      "file": "Lib/Weil/DualPair/PairSumNegation.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 140,
+      "blast_pct": 17.63,
+      "local_fan_out": 1,
+      "dag_depth": 26,
+      "code_lines": 151,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.DualPair.ThetaIntegralLaws",
+      "file": "Lib/Weil/DualPair/ThetaIntegralLaws.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 125,
+      "blast_pct": 15.74,
+      "local_fan_out": 2,
+      "dag_depth": 31,
+      "code_lines": 51,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.CM.FormalGroup.FormalHeight",
+      "file": "Lib/CM/FormalGroup/FormalHeight.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 117,
+      "blast_pct": 14.74,
+      "local_fan_out": 3,
+      "dag_depth": 14,
+      "code_lines": 151,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.MixedModel.EquivariantCoefficients",
+      "file": "Lib/Weil/MixedModel/EquivariantCoefficients.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 107,
+      "blast_pct": 13.48,
+      "local_fan_out": 2,
+      "dag_depth": 32,
+      "code_lines": 154,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.Lift.Staircase",
+      "file": "Lib/Weil/Lift/Staircase.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 97,
+      "blast_pct": 12.22,
+      "local_fan_out": 2,
+      "dag_depth": 33,
+      "code_lines": 142,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "New.Seesaw.IndexTypes",
+      "file": "New/Seesaw/IndexTypes.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 80,
+      "blast_pct": 10.08,
+      "local_fan_out": 2,
+      "dag_depth": 29,
+      "code_lines": 146,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.ZpowSum",
+      "file": "Lib/General/Analysis/ZpowSum.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 649,
+      "blast_pct": 81.74,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 59,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.PartialDerivComm",
+      "file": "Lib/General/LinearAlgebra/PartialDerivComm.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 586,
+      "blast_pct": 73.8,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 98,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Measure.SubgroupIntegral",
+      "file": "Lib/General/Measure/SubgroupIntegral.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 538,
+      "blast_pct": 67.76,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 38,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.CoprimeValuation",
+      "file": "Lib/Adelic/Adeles/CoprimeValuation.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 525,
+      "blast_pct": 66.12,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 135,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.DiscreteSeries.CuspKernel.CircleMean",
+      "file": "Lib/DiscreteSeries/CuspKernel/CircleMean.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 519,
+      "blast_pct": 65.37,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 111,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.ColumnLattices",
+      "file": "Lib/General/LinearAlgebra/ColumnLattices.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 509,
+      "blast_pct": 64.11,
+      "local_fan_out": 2,
+      "dag_depth": 4,
+      "code_lines": 112,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.ValuedMatrix",
+      "file": "Lib/General/LinearAlgebra/ValuedMatrix.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 475,
+      "blast_pct": 59.82,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 52,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.RationalPoints",
+      "file": "Lib/Adelic/Adeles/RationalPoints.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 450,
+      "blast_pct": 56.68,
+      "local_fan_out": 2,
+      "dag_depth": 6,
+      "code_lines": 124,
+      "def_pattern_findings_in_file": 0
+    }
+  ],
+  "cross_dir_coupling_matrix": {
+    "(root)": {
+      "New": 1
+    },
+    "Lib": {
+      "Lib": 960
+    },
+    "New": {
+      "New": 334,
+      "Lib": 102,
+      "(root)": 1
+    }
+  }
+}

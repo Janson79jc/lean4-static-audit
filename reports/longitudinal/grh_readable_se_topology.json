@@ -1,0 +1,794 @@
+{
+  "timing_sec": 0.02,
+  "provenance": {
+    "dag_index_name": "grh_readable_dag_index.json",
+    "se_topology_sha256": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+    "upstream_provenance": {
+      "corpus_label": "corpus/grh-lean/grh/src",
+      "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+      "script_sha256": {
+        "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+        "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+        "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+        "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+        "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+        "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+        "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+      },
+      "lean_toolchain": "leanprover/lean4:v4.35.0",
+      "source_archive": {
+        "file": "raw/lean.tar.gz",
+        "bytes": 239275554,
+        "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+      }
+    }
+  },
+  "invariants_checked": {
+    "edge_conservation": true,
+    "dag_acyclic": true,
+    "exact_all_nodes_blast_radius": true
+  },
+  "module_count": 803,
+  "dag_acyclic": true,
+  "topo_sorted_count": 803,
+  "max_dag_depth": 53,
+  "p90_dag_depth": 39,
+  "zero_decl_wrapper_files": 0,
+  "zero_decl_wrapper_pct": 0.0,
+  "gini_and_percentiles": {
+    "code_lines": {
+      "total": 299902,
+      "gini": 0.2794,
+      "top_1pct_share_pct": 2.33,
+      "top_5pct_share_pct": 10.16,
+      "top_10pct_share_pct": 18.94,
+      "p50": 355,
+      "p90": 627,
+      "p99": 791,
+      "max": 1002
+    },
+    "raw_lines": {
+      "total": 477124,
+      "gini": 0.2632,
+      "top_1pct_share_pct": 2.2,
+      "top_5pct_share_pct": 9.76,
+      "top_10pct_share_pct": 18.29,
+      "p50": 565,
+      "p90": 978,
+      "p99": 1211,
+      "max": 1491
+    },
+    "defs": {
+      "total": 5612,
+      "gini": 0.576,
+      "top_1pct_share_pct": 7.88,
+      "top_5pct_share_pct": 25.29,
+      "top_10pct_share_pct": 40.18,
+      "p50": 4,
+      "p90": 17,
+      "p99": 39,
+      "max": 97
+    },
+    "thms": {
+      "total": 18227,
+      "gini": 0.3199,
+      "top_1pct_share_pct": 3.58,
+      "top_5pct_share_pct": 13.27,
+      "top_10pct_share_pct": 22.8,
+      "p50": 20,
+      "p90": 40,
+      "p99": 70,
+      "max": 113
+    },
+    "direct_fan_in": {
+      "total": 1733,
+      "gini": 0.3583,
+      "top_1pct_share_pct": 5.14,
+      "top_5pct_share_pct": 17.31,
+      "top_10pct_share_pct": 27.87,
+      "p50": 2,
+      "p90": 4,
+      "p99": 8,
+      "max": 20
+    },
+    "local_fan_out": {
+      "total": 1733,
+      "gini": 0.2982,
+      "top_1pct_share_pct": 3.12,
+      "top_5pct_share_pct": 12.75,
+      "top_10pct_share_pct": 22.22,
+      "p50": 2,
+      "p90": 4,
+      "p99": 6,
+      "max": 8
+    },
+    "transitive_blast_radius": {
+      "total": 95514,
+      "gini": 0.6336,
+      "top_1pct_share_pct": 6.01,
+      "top_5pct_share_pct": 25.53,
+      "top_10pct_share_pct": 43.07,
+      "p50": 38,
+      "p90": 349,
+      "p99": 660,
+      "max": 801
+    }
+  },
+  "top_30_hubs_by_blast_radius": [
+    {
+      "module": "Lib.Speed",
+      "file": "Lib/Speed.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 801,
+      "blast_pct": 99.75,
+      "local_fan_out": 0,
+      "dag_depth": 0,
+      "code_lines": 56,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Base",
+      "file": "Lib/Base.lean",
+      "direct_fan_in": 20,
+      "transitive_blast_radius": 800,
+      "blast_pct": 99.63,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 7,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.CongruenceSubgroups",
+      "file": "Lib/General/Groups/CongruenceSubgroups.lean",
+      "direct_fan_in": 10,
+      "transitive_blast_radius": 712,
+      "blast_pct": 88.67,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 254,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Measure.IdempotentKernel",
+      "file": "Lib/General/Measure/IdempotentKernel.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 690,
+      "blast_pct": 85.93,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 121,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.QuotientMeasure.Basic",
+      "file": "Lib/Adelic/QuotientMeasure/Basic.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 689,
+      "blast_pct": 85.8,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 482,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Topology",
+      "file": "Lib/General/Topology.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 684,
+      "blast_pct": 85.18,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 114,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Hecke.Basic",
+      "file": "Lib/Adelic/Hecke/Basic.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 680,
+      "blast_pct": 84.68,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 241,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.Basic",
+      "file": "Lib/Adelic/Adeles/Basic.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 680,
+      "blast_pct": 84.68,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 663,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.AdditiveCharacter",
+      "file": "Lib/Adelic/Adeles/AdditiveCharacter.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 668,
+      "blast_pct": 83.19,
+      "local_fan_out": 3,
+      "dag_depth": 4,
+      "code_lines": 269,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Places.GaloisDefs",
+      "file": "Lib/ClassField/Places/GaloisDefs.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 660,
+      "blast_pct": 82.19,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 126,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.GaloisCohomology.ContinuousCocycles",
+      "file": "Lib/ClassField/GaloisCohomology/ContinuousCocycles.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 659,
+      "blast_pct": 82.07,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 340,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Unitary.Defs",
+      "file": "Lib/Adelic/Unitary/Defs.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 635,
+      "blast_pct": 79.08,
+      "local_fan_out": 3,
+      "dag_depth": 5,
+      "code_lines": 291,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.BesselGroups",
+      "file": "Lib/General/Groups/BesselGroups.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 633,
+      "blast_pct": 78.83,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 138,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.NumberTheory.EmbeddingsAndDifferent",
+      "file": "Lib/General/NumberTheory/EmbeddingsAndDifferent.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 632,
+      "blast_pct": 78.7,
+      "local_fan_out": 1,
+      "dag_depth": 5,
+      "code_lines": 158,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.FourierTransforms",
+      "file": "Lib/General/Analysis/FourierTransforms.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 632,
+      "blast_pct": 78.7,
+      "local_fan_out": 1,
+      "dag_depth": 4,
+      "code_lines": 207,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.IntegralLattices",
+      "file": "Lib/General/LinearAlgebra/IntegralLattices.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 619,
+      "blast_pct": 77.09,
+      "local_fan_out": 2,
+      "dag_depth": 4,
+      "code_lines": 455,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Measure.HaarModulus",
+      "file": "Lib/General/Measure/HaarModulus.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 616,
+      "blast_pct": 76.71,
+      "local_fan_out": 1,
+      "dag_depth": 5,
+      "code_lines": 275,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.ProfiniteCharacters",
+      "file": "Lib/General/Groups/ProfiniteCharacters.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 614,
+      "blast_pct": 76.46,
+      "local_fan_out": 2,
+      "dag_depth": 4,
+      "code_lines": 234,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.StrongApproximation",
+      "file": "Lib/Adelic/Adeles/StrongApproximation.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 608,
+      "blast_pct": 75.72,
+      "local_fan_out": 3,
+      "dag_depth": 6,
+      "code_lines": 437,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Places.Ideles",
+      "file": "Lib/ClassField/Places/Ideles.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 603,
+      "blast_pct": 75.09,
+      "local_fan_out": 3,
+      "dag_depth": 7,
+      "code_lines": 237,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.GaloisRep.BaseChange.Defs",
+      "file": "Lib/GaloisRep/BaseChange/Defs.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 595,
+      "blast_pct": 74.1,
+      "local_fan_out": 1,
+      "dag_depth": 6,
+      "code_lines": 101,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.MatrixPolynomials",
+      "file": "Lib/General/LinearAlgebra/MatrixPolynomials.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 594,
+      "blast_pct": 73.97,
+      "local_fan_out": 1,
+      "dag_depth": 7,
+      "code_lines": 125,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.DualPair.Kronecker",
+      "file": "Lib/Weil/DualPair/Kronecker.lean",
+      "direct_fan_in": 1,
+      "transitive_blast_radius": 587,
+      "blast_pct": 73.1,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 25,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.IdeleModulus",
+      "file": "Lib/Adelic/Adeles/IdeleModulus.lean",
+      "direct_fan_in": 4,
+      "transitive_blast_radius": 586,
+      "blast_pct": 72.98,
+      "local_fan_out": 2,
+      "dag_depth": 8,
+      "code_lines": 311,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.GaloisRep.Hilbert90.TameActions",
+      "file": "Lib/GaloisRep/Hilbert90/TameActions.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 583,
+      "blast_pct": 72.6,
+      "local_fan_out": 1,
+      "dag_depth": 8,
+      "code_lines": 500,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.GaloisRep.Hilbert90.UnitaryGroups",
+      "file": "Lib/GaloisRep/Hilbert90/UnitaryGroups.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 581,
+      "blast_pct": 72.35,
+      "local_fan_out": 1,
+      "dag_depth": 9,
+      "code_lines": 348,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Witt.WittTheorem",
+      "file": "Lib/Adelic/Witt/WittTheorem.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 579,
+      "blast_pct": 72.1,
+      "local_fan_out": 2,
+      "dag_depth": 10,
+      "code_lines": 461,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Algebra.AdicCompletion",
+      "file": "Lib/General/Algebra/AdicCompletion.lean",
+      "direct_fan_in": 5,
+      "transitive_blast_radius": 572,
+      "blast_pct": 71.23,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 414,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.GaussianIntegral",
+      "file": "Lib/General/Analysis/GaussianIntegral.lean",
+      "direct_fan_in": 2,
+      "transitive_blast_radius": 566,
+      "blast_pct": 70.49,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 146,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Places.ProfiniteGalois",
+      "file": "Lib/ClassField/Places/ProfiniteGalois.lean",
+      "direct_fan_in": 3,
+      "transitive_blast_radius": 565,
+      "blast_pct": 70.36,
+      "local_fan_out": 1,
+      "dag_depth": 4,
+      "code_lines": 135,
+      "def_pattern_findings_in_file": 0
+    }
+  ],
+  "top_30_hubs_by_direct_fanin": [
+    {
+      "module": "Lib.Base",
+      "file": "Lib/Base.lean",
+      "direct_fan_in": 20,
+      "transitive_blast_radius": 800,
+      "blast_pct": 99.63,
+      "local_fan_out": 1,
+      "dag_depth": 1,
+      "code_lines": 7,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Shimura.Uniformisation.HolomorphicFamilies",
+      "file": "Lib/Shimura/Uniformisation/HolomorphicFamilies.lean",
+      "direct_fan_in": 11,
+      "transitive_blast_radius": 249,
+      "blast_pct": 31.01,
+      "local_fan_out": 5,
+      "dag_depth": 11,
+      "code_lines": 590,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.NumberTheory.PadicLimitsValuation",
+      "file": "Lib/General/NumberTheory/PadicLimitsValuation.lean",
+      "direct_fan_in": 11,
+      "transitive_blast_radius": 189,
+      "blast_pct": 23.54,
+      "local_fan_out": 3,
+      "dag_depth": 17,
+      "code_lines": 202,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.CongruenceSubgroups",
+      "file": "Lib/General/Groups/CongruenceSubgroups.lean",
+      "direct_fan_in": 10,
+      "transitive_blast_radius": 712,
+      "blast_pct": 88.67,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 254,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Cohomology.Etale.Basic",
+      "file": "Lib/Cohomology/Etale/Basic.lean",
+      "direct_fan_in": 10,
+      "transitive_blast_radius": 484,
+      "blast_pct": 60.27,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 581,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Analysis.HolomorphicIntegrals",
+      "file": "Lib/General/Analysis/HolomorphicIntegrals.lean",
+      "direct_fan_in": 9,
+      "transitive_blast_radius": 544,
+      "blast_pct": 67.75,
+      "local_fan_out": 4,
+      "dag_depth": 4,
+      "code_lines": 456,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.Eigenvalues",
+      "file": "Lib/General/LinearAlgebra/Eigenvalues.lean",
+      "direct_fan_in": 9,
+      "transitive_blast_radius": 348,
+      "blast_pct": 43.34,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 507,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.LinearAlgebra.BlockEmbeddings",
+      "file": "Lib/General/LinearAlgebra/BlockEmbeddings.lean",
+      "direct_fan_in": 9,
+      "transitive_blast_radius": 148,
+      "blast_pct": 18.43,
+      "local_fan_out": 2,
+      "dag_depth": 23,
+      "code_lines": 241,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "New.UpperBound.Objects.Rows",
+      "file": "New/UpperBound/Objects/Rows.lean",
+      "direct_fan_in": 9,
+      "transitive_blast_radius": 82,
+      "blast_pct": 10.21,
+      "local_fan_out": 4,
+      "dag_depth": 37,
+      "code_lines": 541,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Unitary.Defs",
+      "file": "Lib/Adelic/Unitary/Defs.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 635,
+      "blast_pct": 79.08,
+      "local_fan_out": 3,
+      "dag_depth": 5,
+      "code_lines": 291,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Witt.WittTheorem",
+      "file": "Lib/Adelic/Witt/WittTheorem.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 579,
+      "blast_pct": 72.1,
+      "local_fan_out": 2,
+      "dag_depth": 10,
+      "code_lines": 461,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.Unramified.HeckeGL",
+      "file": "Lib/Weil/Unramified/HeckeGL.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 365,
+      "blast_pct": 45.45,
+      "local_fan_out": 2,
+      "dag_depth": 13,
+      "code_lines": 402,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.PadicComparison.Descent.TestCategory",
+      "file": "Lib/PadicComparison/Descent/TestCategory.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 316,
+      "blast_pct": 39.35,
+      "local_fan_out": 2,
+      "dag_depth": 7,
+      "code_lines": 356,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Shimura.HeckeTower.HeckeData",
+      "file": "Lib/Shimura/HeckeTower/HeckeData.lean",
+      "direct_fan_in": 8,
+      "transitive_blast_radius": 201,
+      "blast_pct": 25.03,
+      "local_fan_out": 3,
+      "dag_depth": 14,
+      "code_lines": 576,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.QuotientMeasure.Basic",
+      "file": "Lib/Adelic/QuotientMeasure/Basic.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 689,
+      "blast_pct": 85.8,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 482,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Adeles.LocalFactors",
+      "file": "Lib/Adelic/Adeles/LocalFactors.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 432,
+      "blast_pct": 53.8,
+      "local_fan_out": 3,
+      "dag_depth": 15,
+      "code_lines": 254,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.NumberTheory.FrobeniusOrbits",
+      "file": "Lib/General/NumberTheory/FrobeniusOrbits.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 412,
+      "blast_pct": 51.31,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 146,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.GLn.SchurModule.Basic",
+      "file": "Lib/GLn/SchurModule/Basic.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 387,
+      "blast_pct": 48.19,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 407,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Algebra.MultivariatePolynomials",
+      "file": "Lib/General/Algebra/MultivariatePolynomials.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 320,
+      "blast_pct": 39.85,
+      "local_fan_out": 1,
+      "dag_depth": 4,
+      "code_lines": 286,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.Global.CMSplittingCharacters",
+      "file": "Lib/ClassField/Global/CMSplittingCharacters.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 270,
+      "blast_pct": 33.62,
+      "local_fan_out": 2,
+      "dag_depth": 18,
+      "code_lines": 593,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.HeckeCharacter.SplitTameCharacters",
+      "file": "Lib/ClassField/HeckeCharacter/SplitTameCharacters.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 178,
+      "blast_pct": 22.17,
+      "local_fan_out": 2,
+      "dag_depth": 23,
+      "code_lines": 230,
+      "def_pattern_findings_in_file": 1
+    },
+    {
+      "module": "Lib.Analytic.EntireLFunction",
+      "file": "Lib/Analytic/EntireLFunction.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 151,
+      "blast_pct": 18.8,
+      "local_fan_out": 1,
+      "dag_depth": 7,
+      "code_lines": 123,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.ClassField.HeckeCharacter.TameModulus",
+      "file": "Lib/ClassField/HeckeCharacter/TameModulus.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 139,
+      "blast_pct": 17.31,
+      "local_fan_out": 4,
+      "dag_depth": 28,
+      "code_lines": 222,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Shimura.HeckeTower.Model",
+      "file": "Lib/Shimura/HeckeTower/Model.lean",
+      "direct_fan_in": 7,
+      "transitive_blast_radius": 48,
+      "blast_pct": 5.98,
+      "local_fan_out": 5,
+      "dag_depth": 15,
+      "code_lines": 562,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Topology",
+      "file": "Lib/General/Topology.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 684,
+      "blast_pct": 85.18,
+      "local_fan_out": 1,
+      "dag_depth": 2,
+      "code_lines": 114,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Groups.BesselGroups",
+      "file": "Lib/General/Groups/BesselGroups.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 633,
+      "blast_pct": 78.83,
+      "local_fan_out": 1,
+      "dag_depth": 3,
+      "code_lines": 138,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Adelic.Reduction.FirstMinimumShortBases",
+      "file": "Lib/Adelic/Reduction/FirstMinimumShortBases.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 321,
+      "blast_pct": 39.98,
+      "local_fan_out": 2,
+      "dag_depth": 16,
+      "code_lines": 583,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.GaloisRep.Main.Defs",
+      "file": "Lib/GaloisRep/Main/Defs.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 269,
+      "blast_pct": 33.5,
+      "local_fan_out": 2,
+      "dag_depth": 19,
+      "code_lines": 156,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.General.Geometry.GeometricPoints",
+      "file": "Lib/General/Geometry/GeometricPoints.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 241,
+      "blast_pct": 30.01,
+      "local_fan_out": 3,
+      "dag_depth": 5,
+      "code_lines": 287,
+      "def_pattern_findings_in_file": 0
+    },
+    {
+      "module": "Lib.Weil.DualPair.WeilAction",
+      "file": "Lib/Weil/DualPair/WeilAction.lean",
+      "direct_fan_in": 6,
+      "transitive_blast_radius": 198,
+      "blast_pct": 24.66,
+      "local_fan_out": 6,
+      "dag_depth": 25,
+      "code_lines": 470,
+      "def_pattern_findings_in_file": 0
+    }
+  ],
+  "cross_dir_coupling_matrix": {
+    "(root)": {
+      "New": 1
+    },
+    "Lib": {
+      "Lib": 999
+    },
+    "New": {
+      "Lib": 208,
+      "New": 524,
+      "(root)": 1
+    }
+  }
+}

@@ -1,0 +1,3542 @@
+{
+  "corpus_label": "corpus/grh-lean/grh-compact/src",
+  "provenance": {
+    "corpus_label": "corpus/grh-lean/grh-compact/src",
+    "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+    "script_sha256": {
+      "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+      "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+      "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+      "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+      "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+      "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+      "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+    },
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "source_archive": {
+      "file": "raw/lean.tar.gz",
+      "bytes": 239275554,
+      "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+    }
+  },
+  "invariants_checked": {
+    "by_module_files_conservation": true,
+    "by_module_code_lines_conservation": true,
+    "by_line_bucket_files_conservation": true,
+    "by_import_bucket_files_conservation": true,
+    "proof_shim_partition_conservation": true,
+    "token_length_partition_conservation": true,
+    "cross_bucket_hash_reconciliation": true,
+    "all_passed": true
+  },
+  "timing_sec": {
+    "glob": 0.04,
+    "scan": 6.64,
+    "total": 7.54,
+    "lines_per_sec": 16992
+  },
+  "corpus": {
+    "files": 794,
+    "raw_lines": 112827,
+    "code_lines_nonempty_stripped": 76149,
+    "top_level_col0_definitions": 3855,
+    "top_level_col0_theorems_lemmas": 7088,
+    "proof_baseline_standalone_by_trivial": 0,
+    "proof_baseline_rfl": 119
+  },
+  "def_rule_counts": {
+    "DEF_EXPLICIT_WILDCARD_PARAM": 14
+  },
+  "thm_stmt_fun_true_info_count": 0,
+  "escape_primitives": {},
+  "metaprogramming_primitives": {},
+  "clone_cross_bucket_hash_collisions": {
+    "exact_clones": 0,
+    "type2_total": 0,
+    "type2_short_8_19": 0,
+    "type2_ge_20": 0
+  },
+  "exact_clones": {
+    "definition": {
+      "eligible_decls": 2370,
+      "clone_clusters": 1,
+      "redundant_duplicate_decls": 1,
+      "duplication_rate_pct": 0.04,
+      "size_buckets": {
+        "01_size_2": 1
+      },
+      "spread_buckets": {
+        "multi_file_same_top_dir": 1
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": []
+    },
+    "proof": {
+      "eligible_decls": 5716,
+      "clone_clusters": 0,
+      "redundant_duplicate_decls": 0,
+      "duplication_rate_pct": 0.0,
+      "size_buckets": {},
+      "spread_buckets": {},
+      "exact_size_histogram_top50": [],
+      "top_clusters": []
+    },
+    "proof_shim": {
+      "eligible_decls": 0,
+      "clone_clusters": 0,
+      "redundant_duplicate_decls": 0,
+      "duplication_rate_pct": 0.0,
+      "size_buckets": {},
+      "spread_buckets": {},
+      "exact_size_histogram_top50": [],
+      "top_clusters": []
+    },
+    "proof_substantive": {
+      "eligible_decls": 5716,
+      "clone_clusters": 0,
+      "redundant_duplicate_decls": 0,
+      "duplication_rate_pct": 0.0,
+      "size_buckets": {},
+      "spread_buckets": {},
+      "exact_size_histogram_top50": [],
+      "top_clusters": []
+    }
+  },
+  "type2_clones": {
+    "definition": {
+      "eligible_decls": 2370,
+      "clone_clusters": 34,
+      "redundant_duplicate_decls": 50,
+      "duplication_rate_pct": 2.11,
+      "size_buckets": {
+        "01_size_2": 26,
+        "02_size_3-5": 7,
+        "03_size_6-10": 1
+      },
+      "spread_buckets": {
+        "cross_top_dir": 7,
+        "multi_file_same_top_dir": 17,
+        "single_file_only": 10
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 26
+        },
+        {
+          "size": 3,
+          "clusters": 4
+        },
+        {
+          "size": 4,
+          "clusters": 2
+        },
+        {
+          "size": 5,
+          "clusters": 1
+        },
+        {
+          "size": 7,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": [
+        {
+          "count": 7,
+          "hash": "af89ddd473c69bd4",
+          "samples": [
+            {
+              "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+              "line": 35,
+              "name": "locFullIdele"
+            },
+            {
+              "file": "Lib/ClassField/Places/SelmerDefs.lean",
+              "line": 64,
+              "name": "twistRep"
+            },
+            {
+              "file": "Lib/GaloisRep/Main/AttachedDeterminant.lean",
+              "line": 29,
+              "name": "QZChar.stepField"
+            },
+            {
+              "file": "Lib/General/Measure/SubgroupIntegral.lean",
+              "line": 32,
+              "name": "orbitMeasure"
+            },
+            {
+              "file": "Lib/Shimura/Deformation/TangentBound.lean",
+              "line": 46,
+              "name": "sqZeroSpecMap"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "950ccc9713f65d3a",
+          "samples": [
+            {
+              "file": "Lib/PadicHodge/WachKisin/KummerChart.lean",
+              "line": 114,
+              "name": "frobEUnit"
+            },
+            {
+              "file": "Lib/Weil/Construction/FiniteMultiplier.lean",
+              "line": 52,
+              "name": "saturatingElem"
+            },
+            {
+              "file": "Lib/Weil/Periods/DegreeOfT.lean",
+              "line": 11,
+              "name": "ideleLogVal"
+            },
+            {
+              "file": "New/Columns/ColumnDefs.lean",
+              "line": 25,
+              "name": "piPlaces"
+            },
+            {
+              "file": "New/Filling/Setup.lean",
+              "line": 86,
+              "name": "GFin"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "d19b2d3d6afae55f",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Unitary/SpaceDefs.lean",
+              "line": 286,
+              "name": "embFin"
+            },
+            {
+              "file": "Lib/ClassField/GaloisCohomology/ContinuousCocycles.lean",
+              "line": 58,
+              "name": "actionRep"
+            },
+            {
+              "file": "Lib/DiscreteSeries/CuspKernel/SchurOrthogonality.lean",
+              "line": 26,
+              "name": "HCParam.dsAction"
+            },
+            {
+              "file": "Lib/General/Geometry/LocalTerms.lean",
+              "line": 71,
+              "name": "PointsIn.map"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "6c79266caea76283",
+          "samples": [
+            {
+              "file": "Lib/General/LinearAlgebra/ExtendColumns.lean",
+              "line": 163,
+              "name": "Shape.Form.besselU"
+            },
+            {
+              "file": "Lib/PadicComparison/Crystalline/CrystallineEtale.lean",
+              "line": 131,
+              "name": "HasCrysComparison"
+            },
+            {
+              "file": "Lib/Weil/MixedModel/ZeroTerm.lean",
+              "line": 70,
+              "name": "hypSum"
+            },
+            {
+              "file": "New/Filling/Setup.lean",
+              "line": 124,
+              "name": "reducedImage"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "df3342fab8702b75",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 27,
+              "name": "ratToPlaces"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 30,
+              "name": "Filling.ratIntegralOff"
+            },
+            {
+              "file": "Lib/General/Measure/Place.lean",
+              "line": 123,
+              "name": "quadricMeasure"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "b66b79960fc716fc",
+          "samples": [
+            {
+              "file": "Lib/Cohomology/Duality/Contraction.lean",
+              "line": 290,
+              "name": "TestOver.toTest"
+            },
+            {
+              "file": "Lib/Cohomology/ProjectiveLine/NormalizationPullback.lean",
+              "line": 235,
+              "name": "TestOver.resScalars"
+            },
+            {
+              "file": "Lib/PadicComparison/Crystalline/CrystallineTests.lean",
+              "line": 47,
+              "name": "CrysTest.restrictScalars"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "9b18199f0728ea07",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Witt/SpaceOperations.lean",
+              "line": 122,
+              "name": "reindexGL"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 26,
+              "name": "abTensorMap"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/CutOutIdeals.lean",
+              "line": 42,
+              "name": "imageMod"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "77da38428fabda1d",
+          "samples": [
+            {
+              "file": "Lib/ClassField/Places/CyclotomicCharacter.lean",
+              "line": 147,
+              "name": "cycloGalGroup"
+            },
+            {
+              "file": "Lib/GLn/Dual/MixedCartan.lean",
+              "line": 47,
+              "name": "mixedCartan"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/AmaxStructure.lean",
+              "line": 166,
+              "name": "amaxImage"
+            }
+          ]
+        }
+      ]
+    },
+    "proof": {
+      "eligible_decls": 5716,
+      "clone_clusters": 93,
+      "redundant_duplicate_decls": 236,
+      "duplication_rate_pct": 4.13,
+      "size_buckets": {
+        "01_size_2": 61,
+        "02_size_3-5": 21,
+        "03_size_6-10": 4,
+        "04_size_11-50": 7
+      },
+      "spread_buckets": {
+        "cross_top_dir": 32,
+        "multi_file_same_top_dir": 53,
+        "single_file_only": 8
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 61
+        },
+        {
+          "size": 3,
+          "clusters": 12
+        },
+        {
+          "size": 4,
+          "clusters": 5
+        },
+        {
+          "size": 5,
+          "clusters": 4
+        },
+        {
+          "size": 6,
+          "clusters": 1
+        },
+        {
+          "size": 7,
+          "clusters": 2
+        },
+        {
+          "size": 10,
+          "clusters": 1
+        },
+        {
+          "size": 11,
+          "clusters": 2
+        },
+        {
+          "size": 12,
+          "clusters": 2
+        },
+        {
+          "size": 13,
+          "clusters": 1
+        },
+        {
+          "size": 14,
+          "clusters": 1
+        },
+        {
+          "size": 28,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": [
+        {
+          "count": 28,
+          "hash": "400e62db7eb4d856",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/Definite.lean",
+              "line": 25,
+              "name": "one_le_height"
+            },
+            {
+              "file": "Lib/Adelic/Reduction/MinkowskiSecond.lean",
+              "line": 130,
+              "name": "ideleAbs_det_mkAdelicGL"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 197,
+              "name": "TotalH.cup_comp_homClass_left"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/FloorGroups.lean",
+              "line": 171,
+              "name": "splitGram_mulVec_pair"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Character/LaurentAlternants.lean",
+              "line": 67,
+              "name": "alternant_apply"
+            }
+          ]
+        },
+        {
+          "count": 14,
+          "hash": "38146e7a2cc7ef46",
+          "samples": [
+            {
+              "file": "Lib/CM/Sigma/CurveTheta.lean",
+              "line": 126,
+              "name": "CMLattice.translatedWpDeriv_zero"
+            },
+            {
+              "file": "Lib/ClassField/Places/Conjugation.lean",
+              "line": 66,
+              "name": "cycChar_eq_one_of_mem_inertiaAbove"
+            },
+            {
+              "file": "Lib/ClassField/Places/DecompositionLocal.lean",
+              "line": 95,
+              "name": "sah"
+            },
+            {
+              "file": "Lib/General/NumberTheory/QuadFieldSplitting.lean",
+              "line": 42,
+              "name": "QuadField.chiK_two"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/GaussUnfolding.lean",
+              "line": 35,
+              "name": "exp_eq_of_mem_lattice"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "hash": "16928a6cb29cb7bb",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleTopology.lean",
+              "line": 23,
+              "name": "algebraMap_ResField_eq_zero"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/IdeleHilbert90.lean",
+              "line": 104,
+              "name": "adeleMap_star"
+            },
+            {
+              "file": "Lib/ClassField/Global/Avatars.lean",
+              "line": 15,
+              "name": "adeleNorm_adeleNorm"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 53,
+              "name": "pow_classNumber_mem_principal_sup"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 134,
+              "name": "finAdeleIncl_adeleNorm"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "32bbff9cc8af3c10",
+          "samples": [
+            {
+              "file": "Lib/Cohomology/Etale/Partitions.lean",
+              "line": 25,
+              "name": "isCohomEquiv_iff_range"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 96,
+              "name": "IsBorelMatrix.diag_ne_zero"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 184,
+              "name": "blockDiagAlg.inv_mem"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+              "line": 84,
+              "name": "multiplier_eq_exp"
+            },
+            {
+              "file": "Lib/Shimura/ThetaGroup/SectionLifts.lean",
+              "line": 43,
+              "name": "Pic.ParallelogramLaw.pairing_add_add_pairing_sub"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "2008213b2e3be505",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/RationalPoints.lean",
+              "line": 43,
+              "name": "mem_ratVectors"
+            },
+            {
+              "file": "Lib/Adelic/CuspForms/WeightParameter.lean",
+              "line": 19,
+              "name": "isHCParam_hcParameter"
+            },
+            {
+              "file": "Lib/Adelic/Unitary/CongruenceLevel.lean",
+              "line": 262,
+              "name": "torusChar_mulSingle"
+            },
+            {
+              "file": "Lib/ClassField/HeckeCharacter/LevelModulus.lean",
+              "line": 57,
+              "name": "Modulus.stdLevelIndex_levelOfSubgroup"
+            },
+            {
+              "file": "Lib/Cohomology/ProperBaseChange/ValuativeDensity.lean",
+              "line": 176,
+              "name": "mem_fractionGraph_projRing"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "e8a2f7fccf73b113",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdelicModulus.lean",
+              "line": 20,
+              "name": "norm_locField_eq_q_zpow"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/LocalComponents.lean",
+              "line": 124,
+              "name": "atPlace_atSplit_of_ne"
+            },
+            {
+              "file": "Lib/ClassField/Places/CyclotomicCharacter.lean",
+              "line": 60,
+              "name": "cycCharMod_eq_of_dvd"
+            },
+            {
+              "file": "Lib/Cohomology/Duality/Contraction.lean",
+              "line": 88,
+              "name": "lerayHirsch_naturality"
+            },
+            {
+              "file": "Lib/GaloisRep/Pseudocharacter/FibreSum.lean",
+              "line": 27,
+              "name": "IsTraceNondeg.twist"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "4c026df7a4b4d4b5",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/EichlerMaps.lean",
+              "line": 47,
+              "name": "Filling.frameGram_inv"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/Gram.lean",
+              "line": 107,
+              "name": "map_toPoly"
+            },
+            {
+              "file": "Lib/General/Algebra/AdicRingHomExt.lean",
+              "line": 100,
+              "name": "norm_p_lt_one"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 126,
+              "name": "signMatrix_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 212,
+              "name": "gram_invariant"
+            }
+          ]
+        },
+        {
+          "count": 10,
+          "hash": "96804211ef123837",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Unitary/SpaceGram.lean",
+              "line": 15,
+              "name": "stdForm_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 273,
+              "name": "U_one_mem_unitaryGroup"
+            },
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 67,
+              "name": "ker_thickeningProj_sq"
+            },
+            {
+              "file": "Lib/PadicHodge/WachGamma/Letters.lean",
+              "line": 86,
+              "name": "frobEUnit_pow_smul"
+            },
+            {
+              "file": "Lib/PadicHodge/WachKisin/DeRhamValues.lean",
+              "line": 42,
+              "name": "smul_phiInvToBdR"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "3e5ab3a8e156e2b3",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/FlenstedJensen/RepresentationDefs.lean",
+              "line": 129,
+              "name": "negCount_neg_add"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/Base.lean",
+              "line": 116,
+              "name": "fromBlocks_one'"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriInjective.lean",
+              "line": 106,
+              "name": "IsExponent.apply_proIwahori"
+            },
+            {
+              "file": "Lib/Weil/Construction/Model.lean",
+              "line": 141,
+              "name": "conj_modelInner"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 29,
+              "name": "rho_finVec"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "34e94da419d2265d",
+          "samples": [
+            {
+              "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+              "line": 65,
+              "name": "mem_idelesUnitOff"
+            },
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 135,
+              "name": "locMap_mem_Kw"
+            },
+            {
+              "file": "Lib/General/Algebra/ZerosCostDegree.lean",
+              "line": 263,
+              "name": "symPowMatrix_map"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 20,
+              "name": "LineBundle.exists_landsIn"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 30,
+              "name": "landsIn_iInf"
+            }
+          ]
+        },
+        {
+          "count": 6,
+          "hash": "e3ac2036a2b043f6",
+          "samples": [
+            {
+              "file": "Lib/ClassField/Global/CMNorms.lean",
+              "line": 18,
+              "name": "finAdeleIncl_adeleNorm_eq_mul_star"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 130,
+              "name": "schur_one"
+            },
+            {
+              "file": "Lib/General/Groups/ArtinDefs.lean",
+              "line": 79,
+              "name": "star_locIdele"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 24,
+              "name": "trace_star_mul_self_eq_norm_sq"
+            },
+            {
+              "file": "Lib/Weil/Construction/WeilOperators.lean",
+              "line": 45,
+              "name": "weilOp_one"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "dd11bfa39b9d6c19",
+          "samples": [
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 45,
+              "name": "thetaGeneric_algebraMap_ainf"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/Ainf.lean",
+              "line": 96,
+              "name": "xi_mul_tau"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 65,
+              "name": "frobEnd_teichmuller"
+            },
+            {
+              "file": "Lib/PadicHodge/TateSen/DeRhamFiltration.lean",
+              "line": 48,
+              "name": "algebraMap_mem_hodgeFil_one_iff"
+            },
+            {
+              "file": "New/Exchange/CostOfSquares.lean",
+              "line": 28,
+              "name": "card_𝔪"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "af4eb0b3f581ee6e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleIdempotent.lean",
+              "line": 55,
+              "name": "idem_mul_mem_Ô"
+            },
+            {
+              "file": "Lib/ClassField/GaloisCohomology/SylowReduction.lean",
+              "line": 79,
+              "name": "index_smul_eq_sum_const"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/CpIntegers.lean",
+              "line": 82,
+              "name": "mem_OC"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 61,
+              "name": "omega_finHeisOp"
+            },
+            {
+              "file": "Lib/Weil/Periods/DegreeAndUnipotent.lean",
+              "line": 63,
+              "name": "ratCoordMatrix_inclX"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "8b6d818e10f530e9",
+          "samples": [
+            {
+              "file": "Lib/PadicHodge/WachKisin/KummerChart.lean",
+              "line": 168,
+              "name": "zTau_dvd_phi_pow_smul"
+            },
+            {
+              "file": "Lib/SiegelWeil/Tower/LargeSideConstantTerm.lean",
+              "line": 39,
+              "name": "rankTwist_eq_mul_of_splitting"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 91,
+              "name": "dotProduct_schurJet_mulVec"
+            },
+            {
+              "file": "Lib/Weil/DualPair/Flip.lean",
+              "line": 39,
+              "name": "flipCoords_apply"
+            },
+            {
+              "file": "New/Selmer/DeterminantBound.lean",
+              "line": 91,
+              "name": "IsCompletionGroup.complexEmbOf_eq_iff"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "41564eac28a17bb2",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/CuspStep.lean",
+              "line": 53,
+              "name": "IsIntBounded.mul_and_sub"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Theta/FischerDecomposition.lean",
+              "line": 23,
+              "name": "IsMatch.swap"
+            },
+            {
+              "file": "New/Data/Different.lean",
+              "line": 330,
+              "name": "cycloConductor_mem_different"
+            },
+            {
+              "file": "New/Data/WeilDataOfE.lean",
+              "line": 112,
+              "name": "not_dvd_N₁_mul_d_of_inert"
+            },
+            {
+              "file": "New/Selmer/RowBalanced.lean",
+              "line": 36,
+              "name": "IsColumn.eq_one_of_mem_inertiaAbove"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "cb7bf93ac2b8c7e7",
+          "samples": [
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 184,
+              "name": "gram_inv_of_gram_eq"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriConjugation.lean",
+              "line": 24,
+              "name": "map_mem_proIwahori_iff_of_isEquiv"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 23,
+              "name": "Witt.p_dvd_iff"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 172,
+              "name": "sub_mem_periodLattice_iff"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "c962d51cb90d6478",
+          "samples": [
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 150,
+              "name": "adeleMap_idem_placesAbove"
+            },
+            {
+              "file": "Lib/General/Algebra/FittingDuality.lean",
+              "line": 97,
+              "name": "mem_obeying_cocycleRels"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 79,
+              "name": "isStarProjection_coordProj"
+            },
+            {
+              "file": "Lib/Weil/Construction/PairDefs.lean",
+              "line": 247,
+              "name": "stdForm_homSigns"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "5f43e91acd4efbe3",
+          "samples": [
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 97,
+              "name": "map_schurJet"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 102,
+              "name": "eval_schurCoeffPoly"
+            },
+            {
+              "file": "Lib/Weil/Construction/DataProduct.lean",
+              "line": 62,
+              "name": "blockEmb_mem_Gamma_iff"
+            },
+            {
+              "file": "New/Seesaw/GradingsOfY.lean",
+              "line": 25,
+              "name": "Data.liftTamePart_eq_of_mem_Q"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "598c15494547e858",
+          "samples": [
+            {
+              "file": "Lib/Shimura/HeckeTower/WildType.lean",
+              "line": 58,
+              "name": "commute_conjAtSplit"
+            },
+            {
+              "file": "Lib/SiegelWeil/SingularForms/SingularForms.lean",
+              "line": 130,
+              "name": "radicalCentre_eq_comp"
+            },
+            {
+              "file": "New/Rows/StackedDeterminants.lean",
+              "line": 224,
+              "name": "atPlace_twistPlace_eq_one"
+            },
+            {
+              "file": "New/Seesaw/AdmissibleComb.lean",
+              "line": 42,
+              "name": "map"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "269d55ad20a4572e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 190,
+              "name": "IntegralPlace.md_det_eq_one"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 211,
+              "name": "TotalH.cup_of"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 179,
+              "name": "schur_smul"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 233,
+              "name": "thetaCoord_eq_of_mem_lagrangian"
+            }
+          ]
+        }
+      ]
+    },
+    "proof_shim": {
+      "eligible_decls": 0,
+      "clone_clusters": 0,
+      "redundant_duplicate_decls": 0,
+      "duplication_rate_pct": 0.0,
+      "size_buckets": {},
+      "spread_buckets": {},
+      "exact_size_histogram_top50": [],
+      "top_clusters": []
+    },
+    "proof_substantive": {
+      "eligible_decls": 5716,
+      "clone_clusters": 93,
+      "redundant_duplicate_decls": 236,
+      "duplication_rate_pct": 4.13,
+      "size_buckets": {
+        "01_size_2": 61,
+        "02_size_3-5": 21,
+        "03_size_6-10": 4,
+        "04_size_11-50": 7
+      },
+      "spread_buckets": {
+        "cross_top_dir": 32,
+        "multi_file_same_top_dir": 53,
+        "single_file_only": 8
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 61
+        },
+        {
+          "size": 3,
+          "clusters": 12
+        },
+        {
+          "size": 4,
+          "clusters": 5
+        },
+        {
+          "size": 5,
+          "clusters": 4
+        },
+        {
+          "size": 6,
+          "clusters": 1
+        },
+        {
+          "size": 7,
+          "clusters": 2
+        },
+        {
+          "size": 10,
+          "clusters": 1
+        },
+        {
+          "size": 11,
+          "clusters": 2
+        },
+        {
+          "size": 12,
+          "clusters": 2
+        },
+        {
+          "size": 13,
+          "clusters": 1
+        },
+        {
+          "size": 14,
+          "clusters": 1
+        },
+        {
+          "size": 28,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": [
+        {
+          "count": 28,
+          "hash": "400e62db7eb4d856",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/Definite.lean",
+              "line": 25,
+              "name": "one_le_height"
+            },
+            {
+              "file": "Lib/Adelic/Reduction/MinkowskiSecond.lean",
+              "line": 130,
+              "name": "ideleAbs_det_mkAdelicGL"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 197,
+              "name": "TotalH.cup_comp_homClass_left"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/FloorGroups.lean",
+              "line": 171,
+              "name": "splitGram_mulVec_pair"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Character/LaurentAlternants.lean",
+              "line": 67,
+              "name": "alternant_apply"
+            }
+          ]
+        },
+        {
+          "count": 14,
+          "hash": "38146e7a2cc7ef46",
+          "samples": [
+            {
+              "file": "Lib/CM/Sigma/CurveTheta.lean",
+              "line": 126,
+              "name": "CMLattice.translatedWpDeriv_zero"
+            },
+            {
+              "file": "Lib/ClassField/Places/Conjugation.lean",
+              "line": 66,
+              "name": "cycChar_eq_one_of_mem_inertiaAbove"
+            },
+            {
+              "file": "Lib/ClassField/Places/DecompositionLocal.lean",
+              "line": 95,
+              "name": "sah"
+            },
+            {
+              "file": "Lib/General/NumberTheory/QuadFieldSplitting.lean",
+              "line": 42,
+              "name": "QuadField.chiK_two"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/GaussUnfolding.lean",
+              "line": 35,
+              "name": "exp_eq_of_mem_lattice"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "hash": "16928a6cb29cb7bb",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleTopology.lean",
+              "line": 23,
+              "name": "algebraMap_ResField_eq_zero"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/IdeleHilbert90.lean",
+              "line": 104,
+              "name": "adeleMap_star"
+            },
+            {
+              "file": "Lib/ClassField/Global/Avatars.lean",
+              "line": 15,
+              "name": "adeleNorm_adeleNorm"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 53,
+              "name": "pow_classNumber_mem_principal_sup"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 134,
+              "name": "finAdeleIncl_adeleNorm"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "32bbff9cc8af3c10",
+          "samples": [
+            {
+              "file": "Lib/Cohomology/Etale/Partitions.lean",
+              "line": 25,
+              "name": "isCohomEquiv_iff_range"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 96,
+              "name": "IsBorelMatrix.diag_ne_zero"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 184,
+              "name": "blockDiagAlg.inv_mem"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+              "line": 84,
+              "name": "multiplier_eq_exp"
+            },
+            {
+              "file": "Lib/Shimura/ThetaGroup/SectionLifts.lean",
+              "line": 43,
+              "name": "Pic.ParallelogramLaw.pairing_add_add_pairing_sub"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "2008213b2e3be505",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/RationalPoints.lean",
+              "line": 43,
+              "name": "mem_ratVectors"
+            },
+            {
+              "file": "Lib/Adelic/CuspForms/WeightParameter.lean",
+              "line": 19,
+              "name": "isHCParam_hcParameter"
+            },
+            {
+              "file": "Lib/Adelic/Unitary/CongruenceLevel.lean",
+              "line": 262,
+              "name": "torusChar_mulSingle"
+            },
+            {
+              "file": "Lib/ClassField/HeckeCharacter/LevelModulus.lean",
+              "line": 57,
+              "name": "Modulus.stdLevelIndex_levelOfSubgroup"
+            },
+            {
+              "file": "Lib/Cohomology/ProperBaseChange/ValuativeDensity.lean",
+              "line": 176,
+              "name": "mem_fractionGraph_projRing"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "e8a2f7fccf73b113",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdelicModulus.lean",
+              "line": 20,
+              "name": "norm_locField_eq_q_zpow"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/LocalComponents.lean",
+              "line": 124,
+              "name": "atPlace_atSplit_of_ne"
+            },
+            {
+              "file": "Lib/ClassField/Places/CyclotomicCharacter.lean",
+              "line": 60,
+              "name": "cycCharMod_eq_of_dvd"
+            },
+            {
+              "file": "Lib/Cohomology/Duality/Contraction.lean",
+              "line": 88,
+              "name": "lerayHirsch_naturality"
+            },
+            {
+              "file": "Lib/GaloisRep/Pseudocharacter/FibreSum.lean",
+              "line": 27,
+              "name": "IsTraceNondeg.twist"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "4c026df7a4b4d4b5",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/EichlerMaps.lean",
+              "line": 47,
+              "name": "Filling.frameGram_inv"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/Gram.lean",
+              "line": 107,
+              "name": "map_toPoly"
+            },
+            {
+              "file": "Lib/General/Algebra/AdicRingHomExt.lean",
+              "line": 100,
+              "name": "norm_p_lt_one"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 126,
+              "name": "signMatrix_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 212,
+              "name": "gram_invariant"
+            }
+          ]
+        },
+        {
+          "count": 10,
+          "hash": "96804211ef123837",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Unitary/SpaceGram.lean",
+              "line": 15,
+              "name": "stdForm_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 273,
+              "name": "U_one_mem_unitaryGroup"
+            },
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 67,
+              "name": "ker_thickeningProj_sq"
+            },
+            {
+              "file": "Lib/PadicHodge/WachGamma/Letters.lean",
+              "line": 86,
+              "name": "frobEUnit_pow_smul"
+            },
+            {
+              "file": "Lib/PadicHodge/WachKisin/DeRhamValues.lean",
+              "line": 42,
+              "name": "smul_phiInvToBdR"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "3e5ab3a8e156e2b3",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/FlenstedJensen/RepresentationDefs.lean",
+              "line": 129,
+              "name": "negCount_neg_add"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/Base.lean",
+              "line": 116,
+              "name": "fromBlocks_one'"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriInjective.lean",
+              "line": 106,
+              "name": "IsExponent.apply_proIwahori"
+            },
+            {
+              "file": "Lib/Weil/Construction/Model.lean",
+              "line": 141,
+              "name": "conj_modelInner"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 29,
+              "name": "rho_finVec"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "34e94da419d2265d",
+          "samples": [
+            {
+              "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+              "line": 65,
+              "name": "mem_idelesUnitOff"
+            },
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 135,
+              "name": "locMap_mem_Kw"
+            },
+            {
+              "file": "Lib/General/Algebra/ZerosCostDegree.lean",
+              "line": 263,
+              "name": "symPowMatrix_map"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 20,
+              "name": "LineBundle.exists_landsIn"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 30,
+              "name": "landsIn_iInf"
+            }
+          ]
+        },
+        {
+          "count": 6,
+          "hash": "e3ac2036a2b043f6",
+          "samples": [
+            {
+              "file": "Lib/ClassField/Global/CMNorms.lean",
+              "line": 18,
+              "name": "finAdeleIncl_adeleNorm_eq_mul_star"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 130,
+              "name": "schur_one"
+            },
+            {
+              "file": "Lib/General/Groups/ArtinDefs.lean",
+              "line": 79,
+              "name": "star_locIdele"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 24,
+              "name": "trace_star_mul_self_eq_norm_sq"
+            },
+            {
+              "file": "Lib/Weil/Construction/WeilOperators.lean",
+              "line": 45,
+              "name": "weilOp_one"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "dd11bfa39b9d6c19",
+          "samples": [
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 45,
+              "name": "thetaGeneric_algebraMap_ainf"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/Ainf.lean",
+              "line": 96,
+              "name": "xi_mul_tau"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 65,
+              "name": "frobEnd_teichmuller"
+            },
+            {
+              "file": "Lib/PadicHodge/TateSen/DeRhamFiltration.lean",
+              "line": 48,
+              "name": "algebraMap_mem_hodgeFil_one_iff"
+            },
+            {
+              "file": "New/Exchange/CostOfSquares.lean",
+              "line": 28,
+              "name": "card_𝔪"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "af4eb0b3f581ee6e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleIdempotent.lean",
+              "line": 55,
+              "name": "idem_mul_mem_Ô"
+            },
+            {
+              "file": "Lib/ClassField/GaloisCohomology/SylowReduction.lean",
+              "line": 79,
+              "name": "index_smul_eq_sum_const"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/CpIntegers.lean",
+              "line": 82,
+              "name": "mem_OC"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 61,
+              "name": "omega_finHeisOp"
+            },
+            {
+              "file": "Lib/Weil/Periods/DegreeAndUnipotent.lean",
+              "line": 63,
+              "name": "ratCoordMatrix_inclX"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "8b6d818e10f530e9",
+          "samples": [
+            {
+              "file": "Lib/PadicHodge/WachKisin/KummerChart.lean",
+              "line": 168,
+              "name": "zTau_dvd_phi_pow_smul"
+            },
+            {
+              "file": "Lib/SiegelWeil/Tower/LargeSideConstantTerm.lean",
+              "line": 39,
+              "name": "rankTwist_eq_mul_of_splitting"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 91,
+              "name": "dotProduct_schurJet_mulVec"
+            },
+            {
+              "file": "Lib/Weil/DualPair/Flip.lean",
+              "line": 39,
+              "name": "flipCoords_apply"
+            },
+            {
+              "file": "New/Selmer/DeterminantBound.lean",
+              "line": 91,
+              "name": "IsCompletionGroup.complexEmbOf_eq_iff"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "41564eac28a17bb2",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/CuspStep.lean",
+              "line": 53,
+              "name": "IsIntBounded.mul_and_sub"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Theta/FischerDecomposition.lean",
+              "line": 23,
+              "name": "IsMatch.swap"
+            },
+            {
+              "file": "New/Data/Different.lean",
+              "line": 330,
+              "name": "cycloConductor_mem_different"
+            },
+            {
+              "file": "New/Data/WeilDataOfE.lean",
+              "line": 112,
+              "name": "not_dvd_N₁_mul_d_of_inert"
+            },
+            {
+              "file": "New/Selmer/RowBalanced.lean",
+              "line": 36,
+              "name": "IsColumn.eq_one_of_mem_inertiaAbove"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "cb7bf93ac2b8c7e7",
+          "samples": [
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 184,
+              "name": "gram_inv_of_gram_eq"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriConjugation.lean",
+              "line": 24,
+              "name": "map_mem_proIwahori_iff_of_isEquiv"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 23,
+              "name": "Witt.p_dvd_iff"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 172,
+              "name": "sub_mem_periodLattice_iff"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "c962d51cb90d6478",
+          "samples": [
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 150,
+              "name": "adeleMap_idem_placesAbove"
+            },
+            {
+              "file": "Lib/General/Algebra/FittingDuality.lean",
+              "line": 97,
+              "name": "mem_obeying_cocycleRels"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 79,
+              "name": "isStarProjection_coordProj"
+            },
+            {
+              "file": "Lib/Weil/Construction/PairDefs.lean",
+              "line": 247,
+              "name": "stdForm_homSigns"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "5f43e91acd4efbe3",
+          "samples": [
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 97,
+              "name": "map_schurJet"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 102,
+              "name": "eval_schurCoeffPoly"
+            },
+            {
+              "file": "Lib/Weil/Construction/DataProduct.lean",
+              "line": 62,
+              "name": "blockEmb_mem_Gamma_iff"
+            },
+            {
+              "file": "New/Seesaw/GradingsOfY.lean",
+              "line": 25,
+              "name": "Data.liftTamePart_eq_of_mem_Q"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "598c15494547e858",
+          "samples": [
+            {
+              "file": "Lib/Shimura/HeckeTower/WildType.lean",
+              "line": 58,
+              "name": "commute_conjAtSplit"
+            },
+            {
+              "file": "Lib/SiegelWeil/SingularForms/SingularForms.lean",
+              "line": 130,
+              "name": "radicalCentre_eq_comp"
+            },
+            {
+              "file": "New/Rows/StackedDeterminants.lean",
+              "line": 224,
+              "name": "atPlace_twistPlace_eq_one"
+            },
+            {
+              "file": "New/Seesaw/AdmissibleComb.lean",
+              "line": 42,
+              "name": "map"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "269d55ad20a4572e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 190,
+              "name": "IntegralPlace.md_det_eq_one"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 211,
+              "name": "TotalH.cup_of"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 179,
+              "name": "schur_smul"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 233,
+              "name": "thetaCoord_eq_of_mem_lagrangian"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "type2_clones_short_8_19": {
+    "definition": {
+      "eligible_decls": 1034,
+      "clone_clusters": 33,
+      "redundant_duplicate_decls": 49,
+      "duplication_rate_pct": 4.74,
+      "size_buckets": {
+        "01_size_2": 25,
+        "02_size_3-5": 7,
+        "03_size_6-10": 1
+      },
+      "spread_buckets": {
+        "cross_top_dir": 7,
+        "multi_file_same_top_dir": 17,
+        "single_file_only": 9
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 25
+        },
+        {
+          "size": 3,
+          "clusters": 4
+        },
+        {
+          "size": 4,
+          "clusters": 2
+        },
+        {
+          "size": 5,
+          "clusters": 1
+        },
+        {
+          "size": 7,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": [
+        {
+          "count": 7,
+          "hash": "af89ddd473c69bd4",
+          "samples": [
+            {
+              "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+              "line": 35,
+              "name": "locFullIdele"
+            },
+            {
+              "file": "Lib/ClassField/Places/SelmerDefs.lean",
+              "line": 64,
+              "name": "twistRep"
+            },
+            {
+              "file": "Lib/GaloisRep/Main/AttachedDeterminant.lean",
+              "line": 29,
+              "name": "QZChar.stepField"
+            },
+            {
+              "file": "Lib/General/Measure/SubgroupIntegral.lean",
+              "line": 32,
+              "name": "orbitMeasure"
+            },
+            {
+              "file": "Lib/Shimura/Deformation/TangentBound.lean",
+              "line": 46,
+              "name": "sqZeroSpecMap"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "950ccc9713f65d3a",
+          "samples": [
+            {
+              "file": "Lib/PadicHodge/WachKisin/KummerChart.lean",
+              "line": 114,
+              "name": "frobEUnit"
+            },
+            {
+              "file": "Lib/Weil/Construction/FiniteMultiplier.lean",
+              "line": 52,
+              "name": "saturatingElem"
+            },
+            {
+              "file": "Lib/Weil/Periods/DegreeOfT.lean",
+              "line": 11,
+              "name": "ideleLogVal"
+            },
+            {
+              "file": "New/Columns/ColumnDefs.lean",
+              "line": 25,
+              "name": "piPlaces"
+            },
+            {
+              "file": "New/Filling/Setup.lean",
+              "line": 86,
+              "name": "GFin"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "d19b2d3d6afae55f",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Unitary/SpaceDefs.lean",
+              "line": 286,
+              "name": "embFin"
+            },
+            {
+              "file": "Lib/ClassField/GaloisCohomology/ContinuousCocycles.lean",
+              "line": 58,
+              "name": "actionRep"
+            },
+            {
+              "file": "Lib/DiscreteSeries/CuspKernel/SchurOrthogonality.lean",
+              "line": 26,
+              "name": "HCParam.dsAction"
+            },
+            {
+              "file": "Lib/General/Geometry/LocalTerms.lean",
+              "line": 71,
+              "name": "PointsIn.map"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "6c79266caea76283",
+          "samples": [
+            {
+              "file": "Lib/General/LinearAlgebra/ExtendColumns.lean",
+              "line": 163,
+              "name": "Shape.Form.besselU"
+            },
+            {
+              "file": "Lib/PadicComparison/Crystalline/CrystallineEtale.lean",
+              "line": 131,
+              "name": "HasCrysComparison"
+            },
+            {
+              "file": "Lib/Weil/MixedModel/ZeroTerm.lean",
+              "line": 70,
+              "name": "hypSum"
+            },
+            {
+              "file": "New/Filling/Setup.lean",
+              "line": 124,
+              "name": "reducedImage"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "df3342fab8702b75",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 27,
+              "name": "ratToPlaces"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 30,
+              "name": "Filling.ratIntegralOff"
+            },
+            {
+              "file": "Lib/General/Measure/Place.lean",
+              "line": 123,
+              "name": "quadricMeasure"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "b66b79960fc716fc",
+          "samples": [
+            {
+              "file": "Lib/Cohomology/Duality/Contraction.lean",
+              "line": 290,
+              "name": "TestOver.toTest"
+            },
+            {
+              "file": "Lib/Cohomology/ProjectiveLine/NormalizationPullback.lean",
+              "line": 235,
+              "name": "TestOver.resScalars"
+            },
+            {
+              "file": "Lib/PadicComparison/Crystalline/CrystallineTests.lean",
+              "line": 47,
+              "name": "CrysTest.restrictScalars"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "9b18199f0728ea07",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Witt/SpaceOperations.lean",
+              "line": 122,
+              "name": "reindexGL"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 26,
+              "name": "abTensorMap"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/CutOutIdeals.lean",
+              "line": 42,
+              "name": "imageMod"
+            }
+          ]
+        },
+        {
+          "count": 3,
+          "hash": "77da38428fabda1d",
+          "samples": [
+            {
+              "file": "Lib/ClassField/Places/CyclotomicCharacter.lean",
+              "line": 147,
+              "name": "cycloGalGroup"
+            },
+            {
+              "file": "Lib/GLn/Dual/MixedCartan.lean",
+              "line": 47,
+              "name": "mixedCartan"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/AmaxStructure.lean",
+              "line": 166,
+              "name": "amaxImage"
+            }
+          ]
+        }
+      ]
+    },
+    "proof": {
+      "eligible_decls": 1564,
+      "clone_clusters": 92,
+      "redundant_duplicate_decls": 235,
+      "duplication_rate_pct": 15.03,
+      "size_buckets": {
+        "01_size_2": 60,
+        "02_size_3-5": 21,
+        "03_size_6-10": 4,
+        "04_size_11-50": 7
+      },
+      "spread_buckets": {
+        "cross_top_dir": 32,
+        "multi_file_same_top_dir": 53,
+        "single_file_only": 7
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 60
+        },
+        {
+          "size": 3,
+          "clusters": 12
+        },
+        {
+          "size": 4,
+          "clusters": 5
+        },
+        {
+          "size": 5,
+          "clusters": 4
+        },
+        {
+          "size": 6,
+          "clusters": 1
+        },
+        {
+          "size": 7,
+          "clusters": 2
+        },
+        {
+          "size": 10,
+          "clusters": 1
+        },
+        {
+          "size": 11,
+          "clusters": 2
+        },
+        {
+          "size": 12,
+          "clusters": 2
+        },
+        {
+          "size": 13,
+          "clusters": 1
+        },
+        {
+          "size": 14,
+          "clusters": 1
+        },
+        {
+          "size": 28,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": [
+        {
+          "count": 28,
+          "hash": "400e62db7eb4d856",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/Definite.lean",
+              "line": 25,
+              "name": "one_le_height"
+            },
+            {
+              "file": "Lib/Adelic/Reduction/MinkowskiSecond.lean",
+              "line": 130,
+              "name": "ideleAbs_det_mkAdelicGL"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 197,
+              "name": "TotalH.cup_comp_homClass_left"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/FloorGroups.lean",
+              "line": 171,
+              "name": "splitGram_mulVec_pair"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Character/LaurentAlternants.lean",
+              "line": 67,
+              "name": "alternant_apply"
+            }
+          ]
+        },
+        {
+          "count": 14,
+          "hash": "38146e7a2cc7ef46",
+          "samples": [
+            {
+              "file": "Lib/CM/Sigma/CurveTheta.lean",
+              "line": 126,
+              "name": "CMLattice.translatedWpDeriv_zero"
+            },
+            {
+              "file": "Lib/ClassField/Places/Conjugation.lean",
+              "line": 66,
+              "name": "cycChar_eq_one_of_mem_inertiaAbove"
+            },
+            {
+              "file": "Lib/ClassField/Places/DecompositionLocal.lean",
+              "line": 95,
+              "name": "sah"
+            },
+            {
+              "file": "Lib/General/NumberTheory/QuadFieldSplitting.lean",
+              "line": 42,
+              "name": "QuadField.chiK_two"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/GaussUnfolding.lean",
+              "line": 35,
+              "name": "exp_eq_of_mem_lattice"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "hash": "16928a6cb29cb7bb",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleTopology.lean",
+              "line": 23,
+              "name": "algebraMap_ResField_eq_zero"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/IdeleHilbert90.lean",
+              "line": 104,
+              "name": "adeleMap_star"
+            },
+            {
+              "file": "Lib/ClassField/Global/Avatars.lean",
+              "line": 15,
+              "name": "adeleNorm_adeleNorm"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 53,
+              "name": "pow_classNumber_mem_principal_sup"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 134,
+              "name": "finAdeleIncl_adeleNorm"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "32bbff9cc8af3c10",
+          "samples": [
+            {
+              "file": "Lib/Cohomology/Etale/Partitions.lean",
+              "line": 25,
+              "name": "isCohomEquiv_iff_range"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 96,
+              "name": "IsBorelMatrix.diag_ne_zero"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 184,
+              "name": "blockDiagAlg.inv_mem"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+              "line": 84,
+              "name": "multiplier_eq_exp"
+            },
+            {
+              "file": "Lib/Shimura/ThetaGroup/SectionLifts.lean",
+              "line": 43,
+              "name": "Pic.ParallelogramLaw.pairing_add_add_pairing_sub"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "2008213b2e3be505",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/RationalPoints.lean",
+              "line": 43,
+              "name": "mem_ratVectors"
+            },
+            {
+              "file": "Lib/Adelic/CuspForms/WeightParameter.lean",
+              "line": 19,
+              "name": "isHCParam_hcParameter"
+            },
+            {
+              "file": "Lib/Adelic/Unitary/CongruenceLevel.lean",
+              "line": 262,
+              "name": "torusChar_mulSingle"
+            },
+            {
+              "file": "Lib/ClassField/HeckeCharacter/LevelModulus.lean",
+              "line": 57,
+              "name": "Modulus.stdLevelIndex_levelOfSubgroup"
+            },
+            {
+              "file": "Lib/Cohomology/ProperBaseChange/ValuativeDensity.lean",
+              "line": 176,
+              "name": "mem_fractionGraph_projRing"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "e8a2f7fccf73b113",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdelicModulus.lean",
+              "line": 20,
+              "name": "norm_locField_eq_q_zpow"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/LocalComponents.lean",
+              "line": 124,
+              "name": "atPlace_atSplit_of_ne"
+            },
+            {
+              "file": "Lib/ClassField/Places/CyclotomicCharacter.lean",
+              "line": 60,
+              "name": "cycCharMod_eq_of_dvd"
+            },
+            {
+              "file": "Lib/Cohomology/Duality/Contraction.lean",
+              "line": 88,
+              "name": "lerayHirsch_naturality"
+            },
+            {
+              "file": "Lib/GaloisRep/Pseudocharacter/FibreSum.lean",
+              "line": 27,
+              "name": "IsTraceNondeg.twist"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "4c026df7a4b4d4b5",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/EichlerMaps.lean",
+              "line": 47,
+              "name": "Filling.frameGram_inv"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/Gram.lean",
+              "line": 107,
+              "name": "map_toPoly"
+            },
+            {
+              "file": "Lib/General/Algebra/AdicRingHomExt.lean",
+              "line": 100,
+              "name": "norm_p_lt_one"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 126,
+              "name": "signMatrix_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 212,
+              "name": "gram_invariant"
+            }
+          ]
+        },
+        {
+          "count": 10,
+          "hash": "96804211ef123837",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Unitary/SpaceGram.lean",
+              "line": 15,
+              "name": "stdForm_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 273,
+              "name": "U_one_mem_unitaryGroup"
+            },
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 67,
+              "name": "ker_thickeningProj_sq"
+            },
+            {
+              "file": "Lib/PadicHodge/WachGamma/Letters.lean",
+              "line": 86,
+              "name": "frobEUnit_pow_smul"
+            },
+            {
+              "file": "Lib/PadicHodge/WachKisin/DeRhamValues.lean",
+              "line": 42,
+              "name": "smul_phiInvToBdR"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "3e5ab3a8e156e2b3",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/FlenstedJensen/RepresentationDefs.lean",
+              "line": 129,
+              "name": "negCount_neg_add"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/Base.lean",
+              "line": 116,
+              "name": "fromBlocks_one'"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriInjective.lean",
+              "line": 106,
+              "name": "IsExponent.apply_proIwahori"
+            },
+            {
+              "file": "Lib/Weil/Construction/Model.lean",
+              "line": 141,
+              "name": "conj_modelInner"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 29,
+              "name": "rho_finVec"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "34e94da419d2265d",
+          "samples": [
+            {
+              "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+              "line": 65,
+              "name": "mem_idelesUnitOff"
+            },
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 135,
+              "name": "locMap_mem_Kw"
+            },
+            {
+              "file": "Lib/General/Algebra/ZerosCostDegree.lean",
+              "line": 263,
+              "name": "symPowMatrix_map"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 20,
+              "name": "LineBundle.exists_landsIn"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 30,
+              "name": "landsIn_iInf"
+            }
+          ]
+        },
+        {
+          "count": 6,
+          "hash": "e3ac2036a2b043f6",
+          "samples": [
+            {
+              "file": "Lib/ClassField/Global/CMNorms.lean",
+              "line": 18,
+              "name": "finAdeleIncl_adeleNorm_eq_mul_star"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 130,
+              "name": "schur_one"
+            },
+            {
+              "file": "Lib/General/Groups/ArtinDefs.lean",
+              "line": 79,
+              "name": "star_locIdele"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 24,
+              "name": "trace_star_mul_self_eq_norm_sq"
+            },
+            {
+              "file": "Lib/Weil/Construction/WeilOperators.lean",
+              "line": 45,
+              "name": "weilOp_one"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "dd11bfa39b9d6c19",
+          "samples": [
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 45,
+              "name": "thetaGeneric_algebraMap_ainf"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/Ainf.lean",
+              "line": 96,
+              "name": "xi_mul_tau"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 65,
+              "name": "frobEnd_teichmuller"
+            },
+            {
+              "file": "Lib/PadicHodge/TateSen/DeRhamFiltration.lean",
+              "line": 48,
+              "name": "algebraMap_mem_hodgeFil_one_iff"
+            },
+            {
+              "file": "New/Exchange/CostOfSquares.lean",
+              "line": 28,
+              "name": "card_𝔪"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "af4eb0b3f581ee6e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleIdempotent.lean",
+              "line": 55,
+              "name": "idem_mul_mem_Ô"
+            },
+            {
+              "file": "Lib/ClassField/GaloisCohomology/SylowReduction.lean",
+              "line": 79,
+              "name": "index_smul_eq_sum_const"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/CpIntegers.lean",
+              "line": 82,
+              "name": "mem_OC"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 61,
+              "name": "omega_finHeisOp"
+            },
+            {
+              "file": "Lib/Weil/Periods/DegreeAndUnipotent.lean",
+              "line": 63,
+              "name": "ratCoordMatrix_inclX"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "8b6d818e10f530e9",
+          "samples": [
+            {
+              "file": "Lib/PadicHodge/WachKisin/KummerChart.lean",
+              "line": 168,
+              "name": "zTau_dvd_phi_pow_smul"
+            },
+            {
+              "file": "Lib/SiegelWeil/Tower/LargeSideConstantTerm.lean",
+              "line": 39,
+              "name": "rankTwist_eq_mul_of_splitting"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 91,
+              "name": "dotProduct_schurJet_mulVec"
+            },
+            {
+              "file": "Lib/Weil/DualPair/Flip.lean",
+              "line": 39,
+              "name": "flipCoords_apply"
+            },
+            {
+              "file": "New/Selmer/DeterminantBound.lean",
+              "line": 91,
+              "name": "IsCompletionGroup.complexEmbOf_eq_iff"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "41564eac28a17bb2",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/CuspStep.lean",
+              "line": 53,
+              "name": "IsIntBounded.mul_and_sub"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Theta/FischerDecomposition.lean",
+              "line": 23,
+              "name": "IsMatch.swap"
+            },
+            {
+              "file": "New/Data/Different.lean",
+              "line": 330,
+              "name": "cycloConductor_mem_different"
+            },
+            {
+              "file": "New/Data/WeilDataOfE.lean",
+              "line": 112,
+              "name": "not_dvd_N₁_mul_d_of_inert"
+            },
+            {
+              "file": "New/Selmer/RowBalanced.lean",
+              "line": 36,
+              "name": "IsColumn.eq_one_of_mem_inertiaAbove"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "cb7bf93ac2b8c7e7",
+          "samples": [
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 184,
+              "name": "gram_inv_of_gram_eq"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriConjugation.lean",
+              "line": 24,
+              "name": "map_mem_proIwahori_iff_of_isEquiv"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 23,
+              "name": "Witt.p_dvd_iff"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 172,
+              "name": "sub_mem_periodLattice_iff"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "c962d51cb90d6478",
+          "samples": [
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 150,
+              "name": "adeleMap_idem_placesAbove"
+            },
+            {
+              "file": "Lib/General/Algebra/FittingDuality.lean",
+              "line": 97,
+              "name": "mem_obeying_cocycleRels"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 79,
+              "name": "isStarProjection_coordProj"
+            },
+            {
+              "file": "Lib/Weil/Construction/PairDefs.lean",
+              "line": 247,
+              "name": "stdForm_homSigns"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "5f43e91acd4efbe3",
+          "samples": [
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 97,
+              "name": "map_schurJet"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 102,
+              "name": "eval_schurCoeffPoly"
+            },
+            {
+              "file": "Lib/Weil/Construction/DataProduct.lean",
+              "line": 62,
+              "name": "blockEmb_mem_Gamma_iff"
+            },
+            {
+              "file": "New/Seesaw/GradingsOfY.lean",
+              "line": 25,
+              "name": "Data.liftTamePart_eq_of_mem_Q"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "598c15494547e858",
+          "samples": [
+            {
+              "file": "Lib/Shimura/HeckeTower/WildType.lean",
+              "line": 58,
+              "name": "commute_conjAtSplit"
+            },
+            {
+              "file": "Lib/SiegelWeil/SingularForms/SingularForms.lean",
+              "line": 130,
+              "name": "radicalCentre_eq_comp"
+            },
+            {
+              "file": "New/Rows/StackedDeterminants.lean",
+              "line": 224,
+              "name": "atPlace_twistPlace_eq_one"
+            },
+            {
+              "file": "New/Seesaw/AdmissibleComb.lean",
+              "line": 42,
+              "name": "map"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "269d55ad20a4572e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 190,
+              "name": "IntegralPlace.md_det_eq_one"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 211,
+              "name": "TotalH.cup_of"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 179,
+              "name": "schur_smul"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 233,
+              "name": "thetaCoord_eq_of_mem_lagrangian"
+            }
+          ]
+        }
+      ]
+    },
+    "proof_shim": {
+      "eligible_decls": 0,
+      "clone_clusters": 0,
+      "redundant_duplicate_decls": 0,
+      "duplication_rate_pct": 0.0,
+      "size_buckets": {},
+      "spread_buckets": {},
+      "exact_size_histogram_top50": [],
+      "top_clusters": []
+    },
+    "proof_substantive": {
+      "eligible_decls": 1564,
+      "clone_clusters": 92,
+      "redundant_duplicate_decls": 235,
+      "duplication_rate_pct": 15.03,
+      "size_buckets": {
+        "01_size_2": 60,
+        "02_size_3-5": 21,
+        "03_size_6-10": 4,
+        "04_size_11-50": 7
+      },
+      "spread_buckets": {
+        "cross_top_dir": 32,
+        "multi_file_same_top_dir": 53,
+        "single_file_only": 7
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 60
+        },
+        {
+          "size": 3,
+          "clusters": 12
+        },
+        {
+          "size": 4,
+          "clusters": 5
+        },
+        {
+          "size": 5,
+          "clusters": 4
+        },
+        {
+          "size": 6,
+          "clusters": 1
+        },
+        {
+          "size": 7,
+          "clusters": 2
+        },
+        {
+          "size": 10,
+          "clusters": 1
+        },
+        {
+          "size": 11,
+          "clusters": 2
+        },
+        {
+          "size": 12,
+          "clusters": 2
+        },
+        {
+          "size": 13,
+          "clusters": 1
+        },
+        {
+          "size": 14,
+          "clusters": 1
+        },
+        {
+          "size": 28,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": [
+        {
+          "count": 28,
+          "hash": "400e62db7eb4d856",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/Definite.lean",
+              "line": 25,
+              "name": "one_le_height"
+            },
+            {
+              "file": "Lib/Adelic/Reduction/MinkowskiSecond.lean",
+              "line": 130,
+              "name": "ideleAbs_det_mkAdelicGL"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 197,
+              "name": "TotalH.cup_comp_homClass_left"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/FloorGroups.lean",
+              "line": 171,
+              "name": "splitGram_mulVec_pair"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Character/LaurentAlternants.lean",
+              "line": 67,
+              "name": "alternant_apply"
+            }
+          ]
+        },
+        {
+          "count": 14,
+          "hash": "38146e7a2cc7ef46",
+          "samples": [
+            {
+              "file": "Lib/CM/Sigma/CurveTheta.lean",
+              "line": 126,
+              "name": "CMLattice.translatedWpDeriv_zero"
+            },
+            {
+              "file": "Lib/ClassField/Places/Conjugation.lean",
+              "line": 66,
+              "name": "cycChar_eq_one_of_mem_inertiaAbove"
+            },
+            {
+              "file": "Lib/ClassField/Places/DecompositionLocal.lean",
+              "line": 95,
+              "name": "sah"
+            },
+            {
+              "file": "Lib/General/NumberTheory/QuadFieldSplitting.lean",
+              "line": 42,
+              "name": "QuadField.chiK_two"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/GaussUnfolding.lean",
+              "line": 35,
+              "name": "exp_eq_of_mem_lattice"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "hash": "16928a6cb29cb7bb",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleTopology.lean",
+              "line": 23,
+              "name": "algebraMap_ResField_eq_zero"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/IdeleHilbert90.lean",
+              "line": 104,
+              "name": "adeleMap_star"
+            },
+            {
+              "file": "Lib/ClassField/Global/Avatars.lean",
+              "line": 15,
+              "name": "adeleNorm_adeleNorm"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 53,
+              "name": "pow_classNumber_mem_principal_sup"
+            },
+            {
+              "file": "Lib/ClassField/Places/AdeleNorm.lean",
+              "line": 134,
+              "name": "finAdeleIncl_adeleNorm"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "32bbff9cc8af3c10",
+          "samples": [
+            {
+              "file": "Lib/Cohomology/Etale/Partitions.lean",
+              "line": 25,
+              "name": "isCohomEquiv_iff_range"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 96,
+              "name": "IsBorelMatrix.diag_ne_zero"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/ExpSurjective.lean",
+              "line": 184,
+              "name": "blockDiagAlg.inv_mem"
+            },
+            {
+              "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+              "line": 84,
+              "name": "multiplier_eq_exp"
+            },
+            {
+              "file": "Lib/Shimura/ThetaGroup/SectionLifts.lean",
+              "line": 43,
+              "name": "Pic.ParallelogramLaw.pairing_add_add_pairing_sub"
+            }
+          ]
+        },
+        {
+          "count": 12,
+          "hash": "2008213b2e3be505",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/RationalPoints.lean",
+              "line": 43,
+              "name": "mem_ratVectors"
+            },
+            {
+              "file": "Lib/Adelic/CuspForms/WeightParameter.lean",
+              "line": 19,
+              "name": "isHCParam_hcParameter"
+            },
+            {
+              "file": "Lib/Adelic/Unitary/CongruenceLevel.lean",
+              "line": 262,
+              "name": "torusChar_mulSingle"
+            },
+            {
+              "file": "Lib/ClassField/HeckeCharacter/LevelModulus.lean",
+              "line": 57,
+              "name": "Modulus.stdLevelIndex_levelOfSubgroup"
+            },
+            {
+              "file": "Lib/Cohomology/ProperBaseChange/ValuativeDensity.lean",
+              "line": 176,
+              "name": "mem_fractionGraph_projRing"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "e8a2f7fccf73b113",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdelicModulus.lean",
+              "line": 20,
+              "name": "norm_locField_eq_q_zpow"
+            },
+            {
+              "file": "Lib/Adelic/Adeles/LocalComponents.lean",
+              "line": 124,
+              "name": "atPlace_atSplit_of_ne"
+            },
+            {
+              "file": "Lib/ClassField/Places/CyclotomicCharacter.lean",
+              "line": 60,
+              "name": "cycCharMod_eq_of_dvd"
+            },
+            {
+              "file": "Lib/Cohomology/Duality/Contraction.lean",
+              "line": 88,
+              "name": "lerayHirsch_naturality"
+            },
+            {
+              "file": "Lib/GaloisRep/Pseudocharacter/FibreSum.lean",
+              "line": 27,
+              "name": "IsTraceNondeg.twist"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "hash": "4c026df7a4b4d4b5",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/Bruhat/EichlerMaps.lean",
+              "line": 47,
+              "name": "Filling.frameGram_inv"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/Gram.lean",
+              "line": 107,
+              "name": "map_toPoly"
+            },
+            {
+              "file": "Lib/General/Algebra/AdicRingHomExt.lean",
+              "line": 100,
+              "name": "norm_p_lt_one"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 126,
+              "name": "signMatrix_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 212,
+              "name": "gram_invariant"
+            }
+          ]
+        },
+        {
+          "count": 10,
+          "hash": "96804211ef123837",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Unitary/SpaceGram.lean",
+              "line": 15,
+              "name": "stdForm_mul_self"
+            },
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 273,
+              "name": "U_one_mem_unitaryGroup"
+            },
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 67,
+              "name": "ker_thickeningProj_sq"
+            },
+            {
+              "file": "Lib/PadicHodge/WachGamma/Letters.lean",
+              "line": 86,
+              "name": "frobEUnit_pow_smul"
+            },
+            {
+              "file": "Lib/PadicHodge/WachKisin/DeRhamValues.lean",
+              "line": 42,
+              "name": "smul_phiInvToBdR"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "3e5ab3a8e156e2b3",
+          "samples": [
+            {
+              "file": "Lib/DiscreteSeries/FlenstedJensen/RepresentationDefs.lean",
+              "line": 129,
+              "name": "negCount_neg_add"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/Base.lean",
+              "line": 116,
+              "name": "fromBlocks_one'"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriInjective.lean",
+              "line": 106,
+              "name": "IsExponent.apply_proIwahori"
+            },
+            {
+              "file": "Lib/Weil/Construction/Model.lean",
+              "line": 141,
+              "name": "conj_modelInner"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 29,
+              "name": "rho_finVec"
+            }
+          ]
+        },
+        {
+          "count": 7,
+          "hash": "34e94da419d2265d",
+          "samples": [
+            {
+              "file": "Lib/ClassField/HeckeL/EulerProduct.lean",
+              "line": 65,
+              "name": "mem_idelesUnitOff"
+            },
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 135,
+              "name": "locMap_mem_Kw"
+            },
+            {
+              "file": "Lib/General/Algebra/ZerosCostDegree.lean",
+              "line": 263,
+              "name": "symPowMatrix_map"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 20,
+              "name": "LineBundle.exists_landsIn"
+            },
+            {
+              "file": "Lib/General/Geometry/PointFunctions.lean",
+              "line": 30,
+              "name": "landsIn_iInf"
+            }
+          ]
+        },
+        {
+          "count": 6,
+          "hash": "e3ac2036a2b043f6",
+          "samples": [
+            {
+              "file": "Lib/ClassField/Global/CMNorms.lean",
+              "line": 18,
+              "name": "finAdeleIncl_adeleNorm_eq_mul_star"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 130,
+              "name": "schur_one"
+            },
+            {
+              "file": "Lib/General/Groups/ArtinDefs.lean",
+              "line": 79,
+              "name": "star_locIdele"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 24,
+              "name": "trace_star_mul_self_eq_norm_sq"
+            },
+            {
+              "file": "Lib/Weil/Construction/WeilOperators.lean",
+              "line": 45,
+              "name": "weilOp_one"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "dd11bfa39b9d6c19",
+          "samples": [
+            {
+              "file": "Lib/PadicComparison/HodgeTate/GenericFibreTests.lean",
+              "line": 45,
+              "name": "thetaGeneric_algebraMap_ainf"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/Ainf.lean",
+              "line": 96,
+              "name": "xi_mul_tau"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 65,
+              "name": "frobEnd_teichmuller"
+            },
+            {
+              "file": "Lib/PadicHodge/TateSen/DeRhamFiltration.lean",
+              "line": 48,
+              "name": "algebraMap_mem_hodgeFil_one_iff"
+            },
+            {
+              "file": "New/Exchange/CostOfSquares.lean",
+              "line": 28,
+              "name": "card_𝔪"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "af4eb0b3f581ee6e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/AdeleIdempotent.lean",
+              "line": 55,
+              "name": "idem_mul_mem_Ô"
+            },
+            {
+              "file": "Lib/ClassField/GaloisCohomology/SylowReduction.lean",
+              "line": 79,
+              "name": "index_smul_eq_sum_const"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/CpIntegers.lean",
+              "line": 82,
+              "name": "mem_OC"
+            },
+            {
+              "file": "Lib/Weil/Construction/Projections.lean",
+              "line": 61,
+              "name": "omega_finHeisOp"
+            },
+            {
+              "file": "Lib/Weil/Periods/DegreeAndUnipotent.lean",
+              "line": 63,
+              "name": "ratCoordMatrix_inclX"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "8b6d818e10f530e9",
+          "samples": [
+            {
+              "file": "Lib/PadicHodge/WachKisin/KummerChart.lean",
+              "line": 168,
+              "name": "zTau_dvd_phi_pow_smul"
+            },
+            {
+              "file": "Lib/SiegelWeil/Tower/LargeSideConstantTerm.lean",
+              "line": 39,
+              "name": "rankTwist_eq_mul_of_splitting"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 91,
+              "name": "dotProduct_schurJet_mulVec"
+            },
+            {
+              "file": "Lib/Weil/DualPair/Flip.lean",
+              "line": 39,
+              "name": "flipCoords_apply"
+            },
+            {
+              "file": "New/Selmer/DeterminantBound.lean",
+              "line": 91,
+              "name": "IsCompletionGroup.complexEmbOf_eq_iff"
+            }
+          ]
+        },
+        {
+          "count": 5,
+          "hash": "41564eac28a17bb2",
+          "samples": [
+            {
+              "file": "Lib/Adelic/CuspForms/CuspStep.lean",
+              "line": 53,
+              "name": "IsIntBounded.mul_and_sub"
+            },
+            {
+              "file": "Lib/DiscreteSeries/Theta/FischerDecomposition.lean",
+              "line": 23,
+              "name": "IsMatch.swap"
+            },
+            {
+              "file": "New/Data/Different.lean",
+              "line": 330,
+              "name": "cycloConductor_mem_different"
+            },
+            {
+              "file": "New/Data/WeilDataOfE.lean",
+              "line": 112,
+              "name": "not_dvd_N₁_mul_d_of_inert"
+            },
+            {
+              "file": "New/Selmer/RowBalanced.lean",
+              "line": 36,
+              "name": "IsColumn.eq_one_of_mem_inertiaAbove"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "cb7bf93ac2b8c7e7",
+          "samples": [
+            {
+              "file": "Lib/General/Groups/ValuationPair.lean",
+              "line": 184,
+              "name": "gram_inv_of_gram_eq"
+            },
+            {
+              "file": "Lib/LocalGL/Iwahori/IwahoriConjugation.lean",
+              "line": 24,
+              "name": "map_mem_proIwahori_iff_of_isEquiv"
+            },
+            {
+              "file": "Lib/PadicHodge/PeriodRings/ThetaKernel.lean",
+              "line": 23,
+              "name": "Witt.p_dvd_iff"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 172,
+              "name": "sub_mem_periodLattice_iff"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "c962d51cb90d6478",
+          "samples": [
+            {
+              "file": "Lib/GaloisRep/BaseChange/BaseChangePlaces.lean",
+              "line": 150,
+              "name": "adeleMap_idem_placesAbove"
+            },
+            {
+              "file": "Lib/General/Algebra/FittingDuality.lean",
+              "line": 97,
+              "name": "mem_obeying_cocycleRels"
+            },
+            {
+              "file": "Lib/General/LinearAlgebra/FramedCoefficient.lean",
+              "line": 79,
+              "name": "isStarProjection_coordProj"
+            },
+            {
+              "file": "Lib/Weil/Construction/PairDefs.lean",
+              "line": 247,
+              "name": "stdForm_homSigns"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "5f43e91acd4efbe3",
+          "samples": [
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 97,
+              "name": "map_schurJet"
+            },
+            {
+              "file": "Lib/Weil/CompactLift/BranchingPeriod.lean",
+              "line": 102,
+              "name": "eval_schurCoeffPoly"
+            },
+            {
+              "file": "Lib/Weil/Construction/DataProduct.lean",
+              "line": 62,
+              "name": "blockEmb_mem_Gamma_iff"
+            },
+            {
+              "file": "New/Seesaw/GradingsOfY.lean",
+              "line": 25,
+              "name": "Data.liftTamePart_eq_of_mem_Q"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "598c15494547e858",
+          "samples": [
+            {
+              "file": "Lib/Shimura/HeckeTower/WildType.lean",
+              "line": 58,
+              "name": "commute_conjAtSplit"
+            },
+            {
+              "file": "Lib/SiegelWeil/SingularForms/SingularForms.lean",
+              "line": 130,
+              "name": "radicalCentre_eq_comp"
+            },
+            {
+              "file": "New/Rows/StackedDeterminants.lean",
+              "line": 224,
+              "name": "atPlace_twistPlace_eq_one"
+            },
+            {
+              "file": "New/Seesaw/AdmissibleComb.lean",
+              "line": 42,
+              "name": "map"
+            }
+          ]
+        },
+        {
+          "count": 4,
+          "hash": "269d55ad20a4572e",
+          "samples": [
+            {
+              "file": "Lib/Adelic/Adeles/FinitePlaceDensity.lean",
+              "line": 190,
+              "name": "IntegralPlace.md_det_eq_one"
+            },
+            {
+              "file": "Lib/Cohomology/Hodge/CupProduct.lean",
+              "line": 211,
+              "name": "TotalH.cup_of"
+            },
+            {
+              "file": "Lib/GLn/SchurModule/SchurMatrix.lean",
+              "line": 179,
+              "name": "schur_smul"
+            },
+            {
+              "file": "Lib/Shimura/ThetaModuli/ThetaTorus.lean",
+              "line": 233,
+              "name": "thetaCoord_eq_of_mem_lagrangian"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "type2_clones_ge_20": {
+    "definition": {
+      "eligible_decls": 1336,
+      "clone_clusters": 1,
+      "redundant_duplicate_decls": 1,
+      "duplication_rate_pct": 0.07,
+      "size_buckets": {
+        "01_size_2": 1
+      },
+      "spread_buckets": {
+        "single_file_only": 1
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": []
+    },
+    "proof": {
+      "eligible_decls": 4152,
+      "clone_clusters": 1,
+      "redundant_duplicate_decls": 1,
+      "duplication_rate_pct": 0.02,
+      "size_buckets": {
+        "01_size_2": 1
+      },
+      "spread_buckets": {
+        "single_file_only": 1
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": []
+    },
+    "proof_shim": {
+      "eligible_decls": 0,
+      "clone_clusters": 0,
+      "redundant_duplicate_decls": 0,
+      "duplication_rate_pct": 0.0,
+      "size_buckets": {},
+      "spread_buckets": {},
+      "exact_size_histogram_top50": [],
+      "top_clusters": []
+    },
+    "proof_substantive": {
+      "eligible_decls": 4152,
+      "clone_clusters": 1,
+      "redundant_duplicate_decls": 1,
+      "duplication_rate_pct": 0.02,
+      "size_buckets": {
+        "01_size_2": 1
+      },
+      "spread_buckets": {
+        "single_file_only": 1
+      },
+      "exact_size_histogram_top50": [
+        {
+          "size": 2,
+          "clusters": 1
+        }
+      ],
+      "top_clusters": []
+    }
+  },
+  "by_module": {
+    "(root)": {
+      "files": 2,
+      "code_lines": 19,
+      "defs": 4,
+      "thms": 5,
+      "findings": 0
+    },
+    "Lib": {
+      "files": 573,
+      "code_lines": 51280,
+      "defs": 2812,
+      "thms": 5512,
+      "findings": 10
+    },
+    "New": {
+      "files": 219,
+      "code_lines": 24850,
+      "defs": 1039,
+      "thms": 1571,
+      "findings": 4
+    }
+  },
+  "by_line_bucket": {
+    "01_<50_lines": {
+      "files": 224,
+      "code_lines": 6666,
+      "defs": 490,
+      "thms": 796,
+      "findings": 0
+    },
+    "02_50-199_lines": {
+      "files": 509,
+      "code_lines": 53435,
+      "defs": 2824,
+      "thms": 5058,
+      "findings": 12
+    },
+    "03_200-499_lines": {
+      "files": 61,
+      "code_lines": 16048,
+      "defs": 541,
+      "thms": 1234,
+      "findings": 2
+    }
+  },
+  "by_import_bucket": {
+    "01_1-3_imports": {
+      "files": 749,
+      "code_lines": 69751,
+      "defs": 3613,
+      "thms": 6720,
+      "findings": 13
+    },
+    "02_4-8_imports": {
+      "files": 45,
+      "code_lines": 6398,
+      "defs": 242,
+      "thms": 368,
+      "findings": 1
+    }
+  },
+  "sample_findings": {
+    "DEF_EXPLICIT_WILDCARD_PARAM": [
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/ClassField/HeckeCharacter/LineParabolic.lean",
+        "module": "Lib.ClassField.HeckeCharacter.LineParabolic",
+        "line": 81,
+        "kind": "abbrev",
+        "name": "namedVector",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev namedVector (_ : ReadsAt A π) := (S.hom T).name A (Ψ <| vecToMat · |>.map π) (vacElem _)"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/DiscreteSeries/FlenstedJensen/RepresentationDefs.lean",
+        "module": "Lib.DiscreteSeries.FlenstedJensen.RepresentationDefs",
+        "line": 72,
+        "kind": "abbrev",
+        "name": "HCParam",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev HCParam {n : Type*} (_ : n → ℤˣ) := n → ℤ"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/AbelianScheme/ThetaFamily.lean",
+        "module": "Lib.Shimura.AbelianScheme.ThetaFamily",
+        "line": 158,
+        "kind": "abbrev",
+        "name": "ThetaObject",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev ThetaObject (_ : ThetaFamily D Z τ) T := T ⟶ Z"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+        "module": "Lib.Shimura.GoodReduction.HermitianAction",
+        "line": 48,
+        "kind": "abbrev",
+        "name": "multiplier",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "@[simp] abbrev multiplier (_ : IsHermitianAction L B F β) := canonicalMultiplier B (F β)"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+        "module": "Lib.Shimura.GoodReduction.HermitianAction",
+        "line": 52,
+        "kind": "abbrev",
+        "name": "normShift",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "@[simp] abbrev normShift (_ : IsHermitianAction L B F β) := normalizedShift B (F β)"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/GoodReduction/HermitianAction.lean",
+        "module": "Lib.Shimura.GoodReduction.HermitianAction",
+        "line": 56,
+        "kind": "def",
+        "name": "divLattice",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode def",
+        "snippet": "def divLattice (_ : IsHermitianAction L B F β) a := L.toAddSubgroup.comap (F a).toAddMonoidHom"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/ThetaNormality/NormalGeneration.lean",
+        "module": "Lib.Shimura.ThetaNormality.NormalGeneration",
+        "line": 121,
+        "kind": "def",
+        "name": "HasGoodReduction.normBall",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode def",
+        "snippet": "noncomputable def HasGoodReduction.normBall (_ : HasGoodReduction B χ v r) f :=   (B.thetaSpace χ).restrictScalars v.valuationSubring ⊓ ⨅ x : torsionPoints L,"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/Uniformisation/LieExponential.lean",
+        "module": "Lib.Shimura.Uniformisation.LieExponential",
+        "line": 51,
+        "kind": "abbrev",
+        "name": "LatticeForm",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev LatticeForm (_ : Submodule ℤ V) := RealComplexForm V"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Shimura/Uniformisation/LieExponential.lean",
+        "module": "Lib.Shimura.Uniformisation.LieExponential",
+        "line": 141,
+        "kind": "def",
+        "name": "IsAppellHumbert.poincareTerm",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode def",
+        "snippet": "def IsAppellHumbert.poincareTerm (_ : IsAppellHumbert B χ) x y (l : L) :=   (B x (y - x + l) - B l y - B l l / 2).exp / χ l"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "Lib/Weil/Construction/PairDefs.lean",
+        "module": "Lib.Weil.Construction.PairDefs",
+        "line": 23,
+        "kind": "def",
+        "name": "𝒮",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode def",
+        "snippet": "def 𝒮 (_ : Space E n s) := Model (adelicHeis E s) deriving NormedAddCommGroup, NormedSpace ℂ,   CompleteSpace"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "New/RealPlace/LevelGauge.lean",
+        "module": "New.RealPlace.LevelGauge",
+        "line": 81,
+        "kind": "abbrev",
+        "name": "volumeExponent",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev volumeExponent (_ : Level ι T m) := card ι - (3 * 𝔰.n + 1 + m)"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "New/RealPlace/LocalTheorem.lean",
+        "module": "New.RealPlace.LocalTheorem",
+        "line": 32,
+        "kind": "def",
+        "name": "Level.headDensity",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode def",
+        "snippet": "def Level.headDensity (_ : Level ι T m) :=   ∏ a ∈ .range j, (P.md (p a * q a) ^ (2⁻¹ : ℝ)) ^ (𝔰.k + 1 + 2 * (𝔰.ϱ - (a + 1)))"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "New/Rows/StackedDeterminants.lean",
+        "module": "New.Rows.StackedDeterminants",
+        "line": 178,
+        "kind": "abbrev",
+        "name": "rankDiff",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev rankDiff (_ : AuxPair E r n) := card n - card r"
+      },
+      {
+        "rule": "DEF_EXPLICIT_WILDCARD_PARAM",
+        "file": "New/Rows/StackedDeterminants.lean",
+        "module": "New.Rows.StackedDeterminants",
+        "line": 256,
+        "kind": "abbrev",
+        "name": "genResidue",
+        "detail": "1 explicit `(_ : T)` wildcard param(s) in pure term-mode abbrev",
+        "snippet": "abbrev genResidue (_ : DividedSplitting N m a O z) := O.chosenModulusSq.reduction O.genIntAdele"
+      }
+    ]
+  },
+  "sample_thm_info_hits": []
+}

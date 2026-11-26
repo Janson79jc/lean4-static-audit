@@ -1,0 +1,107 @@
+{
+  "timing_sec": 5.31,
+  "provenance": {
+    "corpus_label": "corpus/grh-lean/grh-compact/src",
+    "probe_bundle_sha256": "43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce",
+    "script_sha256": {
+      "lean_lexer.py": "c05016331ac9ffaaa1c2198c4bb8a07a5ba28aede94b7257f88b01d514df8f01",
+      "lean_decl_parser.py": "0534f67aedbafe61714d59f8de3ce2ccefa3616ae6853c7d54f7f59d6e6b41be",
+      "lean_probes.py": "70cf6233ffe811412e2afcc72b0a30b8ba44a8bd0ceb86dfcc25d0a7e91bda24",
+      "run_audit.py": "9c7681b8b7b27abe43288dfdbfe2fc7cffbd0d341bdec36834c82128ae966aaa",
+      "se_topology.py": "8788610b5f121c67b21281e11037f9ae8fc065cdbcd89903846f89fdaf34d436",
+      "lean_dag.py": "21bc4ae2b30fad9480caf5d68c85ebf7d6835cff23cd5a2f084bd33f709b5418",
+      "run_l25_audit.py": "3afdf41cec6a051fa2f7a2604863916dc36dc4decdac7959f86220791119e408"
+    },
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "source_archive": {
+      "file": "raw/lean.tar.gz",
+      "bytes": 239275554,
+      "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+    }
+  },
+  "shadow_targets_configured": [
+    "RiemannHypothesis",
+    "RiemannZetaZerosOnLine",
+    "riemannZeta",
+    "GeneralizedRiemannHypothesis",
+    "GRH",
+    "DirichletLNonvanishingRightOfHalf",
+    "DirichletLZerosOnLine",
+    "PrimitiveDirichletLZerosOnLine",
+    "LFunction",
+    "ZeroFree"
+  ],
+  "invariants_checked": {
+    "finding_counts_conservation": true,
+    "meta_location_dedup_valid": true
+  },
+  "files_scanned": 794,
+  "escape_counts_all_checked": {
+    "debug_skipKernelTC": 0,
+    "csimp_attr": 0,
+    "trustCompiler": 0,
+    "env_addDecl": 0,
+    "env_addAndCompile": 0,
+    "env_modifyEnv": 0,
+    "env_setEnv": 0,
+    "sorry": 0,
+    "admit": 0,
+    "sorryAx": 0,
+    "mkSorry": 0,
+    "native_decide": 0,
+    "ofReduceBool": 0,
+    "ofReduceNat": 0,
+    "implemented_by": 0,
+    "extern_attr": 0,
+    "unsafe_kw": 0,
+    "axiom_decl": 0,
+    "opaque_decl": 0
+  },
+  "escape_hits": [],
+  "meta_and_partial_summary": {
+    "raw_primitive_hits": 0,
+    "distinct_source_locations": 0,
+    "environment_mutation_calls": 0
+  },
+  "meta_and_command_inventory": {
+    "run_cmd": 0,
+    "elab_decl": 0,
+    "macro_decl": 0,
+    "initialize_decl": 0,
+    "import_lean_meta": 0
+  },
+  "meta_and_command_hits": [],
+  "meta_and_partial_dumps": [],
+  "l25_finding_counts": {},
+  "l25_findings_by_rule": {},
+  "shadow_hits": [
+    {
+      "file": "Statements.lean",
+      "line": 3,
+      "kind": "def",
+      "name": "RiemannZetaZerosOnLine",
+      "snippet": "def RiemannZetaZerosOnLine : Prop :=   ∀ s : ℂ, riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * ((n : ℂ) + 1)) → s ≠ 1 → s.re = 1 / 2"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 6,
+      "kind": "def",
+      "name": "DirichletLNonvanishingRightOfHalf",
+      "snippet": "def DirichletLNonvanishingRightOfHalf : Prop :=   ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 10,
+      "kind": "def",
+      "name": "DirichletLZerosOnLine",
+      "snippet": "def DirichletLZerosOnLine : Prop :=   ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N) (s : ℂ),"
+    },
+    {
+      "file": "Statements.lean",
+      "line": 14,
+      "kind": "def",
+      "name": "PrimitiveDirichletLZerosOnLine",
+      "snippet": "def PrimitiveDirichletLZerosOnLine : Prop :=   ∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N), χ.IsPrimitive →"
+    }
+  ]
+}
