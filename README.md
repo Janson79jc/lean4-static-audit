@@ -100,6 +100,19 @@ cd paper && pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex ma
    - `run_audit.py` writes a ~110 MB local intermediate `reports/full_clean_dag_index.json` consumed by `se_topology.py` and `lean_dag.py`; it is excluded from Git via `.gitignore` and can be removed after downstream stages finish.
    - Core script hashes lock to `probe_bundle_sha256 = 43501e2c8041ccdda6b59a4c324450c9f402c1913682be1f87d82d7562adfbce`.
 
+### 4. Running on Any Lean 4 Repository
+
+All probes are repository-agnostic (no Lean toolchain or third-party Python packages required). Point `--root` at any Lean 4 source directory and specify your entry root(s) via `--entry` (omitting `configs/rh_archive.json`):
+
+```bash
+python -B scripts/run_audit.py --root path/to/lean/src --out-dir out --prefix my_repo
+python -B scripts/se_topology.py --dag-index out/my_repo_dag_index.json --out-dir out --prefix my_repo_se_topology
+python -B scripts/lean_dag.py --root path/to/lean/src --dag-index out/my_repo_dag_index.json --out-dir out --prefix my_repo --entry Main --l3a-only
+python -B scripts/run_l25_audit.py --root path/to/lean/src --out-dir out --prefix my_repo_l25
+```
+
+Pass `--entry` multiple times if your project has multiple root modules, or `--shadow-target <Symbol>` to check custom definition shadowing.
+
 ## Citation
 
 If you use the audit scripts, datasets, or technical report, please cite:
